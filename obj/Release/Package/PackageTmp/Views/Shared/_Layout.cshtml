@@ -1,0 +1,451 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title |مملكة الغذاء</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="~/assets/layouts/css/OpenSans.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/simple-line-icons.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/bootstrap-switch-rtl.min.css" rel="stylesheet" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN PAGE LEVEL PLUGINS -->
+    <link href="~/assets/layouts/css/morris.css" rel="stylesheet" />
+    <!-- END PAGE LEVEL PLUGINS -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="~/assets/layouts/css/components-rounded-rtl.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/plugins-rtl.css" rel="stylesheet" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="~/assets/layouts/css/layout-rtl.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/light-rtl.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/custom-rtl.css" rel="stylesheet" />
+    <!-- END THEME LAYOUT STYLES -->
+    <link href="~/assets/layouts/css/error-rtl.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/profile-rtl.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="~/assets/layouts/img/FavIco.png" />
+    <link href="~/assets/layouts/ZebraDatepicker/style/bootstrap-theme.min.css" rel="stylesheet" />
+</head>
+<body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo" ng-app="App">
+    <div class="page-header navbar navbar-fixed-top">
+        <div class="page-header-inner ">
+            <div class="page-logo">
+                <a href="/Home">
+                    <img src="~/assets/layouts/img/logo-light.png" alt="logo" class="logo-default" />
+                </a>
+            </div>
+            <div class="hor-menu hidden-sm hidden-xs">
+                <ul class="nav navbar-nav" id="MainMenu">
+                    <li class="classic-menu-dropdown">
+                        <a href="/Home" style="border-right: 3px solid #5C9ACF !important; margin-right: -40px;background: #f2f6f9; color: #5b9bd1;">
+                            <i class="icon-home"></i>
+                            الرئيسية
+                            <span class="selected">
+                            </span>
+                        </a>
+                    </li>
+                    <li class="classic-menu-dropdown">
+                        <a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="">
+                            <i class="icon-settings"></i> الاعدادات <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            @*<li>
+                                    <a href="/UserMoney/Finish">
+                                        تصفير الايرادات اليومية
+                                    </a>
+                                </li>*@
+                            <li>
+                                <a href="/Users/Operation">
+                                    إضافة مستخدم جديد
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Omola/Operation">
+                                    عمولة مبيعات
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Company/Index">
+                                    اسم الشركة
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Product/Operation">
+                                    الصنف
+                                </a>
+                            </li>
+                            @*<li>
+                                    <a href="/Product/ProductList">
+                                        اضافة اصناف
+                                    </a>
+                                </li>*@
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">
+                                    إدارة الموظفين
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/Employee/Operation">
+                                            اضافة موظف جديد
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/Employee/Salary">
+                                            الراتب
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Job/Index">
+                                            المهنة
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">
+                                    إدارة المصروفات
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/Masrofat/Operation">
+                                            اضافة مصروفات جديدة
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Masrofat_Type/Index/">
+                                            نوع المصروفات
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a tabindex="-1" href="#">
+                                    إدارة الإيرادات
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="/Eradat/Operation">
+                                            اضافة ايرادات جديدة
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="/Eradat_Type/Index/">
+                                            نوع الايرادات
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/Store/Index">
+                                    المخزن
+                                </a>
+                            </li>
+                            @*<li>
+                                    <a href="/Actions/Search">
+                                        المراقبة
+                                    </a>
+                                </li>*@
+                        </ul>
+                    </li>
+                    <li class="classic-menu-dropdown expire">
+                        <a href="/invoice_Mandob/Invoice_Mandob">
+                            <i class="icon-arrow-up"></i> المبيعات
+                        </a>
+
+                    </li>
+                    <li class="classic-menu-dropdown expire">
+                        <a href="/Invoice_Company/Invoice_Company">
+                            <i class="icon-arrow-down"></i> المشتريات
+                        </a>
+                    </li>
+                    <li class="classic-menu-dropdown">
+                        <a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="/invoice_Mandob/Invoice_Mandob">
+                            <i class="icon-arrow-up"></i> مندوب المبيعات <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/Sadad_Mandob/Sadad">
+                                    سداد فواتير المبيعات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/OmolaMandob/Omola">
+                                    صرف عمولة المندوب
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Mandob/Index">
+                                    تسجيل مندوب مبيعات جديد
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="classic-menu-dropdown">
+                        <a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="">
+                            <i class="icon-arrow-down"></i> الشركات <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/Sadad_Company/Sadad">
+                                    سداد فواتير المشتريات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Company/Index">
+                                    اضافة شركة
+                                </a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+
+                    <li class="classic-menu-dropdown">
+                        <a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="">
+                            <i class="icon-magnifier"></i> البحث <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/Search/Product">
+                                    الإستعلام عن صنف
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Search/Invoice_Mandob">
+                                    الإستعلام عن حركة بيع
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Search/Invoice_Company">
+                                    الإستعلام عن عملية شراء
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Search/Company">
+                                    الإستعلام عن شركة
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Search/Masrofat">
+                                    الإستعلام عن المصروفات
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Search/Eradat">
+                                    الإستعلام عن الايرادات
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="/Search/Employee">
+                                    الإستعلام عن الموظفين
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Search/Salary">
+                                    الإستعلام عن الرواتب
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Users/Search">
+                                    الإستعلام عن المستخدمين
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="classic-menu-dropdown">
+                        <a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" href="">
+                            <i class="icon-docs"></i>التقارير <i class="fa fa-angle-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/Report_Product/AllProducts">
+                                    تقرير جرد المستودع
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Report_Eradat/Eradat">
+                                    تقرير الايرادات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Report_Masrofat/Masrofat">
+                                    تقرير المصروفات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/Report_Arbah/Arbah">
+                                    تقرير الارباح
+                                </a>
+                            </li>
+                            @*<li>
+                                    <a href="#">
+                                        تقرير أقل مبيعات
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير أكثر مبيعات
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير عجز فى جرد المخزن
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير الاصناف التى لا يوجد منها فى المخزن
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير حد الطلب
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير اقل الأصناف فى المخزن
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير أكثر الاصناف فى المخزن
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير إجمالى الشراء و المبيعات و الربحية لكل صنف
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير تقرير عام المخزن
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير اقل مبيعات
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        تقرير الاصناف المنتهية الصلاحية
+                                    </a>
+                                </li>*@
+
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="page-top">
+                <div class="top-menu">
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="separator hide"> </li>
+                        <!-- BEGIN USER LOGIN DROPDOWN -->
+                        <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                        <li class="dropdown dropdown-user dropdown-dark">
+                            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                <span class="username username-hide-on-mobile">@User.Identity.Name</span>
+                                <!-- DOC: Do not remove below empty space(&nbsp;) as its purposely used -->
+                                <img alt="" class="img-circle" src="~/assets/layouts/img/avatar1_small.jpg" />
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-default">
+                                <li ng-controller="FireChangePassCtrl">
+                                    <a href="#" ng-click="FireChangePass()">
+                                        <i class="icon-user"></i>تغير كلمة المرور
+                                    </a>
+                                    <input id="UserName" type="text" style="display:none;" />
+                                </li>
+                                <li>
+                                    <a href="/Users/LogOff">
+                                        <i class="icon-key"></i> تسجيل الخروج
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- END USER LOGIN DROPDOWN -->
+                    </ul>
+                </div>
+                <!-- END TOP NAVIGATION MENU -->
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"> </div>
+    <div class="page-container">
+        <div class="row">
+            <div class="col-md-10" id="MainBody">
+                <div class="page-content">
+                    @RenderBody()
+                </div>
+            </div>
+            <div class="col-md-2" id="Related">
+                <div class="row">
+                    <div class="col-md-12">
+                        @RenderSection("Related", false)
+                    </div>
+                    <div class="col-md-12">
+                        <div class="copy-right">
+                            <p>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END CONTAINER -->
+    <!-- BEGIN FOOTER -->
+    <div class="page-footer">
+        <div class="page-footer-inner">
+        </div>
+        <div class="scroll-to-top">
+            <i class="icon-arrow-up"></i>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+    <script src="~/assets/layouts/scripts/jquery-2.1.4.min.js"></script>
+    <link href="~/App/print/print.min.css" rel="stylesheet" />
+    <script src="~/App/print/print.min.js"></script>
+    <script src="~/assets/layouts/scripts/jquery-migrate.min.js"></script>
+    <script src="~/assets/layouts/scripts/bootstrap.min.js"></script>
+    <script src="~/assets/layouts/scripts/bootstrap-hover-dropdown.min.js"></script>
+    <script src="~/assets/layouts/scripts/jquery.slimscroll.min.js"></script>
+    <script src="~/assets/layouts/scripts/jquery.blockui.min.js"></script>
+    <script src="~/assets/layouts/scripts/js.cookie.min.js"></script>
+    <script src="~/assets/layouts/scripts/bootstrap-switch.min.js"></script>
+    @System.Web.Optimization.Scripts.Render("~/bundles/calendar")
+    @System.Web.Optimization.Styles.Render("~/bundles/calendarCSS")
+    <script src="~/assets/Scripts/Global/jquery.bpopup-0.9.4.min.js"></script>
+    <script src="~/assets/layouts/scripts/raphael-min.js"></script>
+    <script src="~/assets/layouts/scripts/morris.min.js"></script>
+    @RenderSection("OmarRezkJqueryFiles", false)
+
+    <script src="~/assets/Scripts/Global/angular.min.js"></script>
+    <script src="~/App/angular-barcode-scanner.js"></script>
+
+
+    <script src="~/assets/Scripts/Global/angular-fancy-modal.min.js"></script>
+    @System.Web.Optimization.Styles.Render("~/bundles/angularfancymodalcss")
+    <script src="~/App/App.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="~/App/Users/ChangePass.js"></script>
+    @RenderSection("AngularFiles", false)
+
+</body>
+</html>

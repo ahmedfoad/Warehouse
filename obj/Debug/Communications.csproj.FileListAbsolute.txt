@@ -1,0 +1,442 @@
+D:\ElShamel Code\Communications\Communications\bin\Communications.dll.config
+D:\ElShamel Code\Communications\Communications\bin\Communications.dll
+D:\ElShamel Code\Communications\Communications\bin\Communications.pdb
+D:\ElShamel Code\Communications\Communications\bin\EntityFramework.dll
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Helpers.dll
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Razor.dll
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Webpages.Deployment.dll
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Webpages.dll
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Webpages.Razor.dll
+D:\ElShamel Code\Communications\Communications\bin\EntityFramework.xml
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Razor.xml
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Webpages.xml
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Webpages.Deployment.xml
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Webpages.Razor.xml
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Helpers.xml
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.csprojResolveAssemblyReference.cache
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.dll
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.pdb
+D:\ElShamel Code\Communications\Communications\bin\Antlr3.Runtime.dll
+D:\ElShamel Code\Communications\Communications\bin\Microsoft.Web.Infrastructure.dll
+D:\ElShamel Code\Communications\Communications\bin\Newtonsoft.Json.dll
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Optimization.dll
+D:\ElShamel Code\Communications\Communications\bin\WebGrease.dll
+D:\ElShamel Code\Communications\Communications\bin\Antlr3.Runtime.pdb
+D:\ElShamel Code\Communications\Communications\bin\Newtonsoft.Json.xml
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Optimization.xml
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportGlobalReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.csproj.GenerateResource.Cache
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.dll.licenses
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportGlobalReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.TreatmentCopy.TreatmentCopyGlobalReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportReferGlobalReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportReferGlobalReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.TreatmentOpen.TreatmentOpenGlobalReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportBarCodeReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportBarCodeReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportTicketReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportTicketReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.Payment.PaymentReport.resources
+D:\ElShamel Code\Communications\Communications\obj\Debug\Communications.Reports.Archive.CreateArchiveReport.resources
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Mvc.dll
+D:\ElShamel Code\Communications\Communications\bin\System.Web.Mvc.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Communications.dll.config
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Communications.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Communications.pdb
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Antlr3.Runtime.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\EntityFramework.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Microsoft.Web.Infrastructure.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Newtonsoft.Json.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.Helpers.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.Mvc.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.Optimization.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.Razor.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.WebPages.Deployment.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.WebPages.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.WebPages.Razor.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\WebGrease.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Antlr3.Runtime.pdb
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\EntityFramework.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Newtonsoft.Json.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.Helpers.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.Mvc.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.Optimization.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.Razor.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.WebPages.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.WebPages.Deployment.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Web.WebPages.Razor.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.csprojResolveAssemblyReference.cache
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.Archive.CreateArchiveReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportBarCodeReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportGlobalReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportReferGlobalReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportTicketReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportBarCodeReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportGlobalReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportReferGlobalReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportTicketReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.Payment.PaymentReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.TreatmentCopy.TreatmentCopyGlobalReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.TreatmentOpen.TreatmentOpenGlobalReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.csproj.GenerateResource.Cache
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.dll.licenses
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.pdb
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\CrystalDecisions.CrystalReports.Engine.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\CrystalDecisions.Shared.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Charts.v15.2.Core.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Data.v15.2.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.DataAccess.v15.2.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Office.v15.2.Core.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.PivotGrid.v15.2.Core.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Printing.v15.2.Core.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.RichEdit.v15.2.Core.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Sparkline.v15.2.Core.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Xpo.v15.2.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.XtraCharts.v15.2.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.XtraGauges.v15.2.Core.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.XtraReports.v15.2.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\Microsoft.CSharp.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.ComponentModel.DataAnnotations.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Configuration.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.Data.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\System.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Data.v15.2.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.DataAccess.v15.2.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Office.v15.2.Core.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.PivotGrid.v15.2.Core.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Printing.v15.2.Core.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.RichEdit.v15.2.Core.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Sparkline.v15.2.Core.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.Xpo.v15.2.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.XtraCharts.v15.2.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.XtraGauges.v15.2.Core.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\DevExpress.XtraReports.v15.2.xml
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.Data.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.Data.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.Data.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.Data.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.DataAccess.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.DataAccess.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.DataAccess.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.DataAccess.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.Office.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.Office.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.Office.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.Office.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.PivotGrid.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.PivotGrid.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.PivotGrid.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.PivotGrid.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.Printing.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.Printing.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.Printing.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.Printing.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.RichEdit.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.RichEdit.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.RichEdit.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.RichEdit.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.Xpo.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.Xpo.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.Xpo.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.Xpo.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.XtraCharts.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.XtraCharts.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.XtraCharts.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.XtraCharts.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.XtraGauges.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.XtraGauges.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.XtraGauges.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.XtraGauges.v15.2.Core.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\de\DevExpress.XtraReports.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\es\DevExpress.XtraReports.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ja\DevExpress.XtraReports.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\bin\ru\DevExpress.XtraReports.v15.2.resources.dll
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.Archive.StatisticsReport.resources
+D:\ElShamel Code\Deploye\Communications\Tareef\Communications\Communications\obj\Debug\Communications.Reports.Archive.NewStatisticsReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Communications.dll.config
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Communications.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Communications.pdb
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Antlr3.Runtime.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportSource.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.Shared.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Charts.v15.2.Core.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Data.v15.2.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.DataAccess.v15.2.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Office.v15.2.Core.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.PivotGrid.v15.2.Core.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Printing.v15.2.Core.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.RichEdit.v15.2.Core.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Sparkline.v15.2.Core.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Xpo.v15.2.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.XtraCharts.v15.2.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.XtraGauges.v15.2.Core.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.XtraReports.v15.2.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\EntityFramework.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Microsoft.CSharp.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Microsoft.Web.Infrastructure.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Newtonsoft.Json.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.ComponentModel.DataAnnotations.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Configuration.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Data.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.Helpers.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.Mvc.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.Optimization.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.Razor.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.WebPages.Deployment.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.WebPages.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.WebPages.Razor.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\WebGrease.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.CodeParser.v15.2.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Pdf.v15.2.Core.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Pdf.v15.2.Drawing.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\stdole.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Antlr3.Runtime.pdb
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Data.v15.2.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.DataAccess.v15.2.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Office.v15.2.Core.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.PivotGrid.v15.2.Core.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Printing.v15.2.Core.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.RichEdit.v15.2.Core.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Sparkline.v15.2.Core.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Xpo.v15.2.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.XtraCharts.v15.2.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.XtraGauges.v15.2.Core.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.XtraReports.v15.2.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\EntityFramework.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\Newtonsoft.Json.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.Helpers.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.Mvc.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.Optimization.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.Razor.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.WebPages.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.WebPages.Deployment.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\System.Web.WebPages.Razor.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Pdf.v15.2.Core.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\DevExpress.Pdf.v15.2.Drawing.xml
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.Data.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.Data.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.Data.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.Data.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.DataAccess.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.DataAccess.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.DataAccess.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.DataAccess.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.Office.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.Office.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.Office.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.Office.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.PivotGrid.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.PivotGrid.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.PivotGrid.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.PivotGrid.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.Xpo.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.Xpo.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.Xpo.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.Xpo.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.XtraCharts.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.XtraCharts.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.XtraCharts.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.XtraCharts.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.XtraGauges.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.XtraGauges.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.XtraGauges.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.XtraGauges.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.XtraReports.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.XtraReports.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.XtraReports.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.XtraReports.v15.2.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\de\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\es\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ja\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\bin\ru\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.csprojResolveAssemblyReference.cache
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.Archive.CreateArchiveReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.Archive.NewStatisticsReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.Archive.StatisticsReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportBarCodeReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportGlobalReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportReferGlobalReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportTicketReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportBarCodeReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportGlobalReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportReferGlobalReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportTicketReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.Payment.PaymentReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.TreatmentCopy.TreatmentCopyGlobalReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.Reports.TreatmentOpen.TreatmentOpenGlobalReport.resources
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.csproj.GenerateResource.Cache
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.dll.licenses
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.dll
+C:\work\omar 2017\الاتصالات الإدارية\Communications\Communications\obj\Debug\Communications.pdb
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Communications.dll.config
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Communications.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Communications.pdb
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Antlr3.Runtime.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportSource.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.Shared.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Charts.v15.2.Core.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Data.v15.2.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.DataAccess.v15.2.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Office.v15.2.Core.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.PivotGrid.v15.2.Core.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Printing.v15.2.Core.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.RichEdit.v15.2.Core.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Sparkline.v15.2.Core.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Xpo.v15.2.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.XtraCharts.v15.2.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.XtraGauges.v15.2.Core.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.XtraReports.v15.2.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\EntityFramework.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Microsoft.CSharp.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Microsoft.Web.Infrastructure.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Newtonsoft.Json.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.ComponentModel.DataAnnotations.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Configuration.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Data.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.Helpers.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.Mvc.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.Optimization.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.Razor.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.WebPages.Deployment.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.WebPages.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.WebPages.Razor.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\WebGrease.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.CodeParser.v15.2.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Pdf.v15.2.Core.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Pdf.v15.2.Drawing.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\stdole.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Antlr3.Runtime.pdb
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Data.v15.2.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.DataAccess.v15.2.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Office.v15.2.Core.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.PivotGrid.v15.2.Core.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Printing.v15.2.Core.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.RichEdit.v15.2.Core.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Sparkline.v15.2.Core.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Xpo.v15.2.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.XtraCharts.v15.2.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.XtraGauges.v15.2.Core.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.XtraReports.v15.2.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\EntityFramework.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\Newtonsoft.Json.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.Helpers.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.Mvc.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.Optimization.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.Razor.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.WebPages.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.WebPages.Deployment.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\System.Web.WebPages.Razor.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Pdf.v15.2.Core.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\DevExpress.Pdf.v15.2.Drawing.xml
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.Data.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.Data.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.Data.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.Data.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.DataAccess.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.DataAccess.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.DataAccess.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.DataAccess.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.Office.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.Office.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.Office.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.Office.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.PivotGrid.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.PivotGrid.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.PivotGrid.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.PivotGrid.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.Printing.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.Printing.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.Printing.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.Printing.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.RichEdit.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.Sparkline.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.Xpo.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.Xpo.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.Xpo.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.Xpo.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.XtraCharts.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.XtraCharts.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.XtraCharts.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.XtraCharts.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.XtraGauges.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.XtraGauges.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.XtraGauges.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.XtraGauges.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.XtraReports.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.XtraReports.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.XtraReports.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.XtraReports.v15.2.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\de\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\es\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ja\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\bin\ru\DevExpress.Pdf.v15.2.Core.resources.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.csprojResolveAssemblyReference.cache
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.Archive.CreateArchiveReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.Archive.NewStatisticsReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.Archive.StatisticsReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportBarCodeReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportGlobalReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportReferGlobalReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.ListExport.ListExportTicketReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportBarCodeReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportGlobalReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportReferGlobalReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.ListImport.ListImportTicketReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.Payment.PaymentReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.TreatmentCopy.TreatmentCopyGlobalReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.Reports.TreatmentOpen.TreatmentOpenGlobalReport.resources
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.csproj.GenerateResource.Cache
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.dll.licenses
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.dll
+C:\work\Ahmed\16-Casher\Casher\Communications\Communications\obj\Debug\Communications.pdb

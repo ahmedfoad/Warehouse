@@ -1,0 +1,184 @@
+﻿@{
+    ViewBag.Title = "الصفحة الرئيسية";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!-- Start WOWSlider.com HEAD section -->
+<link href="~/assets/slider/engine/style.css" rel="stylesheet" />
+<script src="~/assets/slider/engine/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+<div class="row">
+    <div class="col-md-12">
+        <h4 class="page-title">مملكة الغذاء</h4>
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="#">
+                    مملكة الغذاء
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                   مملكة الغذاء
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row" ng-controller="HomeCtrl">
+    <div class="col-md-12" style="margin-bottom:20px;">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="mt-widget-4">
+                    <div class="mt-img-container">
+                        <img src="~/assets/Images/Home/ListExportOperation.png" />
+                    </div>
+                    <div class="mt-container bg-dark-opacity">
+                        <div class="mt-head-title">المبيعات</div>
+                        <div class="mt-body-icons">
+                            <a href="/ListExport/Search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                            <a href="/ListExport/Report">
+                                <i class="icon-docs"></i>
+                            </a>
+                            <a href="/Payment/Operation">
+                                <i class="icon-wallet"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="mt-widget-4">
+                    <div class="mt-img-container">
+                        <img src="~/assets/Images/Home/ListImportOperation.png" />
+                    </div>
+                    <div class="mt-container bg-green-opacity">
+                        <div class="mt-head-title">المشريات</div>
+                        <div class="mt-body-icons">
+                            <a href="/ListImport/Search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                            <a href="/ListImport/Report">
+                                <i class="icon-docs"></i>
+                            </a>
+                            <a href="/Payment/Operation">
+                                <i class="icon-wallet"></i>
+                            </a>
+                        </div>
+                         
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="mt-widget-4">
+                    <div class="mt-img-container">
+                        <img src="~/assets/Images/Home/UsersInsert.png" />
+                    </div>
+                    <div class="mt-container bg-yellow-gold-opacity">
+                        <div class="mt-head-title">المستخدمين</div>
+                        <div class="mt-body-icons">
+                            <a href="/Users/Search">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                            <a href="/Users/Search">
+                                <i class="icon-docs"></i>
+                            </a>
+                            <a href="/Users/Search">
+                                <i class="icon-wallet"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="mt-widget-4">
+                    <div class="mt-img-container">
+                        <img src="~/assets/Images/Home/ListImportReferOpertation.png" />
+                    </div>
+                    <div class="mt-container bg-purple-seance-opacity">
+                        <div class="mt-head-title">التقارير</div>
+                        <div class="mt-body-icons">
+                            <a href="#">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                            <a href="/ListImport/RReport">
+                                <i class="icon-docs"></i>
+                            </a>
+                            <a href="/ListImport/RSearch">
+                                <i class="icon-wallet"></i>
+                            </a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="mt-widget-4">
+                    <div class="mt-img-container">
+                        <img src="~/assets/Images/Home/ListImportReferOpertation.png" />
+                    </div>
+                    <div class="mt-container bg-red-flamingo-opacity">
+                        <div class="mt-head-title">البحث عن صنف</div>
+                        <div class="mt-body-icons">
+                            <a href="#">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                            <a href="#">
+                                <i class="icon-docs"></i>
+                            </a>
+                            <a href="#">
+                                <i class="icon-wallet"></i>
+                            </a>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="mt-widget-4">
+                    <div class="mt-img-container">
+                        <img src="~/assets/Images/Home/BaldiaInfo.png" />
+                    </div>
+                    <div class="mt-container bg-blue-opacity">
+                        <div class="mt-head-title">الشركات</div>
+                        <div class="mt-body-icons">
+                            <a href="#">
+                                <i class="icon-magnifier"></i>
+                            </a>
+                            <a href="#">
+                                <i class="icon-docs"></i>
+                            </a>
+                            <a href="/BaladiaInfo/Index">
+                                <i class="icon-wallet"></i>
+                            </a>
+                        </div>
+                        <div class="mt-footer-button">
+                            <a href="#" type="button" class="btn btn-circle btn-default btn-sm">تعديل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" style="margin-top:20px;">
+        <div class="portlet light portlet-fit">
+            <div class="portlet-title">
+                رسم توضيحي
+            </div>
+            <div class="portlet-body">
+                <div id="statistics" style="height: 450px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+@section AngularFiles{
+    <script src="~/App/Main/Home.js"></script>
+    <script>
+        document.getElementById("Related").className = "col-md-12";
+        document.getElementById("MainBody").className = "col-md-12";
+    </script>
+}

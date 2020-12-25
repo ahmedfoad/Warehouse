@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CasherModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ACTIONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="USERNAME" Type="varchar2" MaxLength="150" />
+    <Property Name="DAT" Type="varchar2" MaxLength="50" />
+    <Property Name="ACTION" Type="varchar2" MaxLength="500" />
+    <Property Name="TIM" Type="varchar2" MaxLength="50" />
+    <Property Name="VIEWNAME" Type="varchar2" MaxLength="100" />
+    <Property Name="OPERATION" Type="varchar2" MaxLength="100" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="BLADIAINFO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="NAMEAR" Type="varchar2" MaxLength="200" />
+    <Property Name="NAMEEN" Type="varchar2" MaxLength="200" />
+    <Property Name="LOGO" Type="blob" />
+    <Property Name="BOSS" Type="varchar2" MaxLength="200" />
+    <Property Name="DEPARTNO" Type="varchar2" MaxLength="100" />
+    <Property Name="SECTIONNO" Type="varchar2" MaxLength="100" />
+    <Property Name="COMBOSS" Type="varchar2" MaxLength="200" />
+    <Property Name="COMEMP" Type="varchar2" MaxLength="200" />
+    <Property Name="SMSUSERNAME" Type="varchar2" MaxLength="50" />
+    <Property Name="SMSPASSWORD" Type="varchar2" MaxLength="50" />
+    <Property Name="SMSMESSAGE" Type="varchar2" MaxLength="300" />
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COM_DEPARTMENTS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="150" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COM_EMPLOYEES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NO" Type="varchar2" MaxLength="300" />
+    <Property Name="PASS" Type="varchar2" MaxLength="300" />
+    <Property Name="NAME" Type="varchar2" MaxLength="300" />
+    <Property Name="DEPID" Type="number" Precision="38" Scale="0" />
+    <Property Name="DEPNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="IMPORTANTTREATMENTS" Type="number" Precision="38" Scale="0" />
+    <Property Name="STOPEMP" Type="number" Precision="38" Scale="0" />
+    <Property Name="ADMIN" Type="number" Precision="38" Scale="0" />
+    <Property Name="ADMINEMP" Type="number" Precision="38" Scale="0" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="150" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="150" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="150" />
+    <Property Name="MAJLESS" Type="number" Precision="38" Scale="0" />
+    <Property Name="MAJLESSADMIN" Type="number" Precision="38" Scale="0" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="150" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="ROLE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COM_EMPLOYEES_AUTHENTICATION">
+    <Key>
+      <PropertyRef Name="MAXID" />
+    </Key>
+    <Property Name="MAXID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="USERID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VIEWID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="ENTER" Type="number" Precision="38" Scale="0" />
+    <Property Name="SAVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="EDIT" Type="number" Precision="38" Scale="0" />
+    <Property Name="REMOVE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COM_EMPLOYEES_VIEWS">
+    <Key>
+      <PropertyRef Name="VIEWID" />
+    </Key>
+    <Property Name="VIEWID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="VIEWNAME" Type="varchar2" MaxLength="150" />
+    <Property Name="VIEWURL" Type="varchar2" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="COM_LIST_EXPORT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DEPARTMENTID" Type="number" Precision="38" Scale="0" />
+    <Property Name="NO" Type="number" Precision="38" Scale="0" />
+    <Property Name="DATEXPORT" Type="varchar2" MaxLength="15" />
+    <Property Name="DEPARTMENTFROMID" Type="number" Precision="38" Scale="0" />
+    <Property Name="MAINSUBJECT" Type="varchar2" MaxLength="300" />
+    <Property Name="TREATMENTTYPEID" Type="number" Precision="38" Scale="0" />
+    <Property Name="INCLUDES" Type="varchar2" MaxLength="300" />
+    <Property Name="IMPORTANT" Type="varchar2" MaxLength="100" />
+    <Property Name="ETHBATTYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="ETHBATNO" Type="varchar2" MaxLength="100" />
+    <Property Name="DEPARTMENTTOID" Type="number" Precision="38" Scale="0" />
+    <Property Name="NOTES" Type="varchar2" MaxLength="300" />
+    <Property Name="SUBJECTID" Type="number" Precision="38" Scale="0" />
+    <Property Name="REPLAY" Type="varchar2" MaxLength="100" />
+    <Property Name="ACTION" Type="varchar2" MaxLength="300" />
+    <Property Name="PREVTREATMENT" Type="varchar2" MaxLength="100" />
+    <Property Name="PREVTREATMENTNO" Type="varchar2" MaxLength="100" />
+    <Property Name="DATPREVTREATMENT" Type="varchar2" MaxLength="15" />
+    <Property Name="BARCODEID" Type="number" Precision="38" Scale="0" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="OTHERDEPARTMENTS" Type="varchar2" MaxLength="300" />
+    <Property Name="YEAR" Type="number" Precision="38" Scale="0" />
+    <Property Name="RAFNO" Type="varchar2" MaxLength="100" />
+    <Property Name="MALAFNO" Type="varchar2" MaxLength="100" />
+    <Property Name="PCTARCHIVE" Type="blob" />
+    <Property Name="DEPARTMENTEXPORTNO" Type="number" Precision="38" Scale="0" />
+    <Property Name="TASDEEDNO" Type="varchar2" MaxLength="50" />
+    <Property Name="TASDEEDDATE" Type="varchar2" MaxLength="15" />
+    <Property Name="JAWALNO" Type="varchar2" MaxLength="50" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ADMIN" Type="number" Precision="38" Scale="0" />
+    <Property Name="ADMINEMP" Type="number" Precision="38" Scale="0" />
+    <Property Name="ALAKA" Type="varchar2" MaxLength="150" />
+    <Property Name="CARDNO" Type="varchar2" MaxLength="50" />
+    <Property Name="INTERNALNO" Type="varchar2" MaxLength="20" />
+    <Property Name="MAJLESS" Type="number" Precision="38" Scale="0" />
+    <Property Name="MAJLESSADMIN" Type="number" Precision="38" Scale="0" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="OLDID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COM_LIST_EXPORT_REFER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MAINID" Type="number" Precision="38" Scale="0" />
+    <Property Name="NO" Type="varchar2" MaxLength="100" />
+    <Property Name="DATE7ALA" Type="varchar2" MaxLength="15" />
+    <Property Name="INCLUDES" Type="varchar2" MaxLength="300" />
+    <Property Name="DEPPREPARID" Type="number" Precision="38" Scale="0" />
+    <Property Name="DEPPREPARNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="DEPTOID" Type="number" Precision="38" Scale="0" />
+    <Property Name="DEPTONAME" Type="varchar2" MaxLength="300" />
+    <Property Name="EMPNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="ESTELAM" Type="number" Precision="38" Scale="0" />
+    <Property Name="EGRAA" Type="varchar2" MaxLength="150" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COM_LIST_IMPORT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DEPARTMENTID" Type="number" Precision="38" Scale="0" />
+    <Property Name="NO" Type="number" Precision="38" Scale="0" />
+    <Property Name="DATIMPORT" Type="varchar2" MaxLength="15" />
+    <Property Name="DEPARTMENTFROMID" Type="number" Precision="38" Scale="0" />
+    <Property Name="MAINSUBJECT" Type="varchar2" MaxLength="300" />
+    <Property Name="TREATMENTTYPEID" Type="number" Precision="38" Scale="0" />
+    <Property Name="INCLUDES" Type="varchar2" MaxLength="300" />
+    <Property Name="IMPORTANT" Type="varchar2" MaxLength="100" />
+    <Property Name="ETHBATTYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="ETHBATNO" Type="varchar2" MaxLength="100" />
+    <Property Name="DEPARTMENTTOID" Type="number" Precision="38" Scale="0" />
+    <Property Name="NOTES" Type="varchar2" MaxLength="300" />
+    <Property Name="SUBJECTID" Type="number" Precision="38" Scale="0" />
+    <Property Name="REPLAY" Type="varchar2" MaxLength="100" />
+    <Property Name="ACTION" Type="varchar2" MaxLength="300" />
+    <Property Name="PREVTREATMENT" Type="varchar2" MaxLength="100" />
+    <Property Name="PREVTREATMENTNO" Type="varchar2" MaxLength="100" />
+    <Property Name="DATPREVTREATMENT" Type="varchar2" MaxLength="15" />
+    <Property Name="BARCODEID" Type="number" Precision="38" Scale="0" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="OTHERDEPARTMENTS" Type="varchar2" MaxLength="300" />
+    <Property Name="YEAR" Type="number" Precision="38" Scale="0" />
+    <Property Name="KHETABNO" Type="varchar2" MaxLength="300" />
+    <Property Name="DATKHETAB" Type="varchar2" MaxLength="15" />
+    <Property Name="RAFNO" Type="varchar2" MaxLength="100" />
+    <Property Name="MALAFNO" Type="varchar2" MaxLength="100" />
+    <Property Name="PCTARCHIVE" Type="blob" />
+    <Property Name="DEPARTMENTIMPORTNO" Type="number" Precision="38" Scale="0" />
+    <Property Name="OTHERDEPARTMENTSTO" Type="varchar2" MaxLength="300" />
+    <Property Name="TASDEEDNO" Type="varchar2" MaxLength="50" />
+    <Property Name="TASDEEDDATE" Type="varchar2" MaxLength="15" />
+    <Property Name="JAWALNO" Type="varchar2" MaxLength="50" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ALAKA" Type="varchar2" MaxLength="150" />
+    <Property Name="CARDNO" Type="varchar2" MaxLength="150" />
+    <Property Name="EGRAA" Type="varchar2" MaxLength="150" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="ESTELAM" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COM_LIST_IMPORT_REFER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="MAINID" Type="number" Precision="38" Scale="0" />
+    <Property Name="NO" Type="varchar2" MaxLength="100" />
+    <Property Name="DATE7ALA" Type="varchar2" MaxLength="15" />
+    <Property Name="INCLUDES" Type="varchar2" MaxLength="300" />
+    <Property Name="DEPPREPARID" Type="number" Precision="38" Scale="0" />
+    <Property Name="DEPPREPARNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="DEPTOID" Type="number" Precision="38" Scale="0" />
+    <Property Name="DEPTONAME" Type="varchar2" MaxLength="300" />
+    <Property Name="EMPNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ESTELAM" Type="number" Precision="38" Scale="0" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="EGRAA" Type="varchar2" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="COM_PAYMENT_REGISTRATION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="EXPORTID" Type="number" Precision="38" Scale="0" />
+    <Property Name="IMPORTID" Type="number" Precision="38" Scale="0" />
+    <Property Name="DATPAYMENT" Type="varchar2" MaxLength="15" />
+    <Property Name="DEPID" Type="number" Precision="38" Scale="0" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EXPORTID1" Type="number" Precision="38" Scale="0" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="TYPEEXPORTID" Type="varchar2" MaxLength="20" />
+    <Property Name="TYPEIMPORTID" Type="varchar2" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="COM_SUBJECTS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="150" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COM_TREATMENT_COPY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DATCOPY" Type="varchar2" MaxLength="15" />
+    <Property Name="ORGCOPY" Type="varchar2" MaxLength="100" />
+    <Property Name="DETTOID" Type="number" Precision="38" Scale="0" />
+    <Property Name="DETTONAME" Type="varchar2" MaxLength="300" />
+    <Property Name="OTHERDEP" Type="varchar2" MaxLength="300" />
+    <Property Name="DETINCLUDES" Type="varchar2" MaxLength="300" />
+    <Property Name="EMPNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="MAINID" Type="number" Precision="38" Scale="0" />
+    <Property Name="EXPORTIMPORTTYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="COM_TREATMENT_TYPE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="NAME" Type="varchar2" MaxLength="150" />
+    <Property Name="INDATE" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERUSER" Type="varchar2" MaxLength="300" />
+    <Property Name="COMPUTERNAME" Type="varchar2" MaxLength="300" />
+    <Property Name="PROGRAMUSERID" Type="number" Precision="38" Scale="0" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="CasherModelStoreContainer">
+    <EntitySet Name="ACTIONS" EntityType="Self.ACTIONS" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="BLADIAINFO" EntityType="Self.BLADIAINFO" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_DEPARTMENTS" EntityType="Self.COM_DEPARTMENTS" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_EMPLOYEES" EntityType="Self.COM_EMPLOYEES" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_EMPLOYEES_AUTHENTICATION" EntityType="Self.COM_EMPLOYEES_AUTHENTICATION" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_EMPLOYEES_VIEWS" EntityType="Self.COM_EMPLOYEES_VIEWS" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_LIST_EXPORT" EntityType="Self.COM_LIST_EXPORT" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_LIST_EXPORT_REFER" EntityType="Self.COM_LIST_EXPORT_REFER" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_LIST_IMPORT" EntityType="Self.COM_LIST_IMPORT" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_LIST_IMPORT_REFER" EntityType="Self.COM_LIST_IMPORT_REFER" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_PAYMENT_REGISTRATION" EntityType="Self.COM_PAYMENT_REGISTRATION" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_SUBJECTS" EntityType="Self.COM_SUBJECTS" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_TREATMENT_COPY" EntityType="Self.COM_TREATMENT_COPY" Schema="Casher" store:Type="Tables" />
+    <EntitySet Name="COM_TREATMENT_TYPE" EntityType="Self.COM_TREATMENT_TYPE" Schema="Casher" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

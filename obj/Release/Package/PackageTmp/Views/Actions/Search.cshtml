@@ -1,0 +1,150 @@
+﻿@{
+    ViewBag.Title = "مراقبة حركات المستخدمين";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات 
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    بيانات مراقبة حركات المستخدمين
+                </a>
+            </li>
+
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<div class="row" ng-controller="ActionSearchCtrl">
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    خيارات البحث
+                </div>
+                <div class="actions">
+                    <a href="" class="btn btn-default" id="EmptyInputs">
+                        <i class="fa fa-pencil"></i> إخلاء خانات البحث
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="form-body">
+                    <div class="portlet-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-3">
+                                    <label class="control-label">المستخدم</label>
+                                    <input type="text" name="UserName" id="UserName" value="" class="form-control" placeholder="المستخدم" />
+                                    <input type="text" name="UserID" id="UserID" value="" style="display:none" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="control-label">الفترة من </label>
+                                    <input type="text" name="DatBegin" id="DatBegin" value="" class="form-control" placeholder="الفترة من" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="control-label">إلي</label>
+                                    <input type="text" name="DatEnd" id="DatEnd" value="" class="form-control" placeholder="إلي" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="control-label">نوع الحركة</label>
+                                    @*@Html.DropDownList("ActionType", ViewBag.ActionType as SelectList, "نوع الحركة", new { @class = "form-control" })*@
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="control-label">اسم النافذة</label>
+                                    @*@Html.DropDownList("ViewName", ViewBag.ViewName as SelectList, "اسم النافذة", new { @class = "form-control" })*@
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="control-label">الحركة</label>
+                                    <input type="text" name="Action" id="Action" value="" class="form-control" placeholder="الحركة" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" style="text-align: center; margin-top: 10px;">
+                            <button type="submit" class="btn green" id="Search">بحث</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="portlet-title">
+                <div class="caption">
+                    نتائج البحث
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <tr style="color: blue;">
+                            <th style="text-align: center; ">
+                                الإسم
+                            </th>
+                            <th style="text-align: center; ">
+                                التاريخ
+                            </th>
+                            <th style="text-align: center;">
+                                الوقت
+                            </th>
+                            
+                            <th style="text-align: center; ">
+                                اسم النافذة
+                            </th>
+                            <th style="text-align: center;">
+                                نوع الحركة
+                            </th>
+                            <th style="text-align: center; ">
+                                الحركة
+                            </th>
+                        </tr>
+                        <tbody>
+                            <tr ng-repeat="item in data track by $index">
+                                <td>{{item.EmpName}} </td>
+                                <td>{{item.ActionDate | date:'dd/MM/yyyy'}} </td>
+                                <td>{{item.ActionDate | date:'hh:mm a'}} </td>
+                                <td>{{item.View.Name}} </td>
+                                <td>{{item.Action}} </td>
+                                <td>{{item.Operation}} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: center;" ng-show="TableLoading">
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                    </div>
+                    <div ng-show="EndSearch" style="text-align: center; color:red;"> عفوا لا توجد بيانات آخري </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Related{
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="page-title">الأدوات</h4>
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption" style="font-size:14px;">
+                        روابط ذات صلة
+                    </div>
+                </div>
+                <div class="portlet-body" style="text-align: center;">
+                    <a href="/Users/Operation"><i class="fa fa-angle-left"></i>  اضافة مستخدم جديد</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section AngularFiles{
+    <script src="~/App/Search/ActionsSearch.js"></script>
+}
+
+

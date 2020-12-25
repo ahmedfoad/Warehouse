@@ -1,0 +1,17 @@
+.ListExportType {
+    margin-left: 10px;
+}
+.ListExportType > input{
+     margin-left: 5px;
+}
+.dataEntire{
+    border-radius: 8px 0 0 8px !important;
+    min-height:100px;
+}
+.checkBoxSearch{
+    margin-right: 3px;
+    margin-left: -30px;
+}
+.checkBoxDiv{
+    margin-bottom: 10px;
+}

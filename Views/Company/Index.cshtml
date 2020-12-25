@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "اسم الشركة";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+        
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    اسم الشركة
+                </a>
+            </li>
+
+        </ul>
+        <!-- END PAGE TITLE & BREADCRUMB-->
+    </div>
+</div>
+<div class="row" ng-controller="CompanyCtrl">
+    <div class="col-md-12" >
+        <div class="row" ng-hide="ReomveAlertParameter">
+            <div class="col-md-12">
+                <div class="m-heading-1 border-green m-bordered">
+                    {{ErrorName}}
+                    <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div>
+                    <a href="javascript:;" ng-click="Create()" class="b-close btn btn-sm red">
+                        <i class="fa fa-plus"></i>  إضافة شركة جديدة
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6"></div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <div class="input-group input-group-sm">
+                        <input type="text" class="form-control" placeholder="... الحبث" ng-model="Search" ng-keyup="keyupevt()">
+                        <span class="input-group-btn">
+                            <button class="btn green" type="button">بحث</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="portlet light">
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width:80%">  اسم الشركة</th>
+                               
+                                <th style="width:20%" colspan="2">الأدوات  </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in data track by $index">
+                                <td style="width:80%">{{item.Name}}</td>
+                                <td style="width:10%"><a href="javascript:;" ng-click="Edit(item);"><i class="fa fa-pencil"></i>  تعديل</a></td>
+                                <td style="width:10%"><a href="#" ng-click="Delete(item);" style="color:red"><i class="fa fa-trash-o" style="color:red"></i>  حذف</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+ 
+@section Related{
+    
+}
+@section AngularFiles{
+    <script src="~/App/Tarmeez/CompanyCtrl.js"></script>
+     
+}

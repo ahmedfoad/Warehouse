@@ -1,0 +1,129 @@
+﻿@{
+    ViewBag.Title = "تصفير الايرادات اليومية";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    تصفير الايرادات اليومية
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="row" ng-controller="User_MoneyCtrl">
+    <div class="col-md-12" ng-show="AlertParameter">
+        <div class="m-heading-1 border-green m-bordered">
+            <span style="color:red"> {{ErrorName}} </span>
+            <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="Payment">
+        <div id="Paymenttxt" class="m-heading-1 border-green m-bordered">
+            {{Paymenttxt}}
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    البيانات الأساسية
+                </div>
+                <div class="actions" id="EditElements2">
+                    <a href="javascript:;" class="btn blue" ng-hide="BtnPrintShow" ng-click="BtnUser_MoneyZero()">
+                        <i class="fa fa-print"></i> طباعة تصفير الايرادات اليومية (F2)
+                    </a>
+                </div>
+                <div class="tools">
+
+                </div>
+            </div>
+            <div class="portlet-body">
+
+                <div class='row form-body'>
+                    <div class='col-md-2 form-group'>
+                        <label>مسلسل</label>
+                        <div class='form-group'>
+                            <input type='text' class='form-control'  placeholder='مسلسل' ng-model="User_Money.ID" readonly>
+                        </div>
+                    </div>
+                    <div class='col-md-4 form-group'>
+                        <label id="lblBarcode">الكاشير</label>
+                        <div class='form-group fixeddiv'>
+                            <input id="Company_Id" class='form-control' ng-model="User_Money.Sadad_Type_Name" value="{{User_Money.Sadad_Type_Name}}" readonly>
+
+                        </div>
+                    </div>
+                    <div class='col-md-6 form-group'>
+                        <label id="lblBarcode">اسم الموظف</label>
+                        <div class='form-group fixeddiv'>
+                            <input id="Company_Id" class='form-control' ng-model="User_Money.User_Name" value="{{User_Money.User_Name}}" readonly>
+                          
+                        </div>
+                    </div>
+
+
+
+                    @*<div class='col-md-6 form-group' ng-class="{ 'has-error': FormData.Money_Invoice_Mandob.$invalid }">
+                        <label id="lblMoney_Invoice_Mandob">إجمالى المبيعات</label>
+                         
+                        <div class='form-group fixeddiv'>
+                            <input ng-model="User_Money.Money_Invoice_Mandob" type='text' class='form-control' placeholder='إجمالى المبيعات' readonly>
+                            <label class="label2">ريال</label>
+                        </div>
+                    </div>*@
+                    <div class='col-md-4 form-group' ng-class="{ 'has-error': FormData.Money_Sandok.$invalid }">
+                        <label id="lblPrice_Unit">إجمالى المبلغ داخل الكاشير</label>
+                        <span id="spPrice_Unit" ng-show="FormData.Money_Sandok.$error.pattern" style="color: red; float: left; font-size: 10px; margin-left: 10px;">المبلغ غير صحيح</span>
+                        <div class='form-group fixeddiv'>
+                            <input id="Money_Sandok" ng-model="User_Money.Money_Sandok"  ng-change="Calculate()" type='text' class='form-control' placeholder='جمالى المبلغ داخل الكاشير'>
+                            <label class="label2">ريال</label>
+                        </div>
+                    </div>
+                    <div class='col-md-6 form-group' ng-class="{ 'has-error': FormData.Money_Mada.$invalid }">
+                        <label id="lblPrice_Unit">إجمالى مدي</label>
+                        <span id="spPrice_Unit" ng-show="FormData.Money_Mada.$error.pattern" style="color: red; float: left; font-size: 10px; margin-left: 10px;">المبلغ غير صحيح</span>
+                        <div class='form-group fixeddiv'>
+                            <input id="Money_Mada" ng-model="User_Money.Money_Mada" ng-change="Calculate()" type='text' class='form-control' placeholder='إجمالى مدي'>
+                            <label class="label2">ريال</label>
+                        </div>
+                    </div>
+                    @*<div class='col-md-4 form-group' ng-class="{ 'has-error': FormData.Money_Mada.$invalid }">
+                        <label id="lblPrice_Unit">الباقي</label>
+                       
+                        <div class='form-group fixeddiv'>
+                            <input id="Money_Remain" ng-model="User_Money.Money_Remain" type='text' class='form-control' readonly>
+                            <label class="label2">ريال</label>
+                        </div>
+                    </div>*@
+                   
+
+
+                </div>
+                <div class='row form-actions' style='text-align:center'>
+                    <button type='submit' class='btn green' ng-hide="BtnSaveShow" ng-click="Save()">حفظ</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+@section AngularFiles{
+
+  
+<script src="~/App/Tarmeez/User_MoneyCtrl.js"></script>
+}
+
+

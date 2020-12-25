@@ -1,0 +1,27 @@
+
+
+.syntaxhighlighter {
+    padding: 1em 0;
+}
+
+p a {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.top {
+    position: relative;
+    margin-left: 10px;
+    top: -10px;
+}
+
+.Zebra_DatePicker .dp_daypicker .myclass {
+    background: #E8E8E8 url('close.png') no-repeat center center;
+    text-indent: -9999px;
+}
+
+.bootstrap .Zebra_DatePicker .dp_daypicker td.myclass_disabled {
+    background: #FFF url('close.png') no-repeat center center;
+    text-indent: -9999px;
+}
+

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "ليس لديك صلاحية";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-12 page-404">
+        <div class="number">
+            401
+        </div>
+        <div class="details">
+            <h2 style='font-family: sans-serif; text-align: center; font-weight: bold;'>401 - ليس لديك صلاحية</h2>
+            <p>
+                ليس لديك صلاحية <br /><br />
+                <a class='btn btn-default btn-sm' href='/home'> الصفحة الرئيسية </a>
+                @*<a class='btn btn-default btn-sm' href="@Model.Url">  المحاولة مرة آخري  </a>*@
+
+            </p>
+
+        </div>
+    </div>
+</div>
+@section AngularFiles{
+    <script>
+       $("#Related").remove();
+       document.getElementById("MainBody").className = "col-md-12";
+    </script>
+}

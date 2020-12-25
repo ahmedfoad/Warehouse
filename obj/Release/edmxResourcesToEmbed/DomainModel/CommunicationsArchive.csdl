@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CasherArchiveModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="IMAGES_EXPORT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EXPORTID" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTURE" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="UPLOADID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ACTIVE" Type="Decimal" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityContainer Name="CasherArchiveEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="IMAGES_EXPORT" EntityType="Self.IMAGES_EXPORT" />
+    <EntitySet Name="IMAGES_IMPORT" EntityType="CasherArchiveModel.IMAGES_IMPORT" />
+  </EntityContainer>
+  <EntityType Name="IMAGES_IMPORT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="IMPORTID" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="NAME" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PICTURE" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ACTIVE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="UPLOADID" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

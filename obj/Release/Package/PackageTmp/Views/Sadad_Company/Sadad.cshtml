@@ -1,0 +1,165 @@
+﻿@{
+    ViewBag.Title = "سداد فواتير المشتريات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-magnifier"></i>
+                <a href="#">
+                    البحث و الاستعلام
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    سداد فواتير المشتريات
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div class="row" ng-controller="Sadad_companyiesListCtrl">
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    خيارات البحث
+                </div>
+                <div class="actions">
+                    <a href="" class="btn btn-default" ng-click="emptyInputs()">
+                        <i class="fa fa-pencil"></i> إخلاء خانات البحث
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <form role='form'>
+                    <div class='row form-body'>
+                        <div class='col-md-6 form-group'>
+                            <label class="control-label">اسم الشركة</label>
+                            <input id="Eradat_Type_Id" ng-model="Srch_Sadad_CompaniesList.Company_id" type='hidden'>
+                            <input name="Eradat_Type_Name" id="Eradat_Type_Name" ng-model="Srch_Sadad_CompaniesList.Company_Name" type='text' ng-click="loadCompanies()" placeholder="اسم الشركة" class='form-control' readonly>
+                        </div>
+                    
+                        <div class='col-md-3 form-group'>
+                            <label id="lblBarcode">حالة السداد</label>
+                            <div class='form-group fixeddiv'>
+                                <select  ng-model="Srch_Sadad_CompaniesList.Sadad_Status" class="form-control">
+                                    <option value="0" ng-selected="Srch_Sadad_CompaniesList.Sadad_Status == 0">الكل --</option>
+                                    <option value="1" ng-selected="Srch_Sadad_CompaniesList.Sadad_Status == 1">لم يتم السداد</option>
+                                    <option value="2" ng-selected="Srch_Sadad_CompaniesList.Sadad_Status == 2">تم السداد جميع الفواتير</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="row form-actions" style="text-align:center">
+                        <button type="submit" class="btn green" ng-click="SearchButton()">بحث</button>
+                    </div>
+                </form>
+            </div>
+            <div class="portlet-title">
+                <div class="caption">
+                    نتائج البحث
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 5%;"> # </th>
+                                <th>اسم الشركة</th>
+                                <th>المبلغ</th>
+                                <th> سداد </th>
+                                <th> الباقي </th>
+                                <th> تسديد الفواتير </th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in data track by $index">
+                                <td> {{$index + 1}} </td>
+                                <td> {{item.Company_Name}} </td>
+                                <td> {{item.Price}} </td>
+                                <td> {{item.Total_Sadad}} </td>
+                                <td style="background-color: #f76262;"> {{item.Remain}} </td>
+                                <td style="color:red"><a ng-show="item.Remain" href="javascript:void(0)" ng-click="SadadCompany(item)"><i class="fa fa-battery-half" style="color:#1c699f;"></i> تسديد</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: center;" ng-show="TableLoading">
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                    </div>
+                    <div ng-show="EndSearch" style="text-align: center; color:red;"> عفوا لا توجد بيانات آخري </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Related{
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="page-title">الأدوات</h4>
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption" style="font-size:14px;">
+                        روابط ذات صلة
+                    </div>
+                </div>
+                <div>
+                    <div class="portlet-body">
+                        <a href="/Search/Product"><i class="fa fa-angle-left"></i>الإستعلام عن صنف</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Invoice_Company"><i class="fa fa-angle-left"></i>الإستعلام عن حركة بيع</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Invoice_Company"><i class="fa fa-angle-left"></i>الإستعلام عن عملية شراء</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Company"><i class="fa fa-angle-left"></i>الإستعلام عن شركة</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Masrofat"><i class="fa fa-angle-left"></i>الإستعلام عن المصروفات</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Eradat"><i class="fa fa-angle-left"></i>سداد فواتير المشتريات</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Employee"><i class="fa fa-angle-left"></i>الإستعلام عن الموظفين</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Salary"><i class="fa fa-angle-left"></i>الإستعلام عن الرواتب</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+@section AngularFiles{
+<link href="~/assets/layouts/ZebraDatepicker/style/bootstrap-theme.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/assets/layouts/ZebraDatepicker/style/shCoreDefault.min.css" />
+<link href="~/assets/layouts/ZebraDatepicker/style/css/default/zebra_datepicker.min.css" rel="stylesheet" />
+<link href="~/assets/layouts/ZebraDatepicker/examples.css" rel="stylesheet" />
+
+
+<script src="~/assets/layouts/ZebraDatepicker/style/shCore.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushJScript.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushXml.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushCss.min.js"></script>
+<script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+</script>
+
+<script src="~/assets/layouts/ZebraDatepicker/style/zebra_datepicker.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/examples.js"></script>
+
+ 
+<script src="~/App/Masrofat/Sadad_companyiesListCtrl.js"></script>
+}

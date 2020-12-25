@@ -1,0 +1,244 @@
+﻿@{
+    ViewBag.Title = "سداد الشركة";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    سداد الشركة
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="row" ng-controller="Invoice_MandobSadadCtrl">
+    <div class="col-md-12" ng-show="AlertParameter">
+        <div class="m-heading-1 border-green m-bordered">
+            <span style="color:red"> {{ErrorName}} </span>
+            <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="Payment">
+        <div id="Paymenttxt" class="m-heading-1 border-green m-bordered">
+            {{Paymenttxt}}
+        </div>
+    </div>
+
+    
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat2" style="padding:initial !important">
+                        <div class="display">
+                            <div class="number">
+                                <h3 class="font-green-sharp">
+                                    <span data-counter="counterup" data-value="7800">{{Cls_Invoice_Mandob.Price}}</span>
+                                    <small class="font-green-sharp">ريال</small>
+                                </h3>
+                                <small class="font-green-sharp">اجمالى فاتورة الشراء</small>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-money"></i>
+                            </div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 100%;" class="progress-bar progress-bar-success green-sharp">
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat2" style="padding:initial !important">
+                        <div class="display">
+                            <div class="number">
+                                <h3 class="font-blue-sharp">
+                                    <span data-counter="counterup" data-value="">{{Cls_Invoice_Mandob.Total_Sadad}}</span>
+                                    <small class="font-blue-sharp">ريال</small>
+                                </h3>
+                                <small class="font-blue-sharp">إجمالي السداد</small>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-money"></i>
+                            </div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress">
+                                <span style="width:100%;" class="progress-bar progress-bar-success blue-sharp">
+                                </span>
+                            </div>
+                            <div class="status">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat2" style="padding:initial !important">
+                        <div class="display">
+                            <div class="number">
+                                <h3 class="font-red-haze">
+                                    <span data-counter="counterup" data-value="">{{Cls_Invoice_Mandob.Remain}}</span>
+                                    <small class="font-red-haze">ريال</small>
+                                </h3>
+                                <small class="font-red-haze">الباقي</small>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-money"></i>
+                            </div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress">
+                                <span style="width:100%;" class="progress-bar progress-bar-success red-haze">
+                                </span>
+                            </div>
+                            <div class="status">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                    <div class="dashboard-stat2" style="padding:initial !important">
+                        <div class="display">
+                            <div class="number">
+                                <h3 class="font-purple-soft">
+                                    <span data-counter="counterup" data-value="">{{Cls_Invoice_Mandob.Sadad_Count}}</span>
+                                    <small class="font-purple-soft">إيصال</small>
+                                </h3>
+                                <small class="font-purple-soft">عدد سندات الصرف</small>
+                            </div>
+                            <div class="icon">
+                                <i class="fa fa-paper-plane"></i>
+                            </div>
+                        </div>
+                        <div class="progress-info">
+                            <div class="progress">
+                                <span style="width: 100%;" class="progress-bar progress-bar-success purple-soft">
+                                </span>
+                            </div>
+                            <div class="status">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portlet-body row">
+                <div class='col-md-2 form-group'>
+                    <label> رقم الفاتورة</label>
+                    <input id="BuildingID" type='text' class='form-control' placeholder='رقم الفاتورة' ng-model="Cls_Invoice_Mandob.ID" readonly>
+                </div>
+                <div class='col-md-6 form-group'>
+                    <label>اسم الشركة </label>
+                    <input id="BuildingNO" type='text' class='form-control' placeholder='اسم الشركة' ng-model="Cls_Invoice_Mandob.Mandob_Name" readonly>
+                </div>
+                <div class='col-md-2 form-group'>
+                    <label> تاريخ الشراء</label>
+                    <input   type='text' class='form-control' placeholder='تاريخ الشراء' ng-model="Cls_Invoice_Mandob.Date_Invoice" readonly>
+                </div>
+
+             
+            </div>
+            <div class="portlet-body row">
+                <div class='col-md-2 form-group'>
+                 
+                    <a href="javascript:;" ng-click="Create()" class="b-close btn btn-sm red">
+                        <i class="fa fa-plus"></i>  إضافة سداد جديد
+                    </a>
+                </div>
+              
+
+            </div>
+            <div class="portlet-body">
+                <form role='form' name="FormData">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center;"> # </th>
+                                    <th style="text-align: center;"> رقم سند الصرف </th>
+
+                                    <th style="text-align: center;"> تاريخه </th>
+                                    <th style="text-align: center;">
+                                        الوقت
+                                    </th>
+                                    <th style="text-align: center;"> طريقة الدفع</th>
+                                    <th style="text-align: center;"> إجمالي السداد </th>
+                                    <th style="text-align: center;">الباقي</th>
+                                    <th style="vertical-align: inherit;"> تعديل </th>
+                                    <th style="vertical-align: inherit;"> حذف </th>
+                                    <th style="vertical-align: inherit;"> سند القبض </th>
+                                    <th style="vertical-align: inherit;"> بيان ايرادات </th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="item in  Cls_Invoice_Mandob.ClsInvoice_Mandob_Sadad track by $index">
+                                    <td>
+                                        {{$index + 1}}
+                                    </td>
+                                    <td>
+                                        {{item.ID}}
+                                    </td>
+
+                                    <td>
+                                        {{item.Date_Added | date:'dd/MM/yyyy'}}
+                                    </td>
+                                    <td>{{item.Date_Added | date:'hh:mm a'}} </td>
+                                   <td>
+                                       <label ng-if="item.Sadad_Type_Id == 1">
+                                           كاش
+                                       </label>
+                                       <label ng-if="item.Sadad_Type_Id == 2">
+                                           مدي
+                                       </label>
+                                       <label ng-if="item.Sadad_Type_Id == 3">
+                                           ارجاع بضاعة
+                                       </label>
+                                       
+                                    </td>
+                                   <td>{{item.Money}}</td>
+                                    <td>{{item.Remain}}</td>
+                                    <td style="color:red"><a href="javascript:void(0)" ng-click="Edit(item.ID)"><i class="fa fa-edit" style="color:yellow"></i> تعديل</a></td>
+                                    <td style="color:red"><a href="javascript:void(0)" ng-click="Delete(item.ID)"><i class="fa fa-trash-o" style="color:red"></i> حذف</a></td>
+                                    <td style="color:red"><a href="javascript:void(0)" ng-click="Print(item.ID)"><i class="fa fa-print" style="color:blue"></i> طباعة</a></td>
+                                    <td style="color:red"><a href="javascript:void(0)" ng-click="PrintEradat(item.ID)"><i class="fa fa-print" style="color:blue"></i> طباعة</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <div style="text-align: center;" ng-show="TableLoading">
+                            <img src="~/assets/layouts/img/Preloader_2.gif" />
+                            <img src="~/assets/layouts/img/Preloader_2.gif" />
+                        </div>
+                        <div ng-show="EndSearch" style="text-align: center; color:red;"> عفوا لم يتم السداد مسبقاً لهذه الفاتورة </div>
+                </form>
+            </div>
+           
+        </div>
+
+    </div>
+
+</div>
+
+
+@section AngularFiles{
+
+  
+
+<script src="~/App/Main/Invoice_MandobSadadCtrl.js"></script>
+}
+
+

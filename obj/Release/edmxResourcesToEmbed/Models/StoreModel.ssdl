@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_StoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="User_ID" Type="int" />
+    <Property Name="ComputerName" Type="nvarchar(max)" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" />
+    <Property Name="InDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Job_Id" Type="int" Nullable="false" />
+    <Property Name="Salary" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+    <Property Name="ComputerName" Type="nvarchar(max)" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="Userid_In" Type="int" Nullable="false" />
+    <Property Name="userid_Edit" Type="int" />
+  </EntityType>
+  <EntityType Name="Employee_Salary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Salary_Id" Type="int" Nullable="false" />
+    <Property Name="Employee_Id" Type="int" Nullable="false" />
+    <Property Name="Salary" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Eradat">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Number" Type="int" Nullable="false" />
+    <Property Name="Date_Invoice" Type="datetime" Nullable="false" />
+    <Property Name="Eradat_Type_Id" Type="int" Nullable="false" />
+    <Property Name="Money" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Bian" Type="nvarchar(max)" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ComputerName" Type="nvarchar(max)" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="Userid_In" Type="int" Nullable="false" />
+    <Property Name="userid_Edit" Type="int" />
+    <Property Name="Invoice_Mandob_Sadad_ID" Type="int" />
+    <Property Name="IS_Chekced" Type="bit" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Eradat_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice_Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Number" Type="int" Nullable="false" />
+    <Property Name="Company_id" Type="int" Nullable="false" />
+    <Property Name="Date_Invoice" Type="datetime" Nullable="false" />
+    <Property Name="Date_Invoice_Hijri" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Nakl_Cost" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Taxes" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total_Sadad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="IS_Chekced" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice_Company_Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Company_Id" Type="int" Nullable="false" />
+    <Property Name="Product_Id" Type="int" Nullable="false" />
+    <Property Name="Product_Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Taxes" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice_Company_Sadad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Invoice_Id" Type="int" Nullable="false" />
+    <Property Name="Sadad_Type_Id" Type="int" Nullable="false" />
+    <Property Name="Date_Added" Type="datetime" Nullable="false" />
+    <Property Name="Money" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice_Company_Sadad_Rproduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Company_Sadad_id" Type="int" Nullable="false" />
+    <Property Name="Return_Invoice_Product_id" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice_Mandob">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Number" Type="int" Nullable="false" />
+    <Property Name="Payment_Type" Type="int" Nullable="false" />
+    <Property Name="Mandob_id" Type="int" />
+    <Property Name="Date_Invoice" Type="datetime" Nullable="false" />
+    <Property Name="Date_Invoice_Hijri" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Price_Mowrid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Taxes" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Total_Sadad" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+    <Property Name="Is_Deleted" Type="bit" Nullable="false" />
+    <Property Name="IS_Payed_Omola" Type="bit" Nullable="false" />
+    <Property Name="Omola_Type" Type="bit" />
+    <Property Name="Omola_quota" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Omola_Money" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Invoice_Mandob_Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Mandob_Id" Type="int" Nullable="false" />
+    <Property Name="Product_Id" Type="int" Nullable="false" />
+    <Property Name="Product_Name" Type="nvarchar(max)" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Price_Mowrid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Taxes" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Offer_Product_id" Type="int" />
+    <Property Name="Offer_BonusAmount" Type="int" />
+    <Property Name="TotalPrice" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice_Mandob_Sadad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Invoice_Id" Type="int" Nullable="false" />
+    <Property Name="Sadad_Type_Id" Type="int" Nullable="false" />
+    <Property Name="Date_Added" Type="datetime" Nullable="false" />
+    <Property Name="Money" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+    <Property Name="IS_Chekced" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Invoice_Mandob_Sadad_Rproduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Mandob_Sadad_id" Type="int" Nullable="false" />
+    <Property Name="Return_Invoice_Product_id" Type="int" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mandob">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Sejil" Type="int" />
+    <Property Name="JawalNO" Type="nvarchar" MaxLength="50" />
+    <Property Name="JawalNO2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar(max)" />
+    <Property Name="Barcode" Type="nvarchar(max)" />
+    <Property Name="User_ID" Type="int" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Masrofat">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Number" Type="int" Nullable="false" />
+    <Property Name="Date_Invoice" Type="datetime" Nullable="false" />
+    <Property Name="Masrofat_Type_Id" Type="int" Nullable="false" />
+    <Property Name="Money" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Bian" Type="nvarchar(max)" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="ComputerName" Type="nvarchar(max)" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="Userid_In" Type="int" Nullable="false" />
+    <Property Name="userid_Edit" Type="int" />
+    <Property Name="Invoice_Company_Sadad_ID" Type="int" />
+    <Property Name="Invoice_Mandob_ID" Type="int" />
+    <Property Name="Salary_ID" Type="int" />
+    <Property Name="Is_Deleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="Masrofat_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Omola">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Omola_Type" Type="bit" Nullable="false" />
+    <Property Name="Omola_quota" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Barcode" Type="nvarchar(max)" />
+    <Property Name="Company_Id" Type="int" Nullable="false" />
+    <Property Name="Price_Mowrid" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Price_Unit" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Taxes" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OldAmount" Type="int" Nullable="false" />
+    <Property Name="Offer_TargetAmount" Type="int" />
+    <Property Name="Offer_BonusAmount" Type="int" />
+    <Property Name="Offer_Product_id" Type="int" />
+    <Property Name="User_ID" Type="int" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar(max)" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Invoice_Number" Type="int" Nullable="false" />
+    <Property Name="DateFrom" Type="datetime" Nullable="false" />
+    <Property Name="DateTO" Type="datetime" Nullable="false" />
+    <Property Name="Notes" Type="nvarchar(max)" />
+    <Property Name="TotalSalaries" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar(max)" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" />
+    <Property Name="InDate" Type="datetime" Nullable="false" />
+    <Property Name="EditDate" Type="datetime" />
+    <Property Name="Userid_In" Type="int" Nullable="false" />
+    <Property Name="userid_Edit" Type="int" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="User_ID" Type="int" />
+    <Property Name="ComputerName" Type="nvarchar(max)" />
+    <Property Name="ComputerUser" Type="nvarchar(max)" />
+    <Property Name="InDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EMAIL" Type="nvarchar(max)" />
+    <Property Name="ROLE" Type="int" Nullable="false" />
+    <Property Name="INDATE" Type="date" Nullable="false" />
+    <Property Name="STOPEMP" Type="bit" Nullable="false" />
+    <Property Name="Account_Type" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User_Money">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="User_Id" Type="int" Nullable="false" />
+    <Property Name="Money_Invoice_Mandob" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Money_Sarf" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Money_Sandok" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Money_Mada" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Money_Remain" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Save_Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Userid" Type="int" Nullable="false" />
+    <Property Name="Viewid" Type="int" Nullable="false" />
+    <Property Name="ActionDate" Type="datetime" Nullable="false" />
+    <Property Name="Action" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Operation" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserView">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ViewID" Type="int" Nullable="false" />
+    <Property Name="Role_Enter" Type="bit" Nullable="false" />
+    <Property Name="Role_Save" Type="bit" Nullable="false" />
+    <Property Name="Role_Edit" Type="bit" Nullable="false" />
+    <Property Name="Role_Delete" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ViewIndex" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Company_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Company" Type="Self.Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Job_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Salary_Employee">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
+    <End Role="Employee_Salary" Type="Self.Employee_Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee_Salary">
+        <PropertyRef Name="Employee_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Salary_Salary">
+    <End Role="Salary" Type="Self.Salary" Multiplicity="1" />
+    <End Role="Employee_Salary" Type="Self.Employee_Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee_Salary">
+        <PropertyRef Name="Salary_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Userid_In" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_User1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="userid_Edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Erad_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Eradat" Type="Self.Eradat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Eradat">
+        <PropertyRef Name="userid_Edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Erad_User1">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Eradat" Type="Self.Eradat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Eradat">
+        <PropertyRef Name="Userid_In" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eradat_Eradat_Type">
+    <End Role="Eradat_Type" Type="Self.Eradat_Type" Multiplicity="1" />
+    <End Role="Eradat" Type="Self.Eradat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eradat_Type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Eradat">
+        <PropertyRef Name="Eradat_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eradat_Invoice_Mandob_Sadad">
+    <End Role="Invoice_Mandob_Sadad" Type="Self.Invoice_Mandob_Sadad" Multiplicity="0..1" />
+    <End Role="Eradat" Type="Self.Eradat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob_Sadad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Eradat">
+        <PropertyRef Name="Invoice_Mandob_Sadad_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Invoice_Company" Type="Self.Invoice_Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company">
+        <PropertyRef Name="Company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Product_Invoice_Company">
+    <End Role="Invoice_Company" Type="Self.Invoice_Company" Multiplicity="1" />
+    <End Role="Invoice_Company_Product" Type="Self.Invoice_Company_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Product">
+        <PropertyRef Name="Invoice_Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Product_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Invoice_Company_Product" Type="Self.Invoice_Company_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Product">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Sadad_Invoice_Company">
+    <End Role="Invoice_Company" Type="Self.Invoice_Company" Multiplicity="1" />
+    <End Role="Invoice_Company_Sadad" Type="Self.Invoice_Company_Sadad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Sadad">
+        <PropertyRef Name="Invoice_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product">
+    <End Role="Invoice_Company_Product" Type="Self.Invoice_Company_Product" Multiplicity="1" />
+    <End Role="Invoice_Company_Sadad_Rproduct" Type="Self.Invoice_Company_Sadad_Rproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company_Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Sadad_Rproduct">
+        <PropertyRef Name="Return_Invoice_Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad">
+    <End Role="Invoice_Company_Sadad" Type="Self.Invoice_Company_Sadad" Multiplicity="1" />
+    <End Role="Invoice_Company_Sadad_Rproduct" Type="Self.Invoice_Company_Sadad_Rproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company_Sadad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Sadad_Rproduct">
+        <PropertyRef Name="Invoice_Company_Sadad_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Invoice_Company" Type="Self.Invoice_Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Moshtary">
+    <End Role="Mandob" Type="Self.Mandob" Multiplicity="0..1" />
+    <End Role="Invoice_Mandob" Type="Self.Invoice_Mandob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mandob">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob">
+        <PropertyRef Name="Mandob_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Product_Invoice_Moshtary">
+    <End Role="Invoice_Mandob" Type="Self.Invoice_Mandob" Multiplicity="1" />
+    <End Role="Invoice_Mandob_Product" Type="Self.Invoice_Mandob_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Product">
+        <PropertyRef Name="Invoice_Mandob_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Product_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Invoice_Mandob_Product" Type="Self.Invoice_Mandob_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Product">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Sadad_Invoice_Moshtary">
+    <End Role="Invoice_Mandob" Type="Self.Invoice_Mandob" Multiplicity="1" />
+    <End Role="Invoice_Mandob_Sadad" Type="Self.Invoice_Mandob_Sadad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Sadad">
+        <PropertyRef Name="Invoice_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad">
+    <End Role="Invoice_Mandob_Sadad" Type="Self.Invoice_Mandob_Sadad" Multiplicity="1" />
+    <End Role="Invoice_Mandob_Sadad_Rproduct" Type="Self.Invoice_Mandob_Sadad_Rproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob_Sadad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Sadad_Rproduct">
+        <PropertyRef Name="Invoice_Mandob_Sadad_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Sadad_Rproduct_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Invoice_Mandob_Sadad_Rproduct" Type="Self.Invoice_Mandob_Sadad_Rproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Sadad_Rproduct">
+        <PropertyRef Name="Return_Invoice_Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Sadad_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Invoice_Mandob_Sadad" Type="Self.Invoice_Mandob_Sadad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Sadad">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Invoice_Mandob" Type="Self.Invoice_Mandob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_Invoice_Company_Sadad">
+    <End Role="Invoice_Company_Sadad" Type="Self.Invoice_Company_Sadad" Multiplicity="0..1" />
+    <End Role="Masrofat" Type="Self.Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company_Sadad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Invoice_Company_Sadad_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_Invoice_Mandob">
+    <End Role="Invoice_Mandob" Type="Self.Invoice_Mandob" Multiplicity="0..1" />
+    <End Role="Masrofat" Type="Self.Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Invoice_Mandob_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_Masrofat_Type">
+    <End Role="Masrofat_Type" Type="Self.Masrofat_Type" Multiplicity="1" />
+    <End Role="Masrofat" Type="Self.Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Masrofat_Type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Masrofat_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_Salary">
+    <End Role="Salary" Type="Self.Salary" Multiplicity="0..1" />
+    <End Role="Masrofat" Type="Self.Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Salary_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Masrofat" Type="Self.Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Userid_In" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_User1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Masrofat" Type="Self.Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="userid_Edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moshtary_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Mandob" Type="Self.Mandob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mandob">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Company">
+    <End Role="Company" Type="Self.Company" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
+    <End Role="Product1" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product1">
+        <PropertyRef Name="Offer_Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Salary_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="Userid_In" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Salary_User1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Salary" Type="Self.Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="userid_Edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Store_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Store" Type="Self.Store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Store">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Money_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="User_Money" Type="Self.User_Money" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User_Money">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAction_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserAction" Type="Self.UserAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserAction">
+        <PropertyRef Name="Userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAction_View">
+    <End Role="View" Type="Self.View" Multiplicity="1" />
+    <End Role="UserAction" Type="Self.UserAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="View">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserAction">
+        <PropertyRef Name="Viewid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserView_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserView" Type="Self.UserView" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserView">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserView_View">
+    <End Role="View" Type="Self.View" Multiplicity="1" />
+    <End Role="UserView" Type="Self.UserView" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="View">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserView">
+        <PropertyRef Name="ViewID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_StoreModelStoreContainer">
+    <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Salary" EntityType="Self.Employee_Salary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eradat" EntityType="Self.Eradat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eradat_Type" EntityType="Self.Eradat_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice_Company" EntityType="Self.Invoice_Company" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice_Company_Product" EntityType="Self.Invoice_Company_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice_Company_Sadad" EntityType="Self.Invoice_Company_Sadad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice_Company_Sadad_Rproduct" EntityType="Self.Invoice_Company_Sadad_Rproduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice_Mandob" EntityType="Self.Invoice_Mandob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice_Mandob_Product" EntityType="Self.Invoice_Mandob_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice_Mandob_Sadad" EntityType="Self.Invoice_Mandob_Sadad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice_Mandob_Sadad_Rproduct" EntityType="Self.Invoice_Mandob_Sadad_Rproduct" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mandob" EntityType="Self.Mandob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Masrofat" EntityType="Self.Masrofat" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Masrofat_Type" EntityType="Self.Masrofat_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Omola" EntityType="Self.Omola" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Salary" EntityType="Self.Salary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Store" EntityType="Self.Store" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User_Money" EntityType="Self.User_Money" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserAction" EntityType="Self.UserAction" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserView" EntityType="Self.UserView" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View" EntityType="Self.View" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Company_User" Association="Self.FK_Company_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Company" EntitySet="Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Job" Association="Self.FK_Employee_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Salary_Employee" Association="Self.FK_Employee_Salary_Employee">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="Employee_Salary" EntitySet="Employee_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Salary_Salary" Association="Self.FK_Employee_Salary_Salary">
+      <End Role="Salary" EntitySet="Salary" />
+      <End Role="Employee_Salary" EntitySet="Employee_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_User" Association="Self.FK_Employee_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_User1" Association="Self.FK_Employee_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Erad_User" Association="Self.FK_Erad_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Eradat" EntitySet="Eradat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Erad_User1" Association="Self.FK_Erad_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Eradat" EntitySet="Eradat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eradat_Eradat_Type" Association="Self.FK_Eradat_Eradat_Type">
+      <End Role="Eradat_Type" EntitySet="Eradat_Type" />
+      <End Role="Eradat" EntitySet="Eradat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eradat_Invoice_Mandob_Sadad" Association="Self.FK_Eradat_Invoice_Mandob_Sadad">
+      <End Role="Invoice_Mandob_Sadad" EntitySet="Invoice_Mandob_Sadad" />
+      <End Role="Eradat" EntitySet="Eradat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Company" Association="Self.FK_Invoice_Company_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Invoice_Company" EntitySet="Invoice_Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Product_Invoice_Company" Association="Self.FK_Invoice_Company_Product_Invoice_Company">
+      <End Role="Invoice_Company" EntitySet="Invoice_Company" />
+      <End Role="Invoice_Company_Product" EntitySet="Invoice_Company_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Product_Product" Association="Self.FK_Invoice_Company_Product_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Invoice_Company_Product" EntitySet="Invoice_Company_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Sadad_Invoice_Company" Association="Self.FK_Invoice_Company_Sadad_Invoice_Company">
+      <End Role="Invoice_Company" EntitySet="Invoice_Company" />
+      <End Role="Invoice_Company_Sadad" EntitySet="Invoice_Company_Sadad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product" Association="Self.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product">
+      <End Role="Invoice_Company_Product" EntitySet="Invoice_Company_Product" />
+      <End Role="Invoice_Company_Sadad_Rproduct" EntitySet="Invoice_Company_Sadad_Rproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad" Association="Self.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad">
+      <End Role="Invoice_Company_Sadad" EntitySet="Invoice_Company_Sadad" />
+      <End Role="Invoice_Company_Sadad_Rproduct" EntitySet="Invoice_Company_Sadad_Rproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_User" Association="Self.FK_Invoice_Company_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Invoice_Company" EntitySet="Invoice_Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Moshtary" Association="Self.FK_Invoice_Moshtary_Moshtary">
+      <End Role="Mandob" EntitySet="Mandob" />
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Product_Invoice_Moshtary" Association="Self.FK_Invoice_Moshtary_Product_Invoice_Moshtary">
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+      <End Role="Invoice_Mandob_Product" EntitySet="Invoice_Mandob_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Product_Product" Association="Self.FK_Invoice_Moshtary_Product_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Invoice_Mandob_Product" EntitySet="Invoice_Mandob_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Sadad_Invoice_Moshtary" Association="Self.FK_Invoice_Moshtary_Sadad_Invoice_Moshtary">
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+      <End Role="Invoice_Mandob_Sadad" EntitySet="Invoice_Mandob_Sadad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad" Association="Self.FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad">
+      <End Role="Invoice_Mandob_Sadad" EntitySet="Invoice_Mandob_Sadad" />
+      <End Role="Invoice_Mandob_Sadad_Rproduct" EntitySet="Invoice_Mandob_Sadad_Rproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Sadad_Rproduct_Product" Association="Self.FK_Invoice_Moshtary_Sadad_Rproduct_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Invoice_Mandob_Sadad_Rproduct" EntitySet="Invoice_Mandob_Sadad_Rproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Sadad_User" Association="Self.FK_Invoice_Moshtary_Sadad_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Invoice_Mandob_Sadad" EntitySet="Invoice_Mandob_Sadad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_User" Association="Self.FK_Invoice_Moshtary_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_Invoice_Company_Sadad" Association="Self.FK_Masrofat_Invoice_Company_Sadad">
+      <End Role="Invoice_Company_Sadad" EntitySet="Invoice_Company_Sadad" />
+      <End Role="Masrofat" EntitySet="Masrofat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_Invoice_Mandob" Association="Self.FK_Masrofat_Invoice_Mandob">
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+      <End Role="Masrofat" EntitySet="Masrofat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_Masrofat_Type" Association="Self.FK_Masrofat_Masrofat_Type">
+      <End Role="Masrofat_Type" EntitySet="Masrofat_Type" />
+      <End Role="Masrofat" EntitySet="Masrofat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_Salary" Association="Self.FK_Masrofat_Salary">
+      <End Role="Salary" EntitySet="Salary" />
+      <End Role="Masrofat" EntitySet="Masrofat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_User" Association="Self.FK_Masrofat_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Masrofat" EntitySet="Masrofat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_User1" Association="Self.FK_Masrofat_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Masrofat" EntitySet="Masrofat" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moshtary_User" Association="Self.FK_Moshtary_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Mandob" EntitySet="Mandob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Company" Association="Self.FK_Product_Company">
+      <End Role="Company" EntitySet="Company" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Product" Association="Self.FK_Product_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Product1" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_User" Association="Self.FK_Product_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Salary_User" Association="Self.FK_Salary_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Salary" EntitySet="Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Salary_User1" Association="Self.FK_Salary_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="Salary" EntitySet="Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Store_User" Association="Self.FK_Store_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Store" EntitySet="Store" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Money_User" Association="Self.FK_User_Money_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="User_Money" EntitySet="User_Money" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAction_User" Association="Self.FK_UserAction_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserAction" EntitySet="UserAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAction_View" Association="Self.FK_UserAction_View">
+      <End Role="View" EntitySet="View" />
+      <End Role="UserAction" EntitySet="UserAction" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserView_User" Association="Self.FK_UserView_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserView" EntitySet="UserView" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserView_View" Association="Self.FK_UserView_View">
+      <End Role="View" EntitySet="View" />
+      <End Role="UserView" EntitySet="UserView" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

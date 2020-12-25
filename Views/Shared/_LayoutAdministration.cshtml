@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<!--
+Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 3.3.6
+Version: 4.5.6
+Author: KeenThemes
+Edit BY: Omar Rezk
+Website: http://www.keenthemes.com/
+Contact: support@keenthemes.com , omarrezk98@outlook.com
+License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+-->
+
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" dir="rtl">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title |مملكة الغذاء</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+ 
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="~/assets/layouts/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/simple-line-icons.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/bootstrap-switch-rtl.min.css" rel="stylesheet" />
+    <!-- END GLOBAL MANDATORY STYLES -->
+    <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="~/assets/layouts/css/components-rounded-rtl.css" rel="stylesheet" />
+    <link href="~/assets/layouts/css/plugins-rtl.css" rel="stylesheet" />
+    <!-- END THEME GLOBAL STYLES -->
+    <!-- BEGIN THEME LAYOUT STYLES -->
+    <link href="~/assets/layouts/css/login-rtl.css" rel="stylesheet" />
+    <!-- END THEME LAYOUT STYLES -->
+    <link rel="shortcut icon" href="~/assets/layouts/img/FavIco.png" />
+</head>
+<!-- END HEAD -->
+<body class="login" ng-app="App">
+    <div class="content">
+        @RenderBody()
+    </div>
+    <script src="~/assets/layouts/scripts/jquery.min.js"></script>
+    <script src="~/assets/layouts/scripts/jquery-migrate.min.js"></script>
+    <script src="~/assets/layouts/scripts/bootstrap.min.js"></script>
+    <script src="~/assets/layouts/scripts/bootstrap-hover-dropdown.min.js"></script>
+    <script src="~/assets/layouts/scripts/jquery.slimscroll.min.js"></script>
+    <script src="~/assets/layouts/scripts/jquery.blockui.min.js"></script>
+    <script src="~/assets/layouts/scripts/js.cookie.min.js"></script>
+    <script src="~/assets/layouts/scripts/bootstrap-switch.min.js"></script>
+
+    <script src="~/assets/Scripts/Global/angular.min.js"></script>
+    <script src="~/assets/Scripts/Global/angular-fancy-modal.js"></script>
+    <link href="~/assets/layouts/css/angular-fancy-modal.css" rel="stylesheet" />
+
+    <script src="~/App/angular-barcode-scanner.js"></script>
+
+
+    <script src="~/App/App.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    @RenderSection("AngularFiles", false)
+</body>
+</html>

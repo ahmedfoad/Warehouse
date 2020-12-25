@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CasherArchiveModel.Store" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IMAGES_EXPORT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="EXPORTID" Type="number" Precision="38" Scale="0" />
+    <Property Name="NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="PICTURE" Type="blob" />
+    <Property Name="UPLOADID" Type="varchar2" MaxLength="100" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+  </EntityType>
+  <EntityType Name="IMAGES_IMPORT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="number" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="IMPORTID" Type="number" Precision="38" Scale="0" />
+    <Property Name="NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="PICTURE" Type="blob" />
+    <Property Name="ACTIVE" Type="number" Precision="38" Scale="0" />
+    <Property Name="UPLOADID" Type="varchar2" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="CasherArchiveModelStoreContainer">
+    <EntitySet Name="IMAGES_EXPORT" EntityType="Self.IMAGES_EXPORT" Schema="Casher_IMAGES" store:Type="Tables" />
+    <EntitySet Name="IMAGES_IMPORT" EntityType="Self.IMAGES_IMPORT" Schema="Casher_IMAGES" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

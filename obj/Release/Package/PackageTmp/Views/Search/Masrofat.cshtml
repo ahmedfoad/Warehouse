@@ -1,0 +1,184 @@
+﻿@{
+    ViewBag.Title = "الإستعلام عن المصروفات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-magnifier"></i>
+                <a href="#">
+                    البحث و الاستعلام
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    الإستعلام عن المصروفات
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div class="row" ng-controller="MasrofatSearchCtrl">
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    خيارات البحث
+                </div>
+                <div class="actions">
+                    <a href="" class="btn btn-default" ng-click="emptyInputs()">
+                        <i class="fa fa-pencil"></i> إخلاء خانات البحث
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <form role='form'>
+                    <div class='row form-body'>
+                        
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">رقم الفاتورة من </label>
+                            <input ng-model="Srch_Masrofat.ID_From" numbersOnly type="number" name="DatBegin" id="DatBegin" value="" class="form-control" placeholder="الفترة من" />
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">إلي</label>
+                            <input ng-model="Srch_Masrofat.ID_To" numbersOnly type="number" name="DatEnd" id="DatEnd" value="" class="form-control" placeholder="إلي" />
+                        </div>
+                       
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">نوع المصروفات</label>
+                            <input id="Masrofat_Type_Id" ng-model="Srch_Masrofat.Masrofat_Type_Id" type='hidden' value="{{Masrofat.Masrofat_Type_Id}}">
+                            <input name="Masrofat_Type_Name" id="Masrofat_Type_Name" ng-model="Srch_Masrofat.Masrofat_Type_Name" type='text' value="{{Masrofat.Masrofat_Type_Name}}" ng-click="loadMasrofat_Type()" placeholder="نوع المصروفات" class='form-control' readonly>
+                        </div>
+                        <div class='col-md-6 form-group'>
+                            <label class="control-label">البيان</label>
+                            <input name="Bian" focus-next="Notes" id="Bian" ng-model="Srch_Masrofat.Bian" type='text' class='form-control' placeholder="البيان">
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">التاريخ من </label>
+                            <input id="Date_Invoice_From"   ng-model="Srch_Masrofat.Date_Invoice_From" type="text" datepicker class="form-control" data-zdp_readonly_element="true">
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">إلي</label>
+                            <input id="Date_Invoice_TO" ng-model="Srch_Masrofat.Date_Invoice_TO" type="text" datepicker class="form-control" data-zdp_readonly_element="true">
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">المبلغ من </label>
+                            <input ng-model="Srch_Masrofat.Money_From" numbersOnly type="number" name="DatBegin" id="DatBegin" value=""  class="form-control" placeholder="الفترة من" />
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">إلي</label>
+                            <input ng-model="Srch_Masrofat.Money_To"  numbersOnly type="number" name="DatEnd" id="DatEnd" value="" class="form-control" placeholder="إلي" />
+                        </div>
+                        
+                    </div>
+                    <div class="row form-actions" style="text-align:center">
+                        <button type="submit" class="btn green" ng-click="SearchButton()">بحث</button>
+                    </div>
+                </form>
+            </div>
+            <div class="portlet-title">
+                <div class="caption">
+                    نتائج البحث
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 5%;"> رقم الفاتورة </th>
+                                <th style="width: 10%">التاريخ</th>
+                                <th style="width: 15%;">المبلغ</th>
+                                <th style="width: 20%;">نوع المصروفات</th>
+                                <th style="width: 40%;">البيان</th>
+                                <th style="width: 10%;"> تعديل </th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in data track by $index">
+                                <td> {{item.Invoice_Number}} </td>
+                                <td>{{item._Date_Invoice | date:'dd/MM/yyyy'}} </td>
+                                <td> {{item.Money}} </td>
+                                <td> {{item.Masrofat_Type_Name}} </td>
+                                <td> {{item.Bian}} </td>
+                                <td style="color:red"><a ng-show="item.IsEdit" href="javascript:void(0)" ng-click="CallEditPage(item)"><i class="fa fa-edit" style="color:yellow"></i> تعديل</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: center;" ng-show="TableLoading">
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                    </div>
+                    <div ng-show="EndSearch" style="text-align: center; color:red;"> عفوا لا توجد بيانات آخري </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Related{
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="page-title">الأدوات</h4>
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption" style="font-size:14px;">
+                        روابط ذات صلة
+                    </div>
+                </div>
+                <div>
+                    <div class="portlet-body">
+                        <a href="/Search/Product"><i class="fa fa-angle-left"></i>الإستعلام عن صنف</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Invoice_Mandob"><i class="fa fa-angle-left"></i>الإستعلام عن حركة بيع</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Invoice_Company"><i class="fa fa-angle-left"></i>الإستعلام عن عملية شراء</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Company"><i class="fa fa-angle-left"></i>الإستعلام عن شركة</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Masrofat"><i class="fa fa-angle-left"></i>الإستعلام عن المصروفات</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Eradat"><i class="fa fa-angle-left"></i>الإستعلام عن الايرادات</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Employee"><i class="fa fa-angle-left"></i>الإستعلام عن الموظفين</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Salary"><i class="fa fa-angle-left"></i>الإستعلام عن الرواتب</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+@section AngularFiles{
+<link href="~/assets/layouts/ZebraDatepicker/style/bootstrap-theme.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/assets/layouts/ZebraDatepicker/style/shCoreDefault.min.css" />
+<link href="~/assets/layouts/ZebraDatepicker/style/css/default/zebra_datepicker.min.css" rel="stylesheet" />
+<link href="~/assets/layouts/ZebraDatepicker/examples.css" rel="stylesheet" />
+
+
+<script src="~/assets/layouts/ZebraDatepicker/style/shCore.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushJScript.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushXml.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushCss.min.js"></script>
+<script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+</script>
+
+<script src="~/assets/layouts/ZebraDatepicker/style/zebra_datepicker.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/examples.js"></script>
+
+    
+<script src="~/App/Search/MasrofatSearchCtrl.js"></script>
+}

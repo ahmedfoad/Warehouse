@@ -1,0 +1,192 @@
+﻿@{
+    ViewBag.Title = "الراتب";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    الراتب
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+<div class="row" ng-controller="SalaryCtrl">
+    <div class="col-md-12" ng-show="AlertParameter">
+        <div class="m-heading-1 border-green m-bordered">
+            <span style="color:red"> {{ErrorName}} </span>
+            <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="Payment">
+        <div id="Paymenttxt" class="m-heading-1 border-green m-bordered">
+            {{Paymenttxt}}
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    الراتب جديد
+                </div>
+            </div>
+            <div class="portlet-body">
+
+                <div class='row form-body'>
+                    <div class='col-md-2 form-group'>
+                        <label>مسلسل</label>
+                        <div class='form-group'>
+                            <input type='number' class='form-control' readonly placeholder='مسلسل' ng-model="Cls_Salary.ID">
+                        </div>
+                    </div>
+                    <div class='col-md-2 form-group'>
+                        <label id="lblJawalNO">الفترة من</label>
+                        <div class='form-group'>
+                            <input type='text' id="DateFrom" ng-model="Cls_Salary.DateFrom" value="{{Cls_Salary.DateFrom}}" ng-click="CheckDateValidation()"  datepicker data-zdp_readonly_element="true" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class='col-md-2 form-group'>
+                        <label id="lblJawalNO">إلي</label>
+                        <div class='form-group'>
+                            <input type='text' ng-model="Cls_Salary.DateTO" value="{{Cls_Salary.DateTO}}"  id="DateTO" datepicker data-zdp_readonly_element="true" class="form-control">
+                        </div>
+                    </div>
+                    <div class='col-md-4 form-group'>
+                        <label id="lblBarcode">البيان</label>
+                        <div class='form-group fixeddiv'>
+                            <input name="Notes" id="Notes" ng-model="Cls_Salary.Notes" type='text' value="{{Cls_Salary.Notes}}" placeholder="البيان" class='form-control'>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        @*<th style="width:15%"><input type="checkbox" id="EnterMarkAll" ng-click="EnterMarkAll()"> تحديد الكل</th>*@
+                                        <th style="width:30%; vertical-align: inherit;"> اسم الموظف </th>
+                                        <th style="width:30%; vertical-align: inherit;"> المهنة </th>
+                                        <th style="width:15%"> رقم الجوال </th>
+                                        <th style="width:15%"> الراتب </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in Cls_Salary.Cls_Employee_Salary track by $index" id="{{x._View.ID}}">
+                                        @*<th><input type="checkbox" name="emp_checked"  ng-checked="x.emp_checked"  /></th>*@
+                                        <th>{{x.Name}} </th>
+                                        <th>{{x.Job_Name}} </th>
+                                        <th>{{x.Mobile}} </th>
+                                        <th>
+                                            <input name="Salary" id="Salary" ng-model="x.Salary" type='text' value="{{x.Salary}}" placeholder="الراتب" class='form-control'>
+                                        </th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+                <div class='row form-actions' style='text-align:center'>
+                    <button type='submit' class='btn green' ng-hide="SaveBtn" ng-click="Save()">حفظ</button>
+                    <button type='submit' class='btn green' ng-hide="EditBtn" ng-click="Save()">تعديل</button>
+                    <button type='submit' class='btn red' ng-hide="DeleteBtn" ng-click="DeleteCls_Salary()">حذف</button>
+                    <a href="/Home" type='submit' class='btn purple'>إلغاء</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="dataEntire">
+        <div class="note note-info dataEntire">
+            <h4 class="profile-desc-title">بيانات الإدخال</h4>
+            <div class="col-md-5 profile-desc-link">
+                <i class="fa fa-user"></i>
+                <span style="color: #5b9bd1">المستخدم</span>
+                <br />
+                <span style="margin-right: 30px;">{{Cls_Salary.User_Name}}</span>
+            </div>
+            <div class="col-md-2 profile-desc-link">
+                <i class="fa fa-desktop"></i>
+                <span style="color: #5b9bd1">الكمبيوتر</span>
+                <br />
+                <span style="margin-right: 30px;">{{Cls_Salary.ComputerName}}</span>
+            </div>
+            <div class="col-md-2 profile-desc-link">
+                <i class="fa fa-sitemap"></i>
+                <span style="color: #5b9bd1">مستخدم الشبكة</span>
+                <br />
+                <span style="margin-right: 30px;">{{Cls_Salary.ComputerUser}}</span>
+            </div>
+            <div class="col-md-3 profile-desc-link">
+                <i class="fa fa-calendar"></i>
+                <span style="color: #5b9bd1">التاريخ</span>
+                <br />
+                <span style="margin-right: 30px;"> {{Cls_Salary.InDate}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+@section Related{
+    @*<div class="row">
+            <div class="col-md-12">
+                <h4 class="page-title">الأدوات</h4>
+                <div class="portlet light">
+                    <div class="portlet-title">
+                        <div class="caption" style="font-size:14px;">
+                            روابط ذات صلة
+                        </div>
+                    </div>
+                    <div>
+                        <div class="portlet-body">
+                            <a href="/Cls_Salary/Operation"><i class="fa fa-angle-left"></i> إضافة منتج جديد</a>
+                        </div>
+                        <div class="portlet-body">
+                            <a href="/Search/Cls_Salary"><i class="fa fa-angle-left"></i>الإستعلام عن منتج</a>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>*@
+}
+
+@section AngularFiles{
+
+    <link href="~/assets/layouts/ZebraDatepicker/style/bootstrap-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/layouts/ZebraDatepicker/style/shCoreDefault.min.css" />
+    <link href="~/assets/layouts/ZebraDatepicker/style/css/default/zebra_datepicker.min.css" rel="stylesheet" />
+    <link href="~/assets/layouts/ZebraDatepicker/examples.css" rel="stylesheet" />
+
+
+    <script src="~/assets/layouts/ZebraDatepicker/style/shCore.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushJScript.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushXml.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushCss.min.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+    </script>
+
+    <script src="~/assets/layouts/ZebraDatepicker/style/zebra_datepicker.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/examples.js"></script>
+    <script src="~/App/Masrofat/SalaryCtrl.js"></script>
+
+}
+
+

@@ -1,0 +1,131 @@
+﻿@{
+    ViewBag.Title = "تقرير جرد المستودع";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="/Home">
+                    الصفحة الرئيسية
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#" id="pageTitle">
+                    تقرير جرد المستودع
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row" ng-controller="AllProductsCtrl">
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    خيارات البحث
+                </div>
+                <div class="actions">
+                    <a href="" class="btn btn-default" ng-click="emptyInputs()">
+                        <i class="fa fa-pencil"></i> إخلاء خانات البحث
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <form role='form'>
+                    <div class='row form-body'>
+                        <div class='col-md-6 form-group'>
+                            <label>اسم الصنف </label>
+                            <div class='form-group'>
+                                <input type='text' id="ProductName" class='form-control' placeholder='من رقم' ng-model="Srch.ProductName">
+                            </div>
+                        </div>
+                        <div class='col-md-6 form-group'>
+                            <label>اسم الشركة</label>
+                            <div class='form-group'>
+                                <input type='hidden' id="Company_Id" ng-model="Srch.Company_Id">
+                                <input type='text' id="Company_Name" ng-model="Srch.Company_Name" ng-click="loadCompanies()" placeholder='اسم الشركة' class='form-control' readonly>
+                            </div>
+                        </div>
+                       
+                        <div class="row form-actions" style="text-align:center">
+                            <button type="submit" class="btn green" ng-click="SearchButton()">عرض</button>
+                            <button type="submit" class="btn purple" ng-click="BtnPrintInvoice()">طباعة</button>
+                          
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="portlet-title">
+                <div class="caption">
+                    نتائج البحث
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th> اسم الصنف </th>
+                                <th>اسم الشركة</th>
+                                <th title="سعر الشراء"> سعر الشراء </th>
+                                <th>قيمة الضريبة</th>
+                                <th title="إجمالي سعر الشراء"> إجمالي سعر الشراء </th>
+                                <th title="سعر البيع"> سعر البيع </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in ProductList track by $index" ng-dblclick="CallEditPage(item)">
+                                <td> {{item.Name}} </td>
+                                <td>{{item.Company_Name}} </td>
+
+                                <td>{{item.Price_Mowrid}} </td>
+                                <td>{{item.Taxes_Price}} </td>
+                                <td>{{item.TotalPrice}} </td>
+                                <td>{{item.Price_Unit}} </td>
+
+
+
+
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: center;" ng-show="TableLoading">
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                    </div>
+                    <div ng-show="EndSearch" style="text-align: center; color:red;"> عفوا لا توجد بيانات آخري </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Related{
+    <div class="row">
+    <div class="col-md-12">
+        <h4 class="page-title">الأدوات</h4>
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption" style="font-size:14px;">
+                    روابط ذات صلة
+                </div>
+            </div>
+            <div>
+                <div class="portlet-body">
+                    <a href="/Search/Invoice_Mowarid"><i class="fa fa-angle-left"></i> الإستعلام عن عملية شراء</a>
+                </div>
+                <div class="portlet-body">
+                    <a href="/Search/Mandob"><i class="fa fa-angle-left"></i> الإستعلام عن مشترى</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+}
+@section AngularFiles{
+    <script src="~/App/Reports/AllProductsCtrl.js"></script>
+}
+

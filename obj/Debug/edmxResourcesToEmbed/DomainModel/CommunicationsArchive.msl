@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CasherArchiveModelStoreContainer" CdmEntityContainer="CasherArchiveEntities">
+    <EntitySetMapping Name="IMAGES_EXPORT">
+      <EntityTypeMapping TypeName="CasherArchiveModel.IMAGES_EXPORT">
+        <MappingFragment StoreEntitySet="IMAGES_EXPORT">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="EXPORTID" ColumnName="EXPORTID" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+          <ScalarProperty Name="UPLOADID" ColumnName="UPLOADID" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMAGES_IMPORT">
+      <EntityTypeMapping TypeName="CasherArchiveModel.IMAGES_IMPORT">
+        <MappingFragment StoreEntitySet="IMAGES_IMPORT">
+          <ScalarProperty Name="UPLOADID" ColumnName="UPLOADID" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="PICTURE" ColumnName="PICTURE" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="IMPORTID" ColumnName="IMPORTID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

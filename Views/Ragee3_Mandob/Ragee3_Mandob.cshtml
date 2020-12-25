@@ -1,0 +1,264 @@
+﻿@{
+    ViewBag.Title = "ارجاع اصناف";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb" style="background-color:#78baf1  ">
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="/Home">
+                    الصفحة الرئيسية
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="javascript:;" id="pageTitle">
+                    ارجاع اصناف
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row" ng-controller="Ragee3_MandobCtrl">
+    <div class="col-md-12" ng-show="AlertParameter">
+        <div class="m-heading-1 border-green m-bordered">
+            <span style="color:red"> {{ErrorName}} </span>
+            <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+
+                <div class="actions">
+
+                    @*<a href="javascript:;" class="btn blue" ng-click="BtnPrintInvoice()" ng-disabled="btn_Printdisable" id="PrintInvoice">
+                            <i class="fa fa-print"></i>  طباعة الفاتورة (F2)
+                        </a>
+                        <a href="javascript:;" class="btn orange" ng-click="Omola()">
+                            <i class="fa fa-send"></i>  صرف العمولة
+                        </a>
+                        <a href="javascript:;" class="btn red" ng-click="Remove()">
+                            <i class="fa fa-remove"></i>  إلغاء (F8)
+                        </a>*@
+                    <a href="javascript:;" class="btn green" ng-click="BtnNew()">
+                        <i class="fa fa-plus"></i> جديد (F4)
+                    </a>
+
+                    <a href="javascript:;" class="btn green2" ng-click="Sreachproduct()">
+                        <i class="fa fa-search"></i>  البحث عن صنف (F9)
+                    </a>
+
+
+                </div>
+                <div class="tools">
+
+                </div>
+            </div>
+
+
+            <div class="portlet-body">
+                <div class='row form-body'>
+                    <div class='col-md-2 form-group'>
+                        <label>رقم الفاتورة</label>
+                        <div class='form-group'>
+                            <input type='text' class='form-control'  placeholder='رقم الفاتورة' ng-model="Cls_Invoice_Mandob.Invoice_Number" value="{{Cls_Invoice_Mandob.Invoice_Number}}">
+                            <input type='hidden' id="Invoice_ID">
+                        </div>
+                    </div>
+                    <div class='col-md-4 form-group'>
+                        <label>
+                            اسم مندوب المبيعات
+                        </label>
+                        <div class='form-group'>
+                            <input ng-model="Cls_Invoice_Mandob.Mandob_id" value="{{Cls_Invoice_Mandob.Mandob_id}}" type='hidden'>
+                            <input ng-model="Cls_Invoice_Mandob.Mandob_Name" value="{{Cls_Invoice_Mandob.Mandob_Name}}" id="Mandob_Name" placeholder='اسم مندوب المبيعات' ng-click="loadMandob()" type='text' class='form-control' readonly>
+                        </div>
+                    </div>
+                </div>
+                <form role='form' name="FormData">
+                    <div class="table-responsive">
+                        <table class="table table-striped fixed">
+                            <thead>
+                                <tr>
+                                    <th title="اسم الصنف" style="width: 30%;text-align:center;"> اسم الصنف </th>
+                                    <th title="العدد" style="width: 20%;text-align:center;"> العدد </th>
+                                    <th title="سعر الحبة" style="width: 20%;text-align:center;"> سعر الحبة </th>
+                                    <th title="اجمالى السعر" style="width: 30%;text-align:center;"> اجمالى السعر </th>
+                                    <th style="width: 10%;text-align:center;"> حذف </th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+
+                                <tr ng-repeat="item in  Cls_Invoice_Mandob.ClsInvoiceMandob_Product track by $index">
+                                    <td style="width: 30%; ">
+                                        <input ng-model="item.Product_Id" id="Product_Id" type='hidden'>
+                                        <input name="Product_Name[{{$index}}]" ng-model="item.Product_Name" type='text' ng-click="loadproduct($index)" placeholder='اسم الصنف' class='form-control' readonly>
+                                    </td>
+                                    <td style="width: 20%; ">
+                                        <input name="Amount[{{$index}}]" ng-model="item.Amount" ng-change="Calculate_Amount(item,$index)" type='text' placeholder='العدد' class='form-control' select-on-click>
+                                    </td>
+                                    <td style="width: 20%; ">
+                                        <input name="Price[{{$index}}]" ng-model="item.Price" ng-change="Calculate_itemPrice(item , $index)" type='text' placeholder='عدد الكراتين' class='form-control'>
+                                    </td>
+                                    <td style="width: 10%; ">
+                                        <input id="TotalPrice" name="TotalPrice[{{$index}}]" ng-model="item.TotalPrice" required="required" type='text' placeholder=' اجمالى السعر ' class='form-control' readonly>
+                                    </td>
+                                    <td style="color:red"><a href="javascript:void(0)" ng-click="removeRow($index)"><i class="fa fa-trash-o" style="color:red"></i> حذف</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class='row form-actions' style='text-align:center'>
+                        <button type='submit' class='btn green' ng-hide="SaveBtn" ng-click="SaveProduct()">حفظ</button>
+                        <button type='submit' class='btn green' ng-hide="EditBtn" ng-click="SaveProduct()">تعديل</button>
+                        <button type='submit' class='btn red' ng-hide="DeleteBtn" ng-click="DeleteProduct()">حذف</button>
+                        <a href="/Home" type='submit' class='btn purple'>إلغاء</a>
+                    </div>
+                </form>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="dataEntire">
+        <div class="note note-info dataEntire">
+            <h4 class="profile-desc-title">بيانات الإدخال</h4>
+            <div class="col-md-5 profile-desc-link">
+                <i class="fa fa-user"></i>
+                <span style="color: #5b9bd1">المستخدم</span>
+                <br />
+                <span style="margin-right: 30px;">{{Cls_Invoice_Mandob.User_Name}}</span>
+            </div>
+            <div class="col-md-2 profile-desc-link">
+                <i class="fa fa-desktop"></i>
+                <span style="color: #5b9bd1">الكمبيوتر</span>
+                <br />
+                <span style="margin-right: 30px;">{{Cls_Invoice_Mandob.ComputerName}}</span>
+            </div>
+            <div class="col-md-2 profile-desc-link">
+                <i class="fa fa-sitemap"></i>
+                <span style="color: #5b9bd1">مستخدم الشبكة</span>
+                <br />
+                <span style="margin-right: 30px;">{{Cls_Invoice_Mandob.ComputerUser}}</span>
+            </div>
+            <div class="col-md-3 profile-desc-link">
+                <i class="fa fa-calendar"></i>
+                <span style="color: #5b9bd1">التاريخ</span>
+                <br />
+                <span style="margin-right: 30px;"> {{Cls_Invoice_Mandob.InDate}}</span>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+@section Related{
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="portlet light">
+                <div class="portlet-title" style="text-align: center;">
+                    <div class="pricetitle">
+                        مبلغ الارجاع
+                    </div>
+                </div>
+                <div class="portlet-body" style="text-align: center;">
+                    <div id="InvoicePrice" class="uppercase profile-stat-title"></div>
+                    <div class="uppercase profile-stat-text"> ريال سعودي </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="col-md-12">
+            <div class="calculator">
+                <p class="calculatortitle">آلة حاسبة</p>
+                <div class="calc-row">
+                    <div class="screen">0123456789</div>
+                </div>
+
+                <div class="calc-row">
+                    <div class="button">%</div>
+                    <div class="button plus-minus">+/-</div>
+                    <div class="button backspace">back</div>
+                    <div class="button">CE</div>
+                    <div class="button">C</div>
+                </div>
+
+                <div class="calc-row">
+                    <div class="button root">sqrt</div>
+                    <div class="button divice">/</div>
+                    <div class="button">9</div>
+                    <div class="button">8</div>
+                    <div class="button">7</div>
+                </div>
+
+                <div class="calc-row">
+
+
+
+
+                    <div class="button inverse">1/x</div>
+                    <div class="button multiply">*</div>
+                    <div class="button">6</div>
+                    <div class="button">5</div>
+                    <div class="button">4</div>
+                </div>
+
+                <div class="calc-row">
+                    <div class="button pi">pi</div>
+                    <div class="button">-</div>
+                    <div class="button">3</div>
+                    <div class="button">2</div>
+                    <div class="button">1</div>
+                </div>
+
+                <div class="calc-row">
+                    <div class="button equal">=</div>
+                    <div class="button">+</div>
+                    <div class="button decimal">.</div>
+                    <div class="button zero">0</div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+}
+
+@section AngularFiles{
+
+    <link href="~/assets/layouts/Calclator/Style.css" rel="stylesheet" />
+    <link href="~/assets/layouts/Calclator/css.css" rel="stylesheet" />
+    <script src="~/assets/layouts/Calclator/Calculator.js"></script>
+
+
+
+    <link href="~/assets/layouts/ZebraDatepicker/style/bootstrap-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/layouts/ZebraDatepicker/style/shCoreDefault.min.css" />
+    <link href="~/assets/layouts/ZebraDatepicker/style/css/default/zebra_datepicker.min.css" rel="stylesheet" />
+    <link href="~/assets/layouts/ZebraDatepicker/examples.css" rel="stylesheet" />
+
+
+    <script src="~/assets/layouts/ZebraDatepicker/style/shCore.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushJScript.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushXml.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushCss.min.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+    </script>
+
+    <script src="~/assets/layouts/ZebraDatepicker/style/zebra_datepicker.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/examples.js"></script>
+    <script src="~/App/Main/Ragee3_MandobCtrl.js"></script>
+}

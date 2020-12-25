@@ -1,0 +1,46 @@
+﻿<div class="row" ng-controller="StoreCtrl" style="height:200px;">
+    <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet light">
+         
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-paper-plane font-yellow-casablanca" style="color: #5c9acf !important;"></i>
+                    <a href="#" id="pageTitle">
+                        إضافة  مخزن جديد
+                    </a>
+                </div>
+                <div class="actions">
+                    <a class="btn red btn-sm fancymodal-close" id='closeDealingType' ng-click="closeDealingType()" style="padding-left:15px;" href="#"> إغلاق </a>
+                </div>
+            </div>
+            <div class='portlet-body'>
+                <div class="col-md-12" ng-show="AlertParameter">
+                    <div class="m-heading-1 border-green m-bordered">
+                        <span style="color:red"> {{ErrorName}} </span>
+                        <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+                    </div>
+                </div>
+                <div class='row' style="margin: auto;">
+                    <label for="Name">اسم المخزن</label>
+                    <input id="Name"   class='form-control' placeholder='اسم المخزن' type='text' />
+                    <input id="ID" type="hidden"  class='form-control'/>
+                    
+                </div>
+               
+            </div>
+            <div class='row form-actions' style='text-align:center'>
+                <button type='submit' class='btn green' ng-hide="SaveBtn" ng-click="SaveData(Store)">حفظ</button>
+            </div>
+        </div>
+        <!-- END Portlet PORTLET-->
+
+        
+    </div>
+
+    
+</div>
+
+
+
+

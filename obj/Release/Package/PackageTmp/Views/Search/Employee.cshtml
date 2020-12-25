@@ -1,0 +1,173 @@
+﻿@{
+    ViewBag.Title = "الإستعلام عن الايرادات";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-magnifier"></i>
+                <a href="#">
+                    البحث و الاستعلام
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    الإستعلام عن الايرادات
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<div class="row" ng-controller="EmployeeSearchCtrl">
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    خيارات البحث
+                </div>
+                <div class="actions">
+                    <a href="" class="btn btn-default" ng-click="emptyInputs()">
+                        <i class="fa fa-pencil"></i> إخلاء خانات البحث
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <form role='form'>
+                    <div class='row form-body'>
+                        
+                        <div class='col-md-4 form-group'>
+                            <label class="control-label">اسم الموظف</label>
+                            <input name="Bian" focus-next="Notes" id="Bian" ng-model="Srch_Employee.Name" type='text' class='form-control' placeholder="البيان">
+                        </div>
+                        <div class='col-md-4 form-group'>
+                            <label class="control-label">رقم الجوال</label>
+                            <input name="Bian" focus-next="Notes" id="Bian" ng-model="Srch_Employee.Mobile" type='text' class='form-control' placeholder="البيان">
+                        </div>
+                       
+                        <div class="col-md-4 form-group">
+                            <label class="control-label">المهنة</label>
+                            <input id="Eradat_Type_Id" ng-model="Srch_Employee.Job_Id" type='hidden' value="{{Eradat.Eradat_Type_Id}}">
+                            <input name="Eradat_Type_Name" id="Eradat_Type_Name" ng-model="Srch_Employee.Job_Name" type='text' value="{{Eradat.Eradat_Type_Name}}" ng-click="loadjob()" placeholder="المهنة" class='form-control' readonly>
+                        </div>
+                       
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">الراتب من </label>
+                            <input id="Date_Invoice_From"   ng-model="Srch_Employee.Salary_From" type="text" class="form-control">
+                        </div>
+                        <div class="col-md-2 form-group">
+                            <label class="control-label">إلي</label>
+                            <input id="Date_Invoice_TO" ng-model="Srch_Employee.Salary_To" type="text" class="form-control">
+                        </div>
+                       
+                        
+                    </div>
+                    <div class="row form-actions" style="text-align:center">
+                        <button type="submit" class="btn green" ng-click="SearchButton()">بحث</button>
+                    </div>
+                </form>
+            </div>
+            <div class="portlet-title">
+                <div class="caption">
+                    نتائج البحث
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 5%;">#</th>
+                                <th style="width: 20%;">اسم الموظف</th>
+                                <th style="width: 15%">رقم الجوال</th>
+                                <th style="width: 20%;">المهنة</th>
+                                <th style="width: 20%;">الراتب</th>
+                                
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in employeelist track by $index" ng-dblclick="CallEditPage(item)">
+                                <td> {{$index + 1}} </td>
+                                <td> {{item.Name}} </td>
+                                <td> {{item.Mobile}} </td>
+                                <td> {{item.Job_Name}} </td>
+                                <td> {{item.Salary}} </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: center;" ng-show="TableLoading">
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                    </div>
+                    <div ng-show="EndSearch" style="text-align: center; color:red;"> عفوا لا توجد بيانات آخري </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Related{
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="page-title">الأدوات</h4>
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption" style="font-size:14px;">
+                        روابط ذات صلة
+                    </div>
+                </div>
+                <div>
+                    <div class="portlet-body">
+                        <a href="/Search/Product"><i class="fa fa-angle-left"></i>الإستعلام عن صنف</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Invoice_Mandob"><i class="fa fa-angle-left"></i>الإستعلام عن حركة بيع</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Invoice_Company"><i class="fa fa-angle-left"></i>الإستعلام عن عملية شراء</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Company"><i class="fa fa-angle-left"></i>الإستعلام عن شركة</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Masrofat"><i class="fa fa-angle-left"></i>الإستعلام عن المصروفات</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Eradat"><i class="fa fa-angle-left"></i>الإستعلام عن الايرادات</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Employee"><i class="fa fa-angle-left"></i>الإستعلام عن الموظفين</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Salary"><i class="fa fa-angle-left"></i>الإستعلام عن الرواتب</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+}
+@section AngularFiles{
+<link href="~/assets/layouts/ZebraDatepicker/style/bootstrap-theme.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/assets/layouts/ZebraDatepicker/style/shCoreDefault.min.css" />
+<link href="~/assets/layouts/ZebraDatepicker/style/css/default/zebra_datepicker.min.css" rel="stylesheet" />
+<link href="~/assets/layouts/ZebraDatepicker/examples.css" rel="stylesheet" />
+
+
+<script src="~/assets/layouts/ZebraDatepicker/style/shCore.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushJScript.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushXml.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushCss.min.js"></script>
+<script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+</script>
+
+<script src="~/assets/layouts/ZebraDatepicker/style/zebra_datepicker.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/examples.js"></script>
+
+
+<script src="~/App/Search/EmployeeSearchCtrl.js"></script>
+}

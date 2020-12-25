@@ -1,0 +1,174 @@
+﻿@{
+    ViewBag.Title = "اضافة موظف";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    اضافة موظف 
+                </a>
+            </li>
+
+        </ul>
+        
+    </div>
+</div>
+<div class="row" ng-controller="EmployeeCtrl">
+    <div class="col-md-12" ng-show="AlertParameter">
+        <div class="m-heading-1 border-green m-bordered">
+            <span style="color:red"> {{ErrorName}} </span>
+            <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="Payment">
+        <div id="Paymenttxt" class="m-heading-1 border-green m-bordered">
+            {{Paymenttxt}}
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    اضافة موظف جديد
+                </div>
+            </div>
+            <div class="portlet-body">
+                
+                    <div class='row form-body'>
+                        <div class='col-md-2 form-group'>
+                            <label>مسلسل</label>
+                            <div class='form-group'>
+                                <input type='number' class='form-control' readonly placeholder='مسلسل' ng-model="Employee.ID">
+                            </div>
+                        </div>
+                        <div class='col-md-6 form-group'>
+                            <label>اسم الموظف</label>
+                            <div class='form-group'>
+                                <input name="Name"  focus-next="Salary" id="Name" autofocus type='text' class='form-control' placeholder="اسم الموظف" ng-model="Employee.Name" value="{{Employee.Name}}">
+                            </div>
+                        </div>
+                        <div class='col-md-4 form-group'>
+                            <label id="lblBarcode">المهنة</label>
+                            <div class='form-group fixeddiv'>
+                                <input id="Job_Id" ng-model="Employee.Job_Id" type='hidden' value="{{Employee.Job_Id}}" >
+                                <input name="Job_Name" id="Job_Name" ng-model="Employee.Job_Name" type='text' value="{{Employee.Job_Name}}" ng-click="loadjobs()" placeholder="المهنة" class='form-control' readonly>
+                            </div>
+                        </div>
+                       
+                     
+                       
+                        <div class='col-md-4 form-group'>
+                            <label for="Price_Mowrid">الراتب</label>
+                            <div class='form-group fixeddiv'>
+                                <input name="Salary" focus-next="Mobile" id="Salary" ng-model="Employee.Salary"  type='text'  class='form-control' placeholder="الراتب" >
+                                <label id="lbl_SalayByMoney" class="label2">ريال</label>
+                            </div>
+                        </div>
+                        <div class='col-md-4 form-group'>
+                            <label for="Price_Unit">رقم الجوال</label>
+ 
+                            <div class='form-group fixeddiv'>
+                                <input name="Mobile" focus-next="Name"  id="Price_Unit" ng-model="Employee.Mobile" type='text' class='form-control' placeholder="رقم الجوال">
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row form-actions' style='text-align:center'>
+                        <button type='submit' class='btn green' ng-hide="SaveBtn" ng-click="SaveEmployee()">حفظ</button>
+                        <button type='submit' class='btn green' ng-hide="EditBtn" ng-click="SaveEmployee()">تعديل</button>
+                        <button type='submit' class='btn red' ng-hide="DeleteBtn" ng-click="DeleteEmployee()">حذف</button>
+                        <a href="/Home" type='submit' class='btn purple'>إلغاء</a>
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="dataEntire">
+        <div class="note note-info dataEntire">
+            <h4 class="profile-desc-title">بيانات الإدخال</h4>
+            <div class="col-md-5 profile-desc-link">
+                <i class="fa fa-user"></i>
+                <span style="color: #5b9bd1">المستخدم</span>
+                <br />
+                <span style="margin-right: 30px;">{{Employee.User_Name}}</span>
+            </div>
+            <div class="col-md-2 profile-desc-link">
+                <i class="fa fa-desktop"></i>
+                <span style="color: #5b9bd1">الكمبيوتر</span>
+                <br />
+                <span style="margin-right: 30px;">{{Employee.ComputerName}}</span>
+            </div>
+            <div class="col-md-2 profile-desc-link">
+                <i class="fa fa-sitemap"></i>
+                <span style="color: #5b9bd1">مستخدم الشبكة</span>
+                <br />
+                <span style="margin-right: 30px;">{{Employee.ComputerUser}}</span>
+            </div>
+            <div class="col-md-3 profile-desc-link">
+                <i class="fa fa-calendar"></i>
+                <span style="color: #5b9bd1">التاريخ</span>
+                <br />
+                <span style="margin-right: 30px;"> {{Employee.InDate}}</span>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+@section Related{
+    @*<div class="row">
+        <div class="col-md-12">
+            <h4 class="page-title">الأدوات</h4>
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption" style="font-size:14px;">
+                        روابط ذات صلة
+                    </div>
+                </div>
+                <div>
+                    <div class="portlet-body">
+                        <a href="/Employee/Operation"><i class="fa fa-angle-left"></i> إضافة منتج جديد</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Search/Employee"><i class="fa fa-angle-left"></i>الإستعلام عن منتج</a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+           
+        </div>
+    </div>*@
+}
+
+@section AngularFiles{
+
+<link href="~/assets/layouts/ZebraDatepicker/style/bootstrap-theme.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/assets/layouts/ZebraDatepicker/style/shCoreDefault.min.css" />
+<link href="~/assets/layouts/ZebraDatepicker/style/css/default/zebra_datepicker.min.css" rel="stylesheet" />
+<link href="~/assets/layouts/ZebraDatepicker/examples.css" rel="stylesheet" />
+
+
+<script src="~/assets/layouts/ZebraDatepicker/style/shCore.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushJScript.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushXml.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/style/shBrushCss.min.js"></script>
+<script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+</script>
+
+<script src="~/assets/layouts/ZebraDatepicker/style/zebra_datepicker.min.js"></script>
+<script src="~/assets/layouts/ZebraDatepicker/examples.js"></script>
+<script src="~/App/Tarmeez/EmployeeCtrl.js"></script>
+
+}
+
+

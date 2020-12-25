@@ -1,0 +1,973 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E05618EB-B641-44AB-BE2E-76117DBA1AE7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Warehouse</RootNamespace>
+    <AssemblyName>Warehouse</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="BarcodeLib, Version=1.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\BarcodeLib.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.6\lib\net45\System.Web.Http.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.6\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.6\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.6\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.6\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="Unity.Mvc5, Version=1.1.0.0, Culture=neutral, PublicKeyToken=43da31bc42a85347, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Unity.Mvc5.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App\angular-barcode-scanner.js" />
+    <Content Include="App\Eradat\Sadad_MandobsListCtrl.js" />
+    <Content Include="App\Eradat\Eradat_TypeCtrl.js" />
+    <Content Include="App\Eradat\EradatCtrl.js" />
+    <Content Include="App\Main\Invoice_MandobSadadCtrl.js" />
+    <Content Include="App\Main\Invoice_MandobCtrl.js" />
+    <Content Include="App\Main\InvoiceCompanyCtrl.js" />
+    <Content Include="App\Main\Invoice_CompanySadadCtrl.js" />
+    <Content Include="App\Tarmeez\OmolaCtrl.js" />
+    <Content Include="App\Masrofat\Sadad_companyiesListCtrl.js" />
+    <Content Include="App\Masrofat\Omola_MandobsListCtrl.js" />
+    <Content Include="App\Reports\ArbahListCtrl.js" />
+    <Content Include="App\Reports\MasrofatListCtrl.js" />
+    <Content Include="App\Reports\EradatListCtrl.js" />
+    <Content Include="App\Search\EmployeeSearchCtrl.js" />
+    <Content Include="App\Search\EradatSearchCtrl.js" />
+    <Content Include="App\Search\SalarySearchCtrl.js" />
+    <Content Include="App\Search\MasrofatSearchCtrl.js" />
+    <Content Include="App\Tarmeez\EmployeeCtrl.js" />
+    <Content Include="App\Masrofat\SalaryCtrl.js" />
+    <Content Include="App\Masrofat\MasrofatCtrl.js" />
+    <Content Include="App\Masrofat\Masrofat_TypeCtrl.js" />
+    <Content Include="App\print\print.min.css" />
+    <Content Include="App\print\print.min.js" />
+    <Content Include="App\Search\Invoice_CompanySearchCtrl.js" />
+    <Content Include="App\Search\Invoice_MandobSearchCtrl.js" />
+    <Content Include="App\Search\MandobSearchCtrl.js" />
+    <Content Include="App\Tarmeez\JobCtrl.js" />
+    <Content Include="App\Tarmeez\MandobCtrl.js" />
+    <Content Include="App\Tarmeez\User_MoneyCtrl.js" />
+    <Content Include="App\Tarmeez\ProductListCtrl.js" />
+    <Content Include="assets\Images\ajaxLoading.gif" />
+    <Content Include="assets\Images\sucess.png" />
+    <Content Include="assets\layouts\Calclator\Calculator.js" />
+    <Content Include="assets\layouts\Calclator\css.css" />
+    <Content Include="assets\layouts\Calclator\Style.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\bootstrap.html" />
+    <Content Include="assets\layouts\ZebraDatepicker\close.png" />
+    <Content Include="assets\layouts\ZebraDatepicker\examples.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\examples.js" />
+    <Content Include="assets\layouts\ZebraDatepicker\index.html" />
+    <Content Include="assets\layouts\ZebraDatepicker\metallic.html" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\angular-material.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\bootstrap-theme.min.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\bootstrap.min.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\bootstrap\icons.png" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\bootstrap\zebra_datepicker.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\bootstrap\zebra_datepicker.min.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\default\icons.png" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\default\zebra_datepicker.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\default\zebra_datepicker.min.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\metallic\icons.png" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\metallic\zebra_datepicker.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\css\metallic\zebra_datepicker.min.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\jquery-3.2.1.min.js" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\shBrushCss.min.js" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\shBrushJScript.min.js" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\shBrushXml.min.js" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\shCore.min.js" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\shCoreDefault.min.css" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\zebra_datepicker.min.js" />
+    <Content Include="assets\layouts\ZebraDatepicker\style\zebra_datepicker.src.js" />
+    <Content Include="App\Main\Home.js" />
+    <Content Include="App\Main\ProductCtrl.js" />
+    <Content Include="App\Search\ActionsSearch.js" />
+    <Content Include="assets\Images\Home\BaldiaInfo.png" />
+    <Content Include="assets\Images\Home\ListExportOperation.png" />
+    <Content Include="assets\Images\Home\ListImportOperation.png" />
+    <Content Include="assets\Images\Home\ListImportReferOpertation.png" />
+    <Content Include="assets\Images\Home\UsersInsert.png" />
+    <Content Include="assets\Images\Large\-Barcode_32896.jpg" />
+    <Content Include="assets\Images\Large\ajax-loader.gif" />
+    <Content Include="assets\Images\Large\LoginBackground.jpg" />
+    <Content Include="assets\Images\Large\LoginBackground2.jpg" />
+    <Content Include="assets\Images\Large\LoginBackground3.jpg" />
+    <Content Include="assets\Images\Large\LoginBackground4.jpg" />
+    <Content Include="assets\Images\Large\Screen\action.jpg" />
+    <Content Include="assets\Images\Large\Screen\ContactUS.png" />
+    <Content Include="assets\Images\Large\Screen\export.jpg" />
+    <Content Include="assets\Images\Large\Screen\login.jpg" />
+    <Content Include="assets\Images\Large\Screen\logintab.jpg" />
+    <Content Include="assets\Images\Large\Screen\Refer.jpg" />
+    <Content Include="assets\Images\Large\Screen\Report.jpg" />
+    <Content Include="assets\Images\Large\Screen\Search.jpg" />
+    <Content Include="assets\Images\Large\Screen\Services.png" />
+    <Content Include="assets\Images\pdf.png" />
+    <Content Include="assets\layouts\css\angular-fancy-modal.css" />
+    <Content Include="assets\layouts\css\bootstrap-rtl.css" />
+    <Content Include="assets\layouts\css\bootstrap-switch-rtl.min.css" />
+    <Content Include="assets\layouts\css\components-rounded-rtl.css" />
+    <Content Include="assets\layouts\css\custom-rtl.css" />
+    <Content Include="assets\layouts\css\error-rtl.css" />
+    <Content Include="assets\layouts\css\font-awesome.css" />
+    <Content Include="assets\layouts\css\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\layouts\css\login-rtl.css" />
+    <Content Include="assets\layouts\css\profile-rtl.css" />
+    <Content Include="assets\layouts\css\select2-bootstrap.min.css" />
+    <Content Include="assets\layouts\css\select2.min.css" />
+    <Content Include="assets\layouts\css\fonts\Simple-Line-Icons.svg" />
+    <Content Include="assets\layouts\css\layout-rtl.css" />
+    <Content Include="assets\layouts\css\light-rtl.css" />
+    <Content Include="assets\layouts\css\morris.css" />
+    <Content Include="assets\layouts\css\plugins-rtl.css" />
+    <Content Include="assets\layouts\css\simple-line-icons.css" />
+    <Content Include="assets\layouts\fonts\fontawesome-webfont.svg" />
+    <Content Include="assets\layouts\img\avatar1_small.jpg" />
+    <Content Include="assets\layouts\img\logo-light.png" />
+    <Content Include="assets\layouts\img\portlet-collapse-icon-white.png" />
+    <Content Include="assets\layouts\img\portlet-config-icon-white.png" />
+    <Content Include="assets\layouts\img\portlet-reload-icon-white.png" />
+    <Content Include="assets\layouts\img\portlet-remove-icon-white.png" />
+    <Content Include="assets\layouts\img\portlet-remove-icon.png" />
+    <Content Include="assets\layouts\img\Preloader_2.gif" />
+    <Content Include="assets\layouts\img\QKOHubMR.jpg" />
+    <Content Include="assets\layouts\img\remove-icon-small.png" />
+    <Content Include="assets\layouts\img\sidebar-toggle-light.png" />
+    <Content Include="assets\layouts\scripts\jquery-2.1.4.min.js" />
+    <Content Include="assets\layouts\scripts\jquery-migrate.min.js" />
+    <Content Include="assets\layouts\scripts\amcharts.js" />
+    <Content Include="assets\layouts\scripts\ammap.js" />
+    <Content Include="assets\layouts\scripts\amstock.js" />
+    <Content Include="assets\layouts\scripts\app.min.js" />
+    <Content Include="assets\layouts\scripts\bootstrap-hover-dropdown.min.js" />
+    <Content Include="assets\layouts\scripts\bootstrap-switch.min.js" />
+    <Content Include="assets\layouts\scripts\bootstrap.min.js" />
+    <Content Include="assets\layouts\scripts\chalk.js" />
+    <Content Include="assets\layouts\scripts\dashboard.min.js" />
+    <Content Include="assets\layouts\scripts\demo.min.js" />
+    <Content Include="assets\layouts\scripts\horozontal-timeline.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.blockui.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.counterup.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.easypiechart.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.flot.categories.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.flot.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.flot.resize.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.min.js" />
+    <Content Include="App\Tarmeez\CompanyCtrl.js" />
+    <Content Include="App\Tarmeez\StoreCtrl.js" />
+    <Content Include="App\Users\ChangePass.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.slimscroll.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.sparkline.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.vmap.min.js" />
+    <Content Include="assets\layouts\scripts\jquery.waypoints.min.js" />
+    <Content Include="assets\layouts\scripts\js.cookie.min.js" />
+    <Content Include="assets\layouts\scripts\layout.min.js" />
+    <Content Include="assets\layouts\scripts\light.js" />
+    <Content Include="assets\layouts\scripts\moment.min.js" />
+    <Content Include="assets\layouts\scripts\morris.min.js" />
+    <Content Include="assets\layouts\scripts\patterns.js" />
+    <Content Include="assets\layouts\scripts\pie.js" />
+    <Content Include="assets\layouts\scripts\quick-sidebar.min.js" />
+    <Content Include="assets\layouts\scripts\radar.js" />
+    <Content Include="assets\layouts\scripts\raphael-min.js" />
+    <Content Include="assets\layouts\scripts\serial.js" />
+    <Content Include="assets\layouts\scripts\worldLow.js" />
+    <Content Include="assets\layouts\css\OpenSans.css" />
+    <Content Include="App\Reports\AllProductsCtrl.js" />
+    <Content Include="App\Search\ProductSearchCtrl.js" />
+    <Content Include="App\Users\UsersOperation.js" />
+    <Content Include="App\Users\UsersLogin.js" />
+    <Content Include="App\Users\UsersSearch.js" />
+    <Content Include="assets\Scripts\Global\angular-fancy-modal.js" />
+    <Content Include="assets\Scripts\Global\angular-sanitize.min.js" />
+    <Content Include="assets\Scripts\Global\angular-touch.min.js" />
+    <Content Include="assets\Scripts\Global\angular-ui-router.min.js" />
+    <Content Include="assets\Scripts\Global\angular.js" />
+    <Content Include="assets\Scripts\Global\angular.min.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.bpopup-0.9.4.min.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.calendars.all.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.calendars.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.calendars.picker.css" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.calendars.picker.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.calendars.plus.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.calendars.ummalqura.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery.plugin.js" />
+    <Content Include="assets\Scripts\Global\calendar\jquery-2.1.4.min.js" />
+    <Content Include="assets\Scripts\Global\jquery.bpopup-0.9.4.min.js" />
+    <Content Include="assets\Scripts\Global\OmarRezk-Angular-Menu.js" />
+    <Content Include="assets\Scripts\Global\jquery-2.2.4.min.js" />
+    <Content Include="App\App.js" />
+    <Content Include="assets\Scripts\Global\Scanner\FireScanner.js" />
+    <Content Include="assets\Scripts\Global\Scanner\Vintasoft.Shared.js" />
+    <Content Include="assets\Scripts\Global\Scanner\Vintasoft.Twain.js" />
+    <Content Include="assets\slider\data\images\SCom.jpg" />
+    <Content Include="assets\slider\data\images\SCom2.jpg" />
+    <Content Include="assets\slider\data\images\SInsert.jpg" />
+    <Content Include="assets\slider\data\images\Sreport.jpg" />
+    <Content Include="assets\slider\data\images\SSearch.jpg" />
+    <Content Include="assets\slider\engine\arrows.png" />
+    <Content Include="assets\slider\engine\bullet.png" />
+    <Content Include="assets\slider\engine\jquery.js" />
+    <Content Include="assets\slider\engine\pause.png" />
+    <Content Include="assets\slider\engine\play.png" />
+    <Content Include="assets\slider\engine\script.js" />
+    <Content Include="assets\slider\engine\style.css" />
+    <Content Include="assets\slider\engine\style.mod.css" />
+    <Content Include="assets\slider\engine\triangle.png" />
+    <Content Include="assets\slider\engine\wowslider.js" />
+    <Content Include="assets\slider\engine\wowslider.mod.js" />
+    <Content Include="Content\ui-bootstrap-csp.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\StoreModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StoreModel.edmx</DependentUpon>
+      <LastGenOutput>StoreModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\StoreModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StoreModel.edmx</DependentUpon>
+      <LastGenOutput>StoreModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="SannerApp\setup.exe" />
+    <Content Include="assets\layouts\Calclator\fonts\6NUO8FuJNQ2MbkrZ5-J8lKFrp7pRef2r.woff2" />
+    <Content Include="assets\layouts\Calclator\fonts\2sDfZG1Wl4LcnbuKgE0mV0Q.woff2" />
+    <Content Include="assets\layouts\Calclator\fonts\2sDfZG1Wl4LcnbuKjk0m.woff2" />
+    <Content Include="assets\layouts\Calclator\fonts\FwZY7-Qmy14u9lezJ-6D6MmTpA.woff2" />
+    <Content Include="assets\layouts\Calclator\fonts\FwZY7-Qmy14u9lezJ-6I6MmTpA.woff2" />
+    <Content Include="assets\layouts\Calclator\fonts\FwZY7-Qmy14u9lezJ-6I6MmTpA %281%29.woff2" />
+    <Content Include="assets\layouts\Calclator\fonts\FwZY7-Qmy14u9lezJ-6J6MmTpA.woff2" />
+    <Content Include="assets\layouts\Calclator\fonts\FwZY7-Qmy14u9lezJ-6H6Mk.woff2" />
+    <EntityDeploy Include="Models\StoreModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StoreModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\StoreModel.edmx.diagram">
+      <DependentUpon>StoreModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\publish.pubxml" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap-tpls.min.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.js" />
+    <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Views\Invoice_Mandob\Invoice_Mandob.cshtml" />
+    <Content Include="Views\Invoice_Mandob\GetMandob.cshtml" />
+    <Content Include="Views\Invoice_Mandob\PrintInvoice.cshtml" />
+    <Content Include="Views\Invoice_Mandob\AuthorizeManager.cshtml" />
+    <Content Include="Views\Product\GetSearchProducts.cshtml" />
+    <Content Include="Views\Mandob\Create.cshtml" />
+    <Content Include="Views\Mandob\Index.cshtml" />
+    <Content Include="Views\Invoice_Company\Invoice_Company.cshtml" />
+    <Content Include="Views\Invoice_Company\GetCompanies.cshtml" />
+    <Content Include="Views\Sadad_Company\GetProducts.cshtml" />
+    <Content Include="Views\Invoice_Company\GetSearchProducts.cshtml" />
+    <Content Include="Views\Sadad_Company\SadadCompany.cshtml" />
+    <Content Include="Views\Invoice_Mandob\GetProducts.cshtml" />
+    <Content Include="Views\Employee\Operation.cshtml" />
+    <Content Include="Views\Job\Create.cshtml" />
+    <Content Include="Views\Job\Index.cshtml" />
+    <Content Include="Views\Employee\Getjobs.cshtml" />
+    <Content Include="Views\Employee\GetEmployees.cshtml" />
+    <Content Include="Views\Masrofat_Type\Create.cshtml" />
+    <Content Include="Views\Masrofat_Type\Index.cshtml" />
+    <Content Include="Views\Masrofat\GetMasrofat_Type.cshtml" />
+    <Content Include="Views\Masrofat\Operation.cshtml" />
+    <Content Include="Views\Employee\Salary.cshtml" />
+    <Content Include="Views\Eradat_Type\Create.cshtml" />
+    <Content Include="Views\Eradat_Type\Index.cshtml" />
+    <Content Include="Views\Eradat\GetEradat_Type.cshtml" />
+    <Content Include="Views\Eradat\Operation.cshtml" />
+    <Content Include="Views\Invoice_Company\GetProducts.cshtml" />
+    <Content Include="Views\Invoice_Mandob\Omola.cshtml" />
+    <Content Include="Views\Invoice_Mandob\Omola_Confirm.cshtml" />
+    <Content Include="Views\Sadad_Mandob\Sadad_Confirm.cshtml" />
+    <Content Include="Views\OmolaMandob\Omola_Confirm.cshtml" />
+    <Content Include="Views\OmolaMandob\Omola.cshtml" />
+    <Content Include="Views\OmolaMandob\popup_OmolaMandob.cshtml" />
+    <Content Include="Views\Home\Unauthorized.cshtml" />
+    <None Include="Views\Product\GetProducts.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="Controllers\Administration\ActionsController.cs" />
+    <Compile Include="Controllers\Administration\UsersController.cs" />
+    <Compile Include="Controllers\Eradat\EradatController.cs" />
+    <Compile Include="Controllers\Masrofat\OmolaMandobController.cs" />
+    <Compile Include="Controllers\Report\Report_ArbahController.cs" />
+    <Compile Include="Controllers\Report\Report_MasrofatController.cs" />
+    <Compile Include="Controllers\Report\Report_EradatController.cs" />
+    <Compile Include="Controllers\Tarmeez\MandobController.cs" />
+    <Compile Include="Models\ClsInvoice_Mandob_Sadad.cs" />
+    <Compile Include="Controllers\Eradat\Sadad_MandobController.cs" />
+    <Compile Include="Models\ClsSadad_CompaniesList.cs" />
+    <Compile Include="Models\ClsSadad_MandobsList.cs" />
+    <Compile Include="Models\Cls_Arbah.cs" />
+    <Compile Include="Models\Cls_Company_SadadList.cs" />
+    <Compile Include="Models\Cls_Invoice_Company_Sadad.cs" />
+    <Compile Include="Models\Cls_Invoice_Mandob_Sadad.cs" />
+    <Compile Include="Models\Cls_Mandob_SadadList.cs" />
+    <Compile Include="Models\Cls_Salary.cs" />
+    <Compile Include="Models\Reports\Prnt_Arbah.cs" />
+    <Compile Include="Models\Reports\Prnt_InvoiceMandob_Product.cs" />
+    <Compile Include="Models\Reports\Prnt_InvoiceCompany_Product.cs" />
+    <Compile Include="Models\Reports\Prnt_Masrofat.cs" />
+    <Compile Include="Models\Reports\Prnt_Eradat.cs" />
+    <Compile Include="Models\Srch_Employee.cs" />
+    <Compile Include="Models\Srch_Eradat.cs" />
+    <Compile Include="Models\Srch_Masrofat.cs" />
+    <Compile Include="Models\ClsOmola.cs" />
+    <Compile Include="Controllers\Tarmeez\OmolaController.cs" />
+    <Compile Include="Models\Cls_Eradat.cs" />
+    <Compile Include="Models\Cls_Eradat_Type.cs" />
+    <Compile Include="Controllers\Eradat\Eradat_TypeController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Main\Invoice_CompanyController.cs" />
+    <Compile Include="Controllers\Main\Invoice_MandobController.cs" />
+    <Compile Include="Controllers\Masrofat\Sadad_CompanyController.cs" />
+    <Compile Include="Controllers\Main\SearchController.cs" />
+    <Compile Include="Controllers\Main\UserMoneyController.cs" />
+    <Compile Include="Controllers\Masrofat\MasrofatController.cs" />
+    <Compile Include="Models\Cls_Masrofat.cs" />
+    <Compile Include="Models\Cls_Masrofat_Type.cs" />
+    <Compile Include="Controllers\Report\Report_ProductController.cs" />
+    <Compile Include="Controllers\Masrofat\Masrofat_TypeController.cs" />
+    <Compile Include="Models\Cls_Job.cs" />
+    <Compile Include="Controllers\Tarmeez\JobController.cs" />
+    <Compile Include="Controllers\Tarmeez\CompanyController.cs" />
+    <Compile Include="Controllers\Tarmeez\EmployeeController.cs" />
+    <Compile Include="Controllers\Tarmeez\ProductController.cs" />
+    <Compile Include="Controllers\Tarmeez\StoreController.cs" />
+    <Compile Include="CustomFilters\MyCustomAuthorizationAttribute.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass\Barcode.cs" />
+    <Compile Include="GlobalClass\ConvertToEasternArabicNumerals.cs" />
+    <Compile Include="GlobalClass\CurrencyInfo.cs" />
+    <Compile Include="GlobalClass\LargeJsonResult.cs" />
+    <Compile Include="GlobalClass\Reports\Rpt_Product.cs" />
+    <Compile Include="GlobalClass\ToWord.cs" />
+    <Compile Include="Models\Administration\ActionsViewModel.cs" />
+    <Compile Include="Models\Administration\ErrorViewModel.cs" />
+    <Compile Include="Models\clsMandob.cs" />
+    <Compile Include="Models\ClsProduct.cs" />
+    <Compile Include="Models\ClsUser.cs" />
+    <Compile Include="Models\ClsUser_Money.cs" />
+    <Compile Include="Models\Cls_Company.cs" />
+    <Compile Include="Models\Cls_Company_Sadad.cs" />
+    <Compile Include="Models\Cls_Invoice_Mandob.cs" />
+    <Compile Include="Models\Cls_Invoice_Company.cs" />
+    <Compile Include="Models\Cls_LogIn.cs" />
+    <Compile Include="Models\Cls_Employee.cs" />
+    <Compile Include="Models\Cls_Mandob.cs" />
+    <Compile Include="Models\Cls_Store.cs" />
+    <Compile Include="Models\Cls_User.cs" />
+    <Compile Include="Models\cls_UserAction.cs" />
+    <Compile Include="Models\Cls_View.cs" />
+    <Compile Include="Models\Company.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Employee_Salary.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Eradat.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Eradat_Type.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice_Company.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice_Company_Product.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice_Company_Sadad.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice_Company_Sadad_Rproduct.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice_Mandob.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice_Mandob_Product.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice_Mandob_Sadad.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Invoice_Mandob_Sadad_Rproduct.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Job.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Mandob.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Masrofat.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Masrofat_Type.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Omola.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Product.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Reports\Cls_Product.cs" />
+    <Compile Include="Models\Reports\Prnt_ProductSummary.cs" />
+    <Compile Include="Models\Reports\Prnt_Invoice_Mandob.cs" />
+    <Compile Include="Models\Reports\Prnt_ProductBarcode.cs" />
+    <Compile Include="Models\Salary.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Search\Srch_Company.cs" />
+    <Compile Include="Models\Search\Srch_Invoice_Company.cs" />
+    <Compile Include="Models\Search\Srch_Invoice_Mandob.cs" />
+    <Compile Include="Models\Search\Srch_Mandob.cs" />
+    <Compile Include="Models\Search\Srch_Product.cs" />
+    <Compile Include="Models\Srch_Sadad_CompaniesList.cs" />
+    <Compile Include="Models\Srch_Sadad_MandobsList.cs" />
+    <Compile Include="Models\Srch_Salary.cs" />
+    <Compile Include="Models\Store.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StoreModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StoreModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\StoreModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StoreModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserAction.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserView.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_Money.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\View.cs">
+      <DependentUpon>StoreModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Arbah\Rpt_ArbahList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Arbah\Rpt_ArbahList.Designer.cs">
+      <DependentUpon>Rpt_ArbahList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Eradat\Rpt_Eradat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Eradat\Rpt_Eradat.Designer.cs">
+      <DependentUpon>Rpt_Eradat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Eradat\Rpt_EradatList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Eradat\Rpt_EradatList.Designer.cs">
+      <DependentUpon>Rpt_EradatList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Mandob.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Mandob.Designer.cs">
+      <DependentUpon>Rpt_Invoice_Mandob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Company.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Company.Designer.cs">
+      <DependentUpon>Rpt_Invoice_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Mandob_SarfOmola.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Mandob_SarfOmola.Designer.cs">
+      <DependentUpon>Rpt_Invoice_Mandob_SarfOmola.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Mandob_Kabd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Mandob_Kabd.Designer.cs">
+      <DependentUpon>Rpt_Invoice_Mandob_Kabd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Company_Sarf.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_Invoice_Company_Sarf.Designer.cs">
+      <DependentUpon>Rpt_Invoice_Company_Sarf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_ZeroBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Invoices\Rpt_ZeroBox.Designer.cs">
+      <DependentUpon>Rpt_ZeroBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Masrofat\Rpt_MasrofatList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Masrofat\Rpt_MasrofatList.Designer.cs">
+      <DependentUpon>Rpt_MasrofatList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Masrofat\Rpt_Masrofat.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Masrofat\Rpt_Masrofat.Designer.cs">
+      <DependentUpon>Rpt_Masrofat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Product\BarCodeReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Product\BarCodeReport.Designer.cs">
+      <DependentUpon>BarCodeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Product\Rpt_Products.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\Product\Rpt_Products.Designer.cs">
+      <DependentUpon>Rpt_Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repositories\Account.cs" />
+    <Compile Include="Repositories\IAccount.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="assets\layouts\css\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\layouts\css\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\layouts\css\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\layouts\css\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\layouts\css\fonts\Greta_Arabic_Regular.woff" />
+    <Content Include="assets\layouts\css\fonts\Simple-Line-Icons.eot" />
+    <Content Include="assets\layouts\css\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="assets\layouts\css\fonts\Simple-Line-Icons.woff" />
+    <Content Include="assets\layouts\fonts\Al Jazeera Arabic Bold.ttf" />
+    <Content Include="assets\layouts\fonts\Al-Jazeera-Arabic-Bold.eot" />
+    <Content Include="assets\layouts\fonts\Al-Jazeera-Arabic-Bold.ttf" />
+    <Content Include="assets\layouts\fonts\Al-Jazeera-Arabic-Bold.woff" />
+    <Content Include="assets\layouts\fonts\Al-Jazeera-Arabic-Light.eot" />
+    <Content Include="assets\layouts\fonts\Al-Jazeera-Arabic-Light.ttf" />
+    <Content Include="assets\layouts\fonts\Al-Jazeera-Arabic-Regular.eot" />
+    <Content Include="assets\layouts\fonts\Al-Jazeera-Arabic-Regular.ttf" />
+    <Content Include="assets\layouts\fonts\Al-Jazeera-Arabic-Regular.woff" />
+    <Content Include="assets\layouts\fonts\fontawesome-webfont.ttf" />
+    <Content Include="assets\layouts\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Views\Shared\_LayoutAdministration.cshtml" />
+    <Content Include="Views\Users\Login.cshtml" />
+    <Content Include="Views\Users\Operation.cshtml" />
+    <Content Include="Views\Shared\Unauthorized.cshtml" />
+    <Content Include="Views\Users\Search.cshtml" />
+    <Content Include="assets\Scripts\Global\angular-fancy-modal.min.js" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\App.ico.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\Newtonsoft.Json.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\System.Net.Http.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\System.Net.Http.Formatting.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\System.Web.Http.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\System.Web.Http.SelfHost.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\Vintasoft.Shared.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\Vintasoft.Shared.Web.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\Vintasoft.Twain.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\Vintasoft.Twain.Web.ApiControllers.dll.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\VintasoftWebTwainService.application" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\VintasoftWebTwainService.exe.deploy" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\VintasoftWebTwainService.exe.manifest" />
+    <Content Include="SannerApp\Application Files\VintasoftWebTwainService_1_0_0_7\_readme!.txt.deploy" />
+    <Content Include="SannerApp\SannerApp.rar" />
+    <Content Include="SannerApp\VintasoftWebTwainService.application" />
+    <Content Include="assets\layouts\css\fonts\fontawesome-webfont.woff2" />
+    <None Include="Properties\PublishProfiles\Communications.pubxml" />
+    <Content Include="Views\Users\_UserPopUp.cshtml" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="Views\Store\Create.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Company\Create.cshtml" />
+    <Content Include="Views\Company\Index.cshtml" />
+    <Content Include="Views\Product\Operation.cshtml" />
+    <Content Include="Views\Product\GetCompanies.cshtml" />
+    <Content Include="Views\Actions\Search.cshtml" />
+    <Content Include="Views\Search\Product.cshtml" />
+    <Content Include="Views\Search\Invoice_Mandob.cshtml" />
+    <Content Include="Views\Search\Mandob.cshtml" />
+    <Content Include="Views\Search\Invoice_Company.cshtml" />
+    <Content Include="Views\Report_Product\AllProducts.cshtml" />
+    <Content Include="Views\Product\ProductList.cshtml" />
+    <Content Include="Views\Product\Print_BarcodeProduct.cshtml" />
+    <Content Include="Views\UserMoney\Finish.cshtml" />
+    <Content Include="Views\UserMoney\PrintUserMoney.cshtml" />
+    <Content Include="Views\Search\Company.cshtml" />
+    <Content Include="Views\Shared\ForCasher.cshtml" />
+    <Content Include="Views\Shared\ForAdmin.cshtml" />
+    <Content Include="Views\Sadad_Company\Create.cshtml" />
+    <Content Include="Views\Omola\Operation.cshtml" />
+    <Content Include="Views\Search\Masrofat.cshtml" />
+    <Content Include="Views\Search\Eradat.cshtml" />
+    <Content Include="Views\Sadad_Company\Edit.cshtml" />
+    <Content Include="Views\Sadad_Mandob\Create.cshtml" />
+    <Content Include="Views\Sadad_Mandob\Edit.cshtml" />
+    <Content Include="Views\Sadad_Mandob\GetProducts.cshtml" />
+    <Content Include="Views\Sadad_Mandob\SadadMandob.cshtml" />
+    <Content Include="Views\Search\Employee.cshtml" />
+    <Content Include="Views\Report_Eradat\Eradat.cshtml" />
+    <Content Include="Views\Report_Masrofat\Masrofat.cshtml" />
+    <Content Include="Views\Search\Salary.cshtml" />
+    <Content Include="Views\Sadad_Mandob\Sadad.cshtml" />
+    <Content Include="Views\Sadad_Mandob\popup_SadadMandob.cshtml" />
+    <Content Include="Views\Sadad_Company\popup_SadadCompany.cshtml" />
+    <Content Include="Views\Sadad_Company\Sadad.cshtml" />
+    <Content Include="Views\Sadad_Company\Sadad_Confirm.cshtml" />
+    <Content Include="Views\Report_Arbah\Arbah.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Reports\pdf\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\Arbah\Rpt_ArbahList.resx">
+      <DependentUpon>Rpt_ArbahList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eradat\Rpt_Eradat.resx">
+      <DependentUpon>Rpt_Eradat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Eradat\Rpt_EradatList.resx">
+      <DependentUpon>Rpt_EradatList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoices\Rpt_Invoice_Mandob.resx">
+      <DependentUpon>Rpt_Invoice_Mandob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoices\Rpt_Invoice_Company.resx">
+      <DependentUpon>Rpt_Invoice_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoices\Rpt_Invoice_Mandob_SarfOmola.resx">
+      <DependentUpon>Rpt_Invoice_Mandob_SarfOmola.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoices\Rpt_Invoice_Mandob_Kabd.resx">
+      <DependentUpon>Rpt_Invoice_Mandob_Kabd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoices\Rpt_Invoice_Company_Sarf.resx">
+      <DependentUpon>Rpt_Invoice_Company_Sarf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Invoices\Rpt_ZeroBox.resx">
+      <DependentUpon>Rpt_ZeroBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Masrofat\Rpt_MasrofatList.resx">
+      <DependentUpon>Rpt_MasrofatList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Masrofat\Rpt_Masrofat.resx">
+      <DependentUpon>Rpt_Masrofat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Product\BarCodeReport.resx">
+      <DependentUpon>BarCodeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Product\Rpt_Products.resx">
+      <DependentUpon>Rpt_Products.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>24279</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1522/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

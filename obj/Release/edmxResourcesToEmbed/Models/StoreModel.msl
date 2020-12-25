@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_StoreModelStoreContainer" CdmEntityContainer="DB_StoreEntities">
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="DB_StoreModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="DB_StoreModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="userid_Edit" ColumnName="userid_Edit" />
+          <ScalarProperty Name="Userid_In" ColumnName="Userid_In" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Job_Id" ColumnName="Job_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Salary">
+      <EntityTypeMapping TypeName="DB_StoreModel.Employee_Salary">
+        <MappingFragment StoreEntitySet="Employee_Salary">
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Employee_Id" ColumnName="Employee_Id" />
+          <ScalarProperty Name="Salary_Id" ColumnName="Salary_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eradats">
+      <EntityTypeMapping TypeName="DB_StoreModel.Eradat">
+        <MappingFragment StoreEntitySet="Eradat">
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="IS_Chekced" ColumnName="IS_Chekced" />
+          <ScalarProperty Name="Invoice_Mandob_Sadad_ID" ColumnName="Invoice_Mandob_Sadad_ID" />
+          <ScalarProperty Name="userid_Edit" ColumnName="userid_Edit" />
+          <ScalarProperty Name="Userid_In" ColumnName="Userid_In" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Bian" ColumnName="Bian" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Eradat_Type_Id" ColumnName="Eradat_Type_Id" />
+          <ScalarProperty Name="Date_Invoice" ColumnName="Date_Invoice" />
+          <ScalarProperty Name="Invoice_Number" ColumnName="Invoice_Number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Eradat_Type">
+      <EntityTypeMapping TypeName="DB_StoreModel.Eradat_Type">
+        <MappingFragment StoreEntitySet="Eradat_Type">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Company">
+      <EntityTypeMapping TypeName="DB_StoreModel.Invoice_Company">
+        <MappingFragment StoreEntitySet="Invoice_Company">
+          <ScalarProperty Name="IS_Chekced" ColumnName="IS_Chekced" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Total_Sadad" ColumnName="Total_Sadad" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Nakl_Cost" ColumnName="Nakl_Cost" />
+          <ScalarProperty Name="Date_Invoice_Hijri" ColumnName="Date_Invoice_Hijri" />
+          <ScalarProperty Name="Date_Invoice" ColumnName="Date_Invoice" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="Invoice_Number" ColumnName="Invoice_Number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Company_Product">
+      <EntityTypeMapping TypeName="DB_StoreModel.Invoice_Company_Product">
+        <MappingFragment StoreEntitySet="Invoice_Company_Product">
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Invoice_Company_Id" ColumnName="Invoice_Company_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Company_Sadad">
+      <EntityTypeMapping TypeName="DB_StoreModel.Invoice_Company_Sadad">
+        <MappingFragment StoreEntitySet="Invoice_Company_Sadad">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Date_Added" ColumnName="Date_Added" />
+          <ScalarProperty Name="Sadad_Type_Id" ColumnName="Sadad_Type_Id" />
+          <ScalarProperty Name="Invoice_Id" ColumnName="Invoice_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Company_Sadad_Rproduct">
+      <EntityTypeMapping TypeName="DB_StoreModel.Invoice_Company_Sadad_Rproduct">
+        <MappingFragment StoreEntitySet="Invoice_Company_Sadad_Rproduct">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Return_Invoice_Product_id" ColumnName="Return_Invoice_Product_id" />
+          <ScalarProperty Name="Invoice_Company_Sadad_id" ColumnName="Invoice_Company_Sadad_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Mandob">
+      <EntityTypeMapping TypeName="DB_StoreModel.Invoice_Mandob">
+        <MappingFragment StoreEntitySet="Invoice_Mandob">
+          <ScalarProperty Name="Omola_Money" ColumnName="Omola_Money" />
+          <ScalarProperty Name="Omola_quota" ColumnName="Omola_quota" />
+          <ScalarProperty Name="Omola_Type" ColumnName="Omola_Type" />
+          <ScalarProperty Name="IS_Payed_Omola" ColumnName="IS_Payed_Omola" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Total_Sadad" ColumnName="Total_Sadad" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price_Mowrid" ColumnName="Price_Mowrid" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date_Invoice_Hijri" ColumnName="Date_Invoice_Hijri" />
+          <ScalarProperty Name="Date_Invoice" ColumnName="Date_Invoice" />
+          <ScalarProperty Name="Mandob_id" ColumnName="Mandob_id" />
+          <ScalarProperty Name="Payment_Type" ColumnName="Payment_Type" />
+          <ScalarProperty Name="Invoice_Number" ColumnName="Invoice_Number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Mandob_Product">
+      <EntityTypeMapping TypeName="DB_StoreModel.Invoice_Mandob_Product">
+        <MappingFragment StoreEntitySet="Invoice_Mandob_Product">
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Offer_BonusAmount" ColumnName="Offer_BonusAmount" />
+          <ScalarProperty Name="Offer_Product_id" ColumnName="Offer_Product_id" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Price_Mowrid" ColumnName="Price_Mowrid" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Invoice_Mandob_Id" ColumnName="Invoice_Mandob_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Mandob_Sadad">
+      <EntityTypeMapping TypeName="DB_StoreModel.Invoice_Mandob_Sadad">
+        <MappingFragment StoreEntitySet="Invoice_Mandob_Sadad">
+          <ScalarProperty Name="IS_Chekced" ColumnName="IS_Chekced" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Date_Added" ColumnName="Date_Added" />
+          <ScalarProperty Name="Sadad_Type_Id" ColumnName="Sadad_Type_Id" />
+          <ScalarProperty Name="Invoice_Id" ColumnName="Invoice_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Mandob_Sadad_Rproduct">
+      <EntityTypeMapping TypeName="DB_StoreModel.Invoice_Mandob_Sadad_Rproduct">
+        <MappingFragment StoreEntitySet="Invoice_Mandob_Sadad_Rproduct">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Return_Invoice_Product_id" ColumnName="Return_Invoice_Product_id" />
+          <ScalarProperty Name="Invoice_Mandob_Sadad_id" ColumnName="Invoice_Mandob_Sadad_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jobs">
+      <EntityTypeMapping TypeName="DB_StoreModel.Job">
+        <MappingFragment StoreEntitySet="Job">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mandobs">
+      <EntityTypeMapping TypeName="DB_StoreModel.Mandob">
+        <MappingFragment StoreEntitySet="Mandob">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="JawalNO2" ColumnName="JawalNO2" />
+          <ScalarProperty Name="JawalNO" ColumnName="JawalNO" />
+          <ScalarProperty Name="Sejil" ColumnName="Sejil" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Masrofats">
+      <EntityTypeMapping TypeName="DB_StoreModel.Masrofat">
+        <MappingFragment StoreEntitySet="Masrofat">
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="Salary_ID" ColumnName="Salary_ID" />
+          <ScalarProperty Name="Invoice_Mandob_ID" ColumnName="Invoice_Mandob_ID" />
+          <ScalarProperty Name="Invoice_Company_Sadad_ID" ColumnName="Invoice_Company_Sadad_ID" />
+          <ScalarProperty Name="userid_Edit" ColumnName="userid_Edit" />
+          <ScalarProperty Name="Userid_In" ColumnName="Userid_In" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Bian" ColumnName="Bian" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Masrofat_Type_Id" ColumnName="Masrofat_Type_Id" />
+          <ScalarProperty Name="Date_Invoice" ColumnName="Date_Invoice" />
+          <ScalarProperty Name="Invoice_Number" ColumnName="Invoice_Number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Masrofat_Type">
+      <EntityTypeMapping TypeName="DB_StoreModel.Masrofat_Type">
+        <MappingFragment StoreEntitySet="Masrofat_Type">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Omolas">
+      <EntityTypeMapping TypeName="DB_StoreModel.Omola">
+        <MappingFragment StoreEntitySet="Omola">
+          <ScalarProperty Name="Omola_quota" ColumnName="Omola_quota" />
+          <ScalarProperty Name="Omola_Type" ColumnName="Omola_Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DB_StoreModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Offer_Product_id" ColumnName="Offer_Product_id" />
+          <ScalarProperty Name="Offer_BonusAmount" ColumnName="Offer_BonusAmount" />
+          <ScalarProperty Name="Offer_TargetAmount" ColumnName="Offer_TargetAmount" />
+          <ScalarProperty Name="OldAmount" ColumnName="OldAmount" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price_Unit" ColumnName="Price_Unit" />
+          <ScalarProperty Name="Price_Mowrid" ColumnName="Price_Mowrid" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Salaries">
+      <EntityTypeMapping TypeName="DB_StoreModel.Salary">
+        <MappingFragment StoreEntitySet="Salary">
+          <ScalarProperty Name="userid_Edit" ColumnName="userid_Edit" />
+          <ScalarProperty Name="Userid_In" ColumnName="Userid_In" />
+          <ScalarProperty Name="EditDate" ColumnName="EditDate" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="TotalSalaries" ColumnName="TotalSalaries" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="DateTO" ColumnName="DateTO" />
+          <ScalarProperty Name="DateFrom" ColumnName="DateFrom" />
+          <ScalarProperty Name="Invoice_Number" ColumnName="Invoice_Number" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stores">
+      <EntityTypeMapping TypeName="DB_StoreModel.Store">
+        <MappingFragment StoreEntitySet="Store">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DB_StoreModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Account_Type" ColumnName="Account_Type" />
+          <ScalarProperty Name="STOPEMP" ColumnName="STOPEMP" />
+          <ScalarProperty Name="INDATE" ColumnName="INDATE" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Money">
+      <EntityTypeMapping TypeName="DB_StoreModel.User_Money">
+        <MappingFragment StoreEntitySet="User_Money">
+          <ScalarProperty Name="Save_Date" ColumnName="Save_Date" />
+          <ScalarProperty Name="Money_Remain" ColumnName="Money_Remain" />
+          <ScalarProperty Name="Money_Mada" ColumnName="Money_Mada" />
+          <ScalarProperty Name="Money_Sandok" ColumnName="Money_Sandok" />
+          <ScalarProperty Name="Money_Sarf" ColumnName="Money_Sarf" />
+          <ScalarProperty Name="Money_Invoice_Mandob" ColumnName="Money_Invoice_Mandob" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserActions">
+      <EntityTypeMapping TypeName="DB_StoreModel.UserAction">
+        <MappingFragment StoreEntitySet="UserAction">
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+          <ScalarProperty Name="Viewid" ColumnName="Viewid" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserViews">
+      <EntityTypeMapping TypeName="DB_StoreModel.UserView">
+        <MappingFragment StoreEntitySet="UserView">
+          <ScalarProperty Name="Role_Delete" ColumnName="Role_Delete" />
+          <ScalarProperty Name="Role_Edit" ColumnName="Role_Edit" />
+          <ScalarProperty Name="Role_Save" ColumnName="Role_Save" />
+          <ScalarProperty Name="Role_Enter" ColumnName="Role_Enter" />
+          <ScalarProperty Name="ViewID" ColumnName="ViewID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Views">
+      <EntityTypeMapping TypeName="DB_StoreModel.View">
+        <MappingFragment StoreEntitySet="View">
+          <ScalarProperty Name="ViewIndex" ColumnName="ViewIndex" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

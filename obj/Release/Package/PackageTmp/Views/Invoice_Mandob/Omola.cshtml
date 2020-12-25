@@ -1,0 +1,65 @@
+﻿<div class="row" style="height:200px;">
+    <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet light">
+         
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-paper-plane font-yellow-casablanca" style="color: #5c9acf !important;"></i>
+                    <a href="#" id="pageTitle">
+                        صروف عمولة مندوب المبيعات 
+                    </a>
+                </div>
+                <div class="actions">
+                    <a class="btn red btn-sm fancymodal-close" id='closeDealingType' ng-click="closeUiModal()" style="padding-left:15px;" href="#"> إغلاق </a>
+                </div>
+            </div>
+            <div class='portlet-body'  >
+                <div class="col-md-12" ng-show="AlertParameter">
+                    <div class="m-heading-1 border-green m-bordered">
+                        <span style="color:red"> {{ErrorName}} </span>
+                        <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+                    </div>
+                </div>
+                <div ng-hide="IsNewSarf">
+                    <div class='row' style="margin: auto;">
+                        <label>إجمالي فاتورة المبيعات</label>
+                        <input id="Money" style="background-color:#ffffff;" ng-model="Cls_Invoice_Mandob.Price" class='form-control' type='text' readonly />
+                    </div>
+                    <div class='row' style="margin: auto;">
+                        <label>عدد الاصناف</label>
+                        <input id="Name" style="background-color:#ffffff;" ng-model="Cls_Invoice_Mandob.Omola_Amount_AllProducts" class='form-control' type='text' readonly />
+                    </div>
+                    <div class='row' style="margin: auto;">
+                        <label>نوع العمولة</label>
+                        <input id="Name" style="background-color:#ffffff;" ng-model="Cls_Invoice_Mandob.Omola_Text" class='form-control' type='text' readonly />
+                    </div>
+                    <div class='row' style="margin: auto;">
+                        <label>إجمالي عمولة المبيعات</label>
+                        <input id="Name" ng-model="Cls_Invoice_Mandob.Omola_Money_Orignal" class='form-control' type='text' readonly />
+                    </div>
+                </div>
+                <div ng-hide="IsSucess" style='text-align:center;'>
+                    <div style="color:#e7505a;font-size:55px;font-weight:bold;">تم صرف العمولة بنجاح ....</div>
+                    <img src="~/assets/Images/sucess.png" />
+                </div>
+              
+              <br />
+            </div>
+            <div class='row form-actions' style='text-align:center;border-top: 1px solid #eee;padding-top: 15px;'>
+                <button type='submit' class='btn green' ng-hide="IsNewSarf" ng-click="BtnOmolaConfirm()"><i class="fa fa-send"></i>  صرف العمولة </button>
+                <button type='submit' class='btn green' ng-hide="IsSucess" ng-click="PDF_SarfOmola()"><i class="fa fa-print"></i>  طباعة سند الصرف </button>
+                <button type='submit' class='btn green' ng-hide="IsSucess" ng-click="PrintMasrofat()"><i class="fa fa-print"></i>  طباعة بيان المصروفات </button>
+            </div>
+        </div>
+        <!-- END Portlet PORTLET-->
+
+        
+    </div>
+
+    
+</div>
+
+
+
+

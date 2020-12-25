@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_cashierModelStoreContainer" CdmEntityContainer="DB_cashierEntities">
+    <EntitySetMapping Name="aspnet_Applications">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_Applications">
+        <MappingFragment StoreEntitySet="aspnet_Applications">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+          <ScalarProperty Name="LoweredApplicationName" ColumnName="LoweredApplicationName" />
+          <ScalarProperty Name="ApplicationName" ColumnName="ApplicationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Membership">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_Membership">
+        <MappingFragment StoreEntitySet="aspnet_Membership">
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptWindowStart" ColumnName="FailedPasswordAnswerAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAnswerAttemptCount" ColumnName="FailedPasswordAnswerAttemptCount" />
+          <ScalarProperty Name="FailedPasswordAttemptWindowStart" ColumnName="FailedPasswordAttemptWindowStart" />
+          <ScalarProperty Name="FailedPasswordAttemptCount" ColumnName="FailedPasswordAttemptCount" />
+          <ScalarProperty Name="LastLockoutDate" ColumnName="LastLockoutDate" />
+          <ScalarProperty Name="LastPasswordChangedDate" ColumnName="LastPasswordChangedDate" />
+          <ScalarProperty Name="LastLoginDate" ColumnName="LastLoginDate" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="IsLockedOut" ColumnName="IsLockedOut" />
+          <ScalarProperty Name="IsApproved" ColumnName="IsApproved" />
+          <ScalarProperty Name="PasswordAnswer" ColumnName="PasswordAnswer" />
+          <ScalarProperty Name="PasswordQuestion" ColumnName="PasswordQuestion" />
+          <ScalarProperty Name="LoweredEmail" ColumnName="LoweredEmail" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobilePIN" ColumnName="MobilePIN" />
+          <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+          <ScalarProperty Name="PasswordFormat" ColumnName="PasswordFormat" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Paths">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_Paths">
+        <MappingFragment StoreEntitySet="aspnet_Paths">
+          <ScalarProperty Name="LoweredPath" ColumnName="LoweredPath" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationAllUsers">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_PersonalizationAllUsers">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationAllUsers">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_PersonalizationPerUser">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_PersonalizationPerUser">
+        <MappingFragment StoreEntitySet="aspnet_PersonalizationPerUser">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PageSettings" ColumnName="PageSettings" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="PathId" ColumnName="PathId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Profile">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_Profile">
+        <MappingFragment StoreEntitySet="aspnet_Profile">
+          <ScalarProperty Name="LastUpdatedDate" ColumnName="LastUpdatedDate" />
+          <ScalarProperty Name="PropertyValuesBinary" ColumnName="PropertyValuesBinary" />
+          <ScalarProperty Name="PropertyValuesString" ColumnName="PropertyValuesString" />
+          <ScalarProperty Name="PropertyNames" ColumnName="PropertyNames" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Roles">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_Roles">
+        <MappingFragment StoreEntitySet="aspnet_Roles">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="LoweredRoleName" ColumnName="LoweredRoleName" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_SchemaVersions">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_SchemaVersions">
+        <MappingFragment StoreEntitySet="aspnet_SchemaVersions">
+          <ScalarProperty Name="IsCurrentVersion" ColumnName="IsCurrentVersion" />
+          <ScalarProperty Name="CompatibleSchemaVersion" ColumnName="CompatibleSchemaVersion" />
+          <ScalarProperty Name="Feature" ColumnName="Feature" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_Users">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_Users">
+        <MappingFragment StoreEntitySet="aspnet_Users">
+          <ScalarProperty Name="LastActivityDate" ColumnName="LastActivityDate" />
+          <ScalarProperty Name="IsAnonymous" ColumnName="IsAnonymous" />
+          <ScalarProperty Name="MobileAlias" ColumnName="MobileAlias" />
+          <ScalarProperty Name="LoweredUserName" ColumnName="LoweredUserName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ApplicationId" ColumnName="ApplicationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="aspnet_WebEvent_Events">
+      <EntityTypeMapping TypeName="DB_cashierModel.aspnet_WebEvent_Events">
+        <MappingFragment StoreEntitySet="aspnet_WebEvent_Events">
+          <ScalarProperty Name="Details" ColumnName="Details" />
+          <ScalarProperty Name="ExceptionType" ColumnName="ExceptionType" />
+          <ScalarProperty Name="RequestUrl" ColumnName="RequestUrl" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="ApplicationVirtualPath" ColumnName="ApplicationVirtualPath" />
+          <ScalarProperty Name="ApplicationPath" ColumnName="ApplicationPath" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="EventDetailCode" ColumnName="EventDetailCode" />
+          <ScalarProperty Name="EventCode" ColumnName="EventCode" />
+          <ScalarProperty Name="EventOccurrence" ColumnName="EventOccurrence" />
+          <ScalarProperty Name="EventSequence" ColumnName="EventSequence" />
+          <ScalarProperty Name="EventType" ColumnName="EventType" />
+          <ScalarProperty Name="EventTime" ColumnName="EventTime" />
+          <ScalarProperty Name="EventTimeUtc" ColumnName="EventTimeUtc" />
+          <ScalarProperty Name="EventId" ColumnName="EventId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Companies">
+      <EntityTypeMapping TypeName="DB_cashierModel.Company">
+        <MappingFragment StoreEntitySet="Company">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Department_ID" ColumnName="Department_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="DB_cashierModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Cancel">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Cancel">
+        <MappingFragment StoreEntitySet="Invoice_Cancel">
+          <ScalarProperty Name="IS_Chekced" ColumnName="IS_Chekced" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date_Invoice_Hijri" ColumnName="Date_Invoice_Hijri" />
+          <ScalarProperty Name="Date_Invoice" ColumnName="Date_Invoice" />
+          <ScalarProperty Name="Moshtary_id" ColumnName="Moshtary_id" />
+          <ScalarProperty Name="Sadad_Type_Id" ColumnName="Sadad_Type_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Cancel_Product">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Cancel_Product">
+        <MappingFragment StoreEntitySet="Invoice_Cancel_Product">
+          <ScalarProperty Name="Haba_Count" ColumnName="Haba_Count" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Type" ColumnName="Product_Type" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Invoice_Cancel_Id" ColumnName="Invoice_Cancel_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Company">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Company">
+        <MappingFragment StoreEntitySet="Invoice_Company">
+          <ScalarProperty Name="IS_Chekced" ColumnName="IS_Chekced" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Total_Sadad" ColumnName="Total_Sadad" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date_Invoice_Hijri" ColumnName="Date_Invoice_Hijri" />
+          <ScalarProperty Name="Date_Invoice" ColumnName="Date_Invoice" />
+          <ScalarProperty Name="Company_id" ColumnName="Company_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Company_Product">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Company_Product">
+        <MappingFragment StoreEntitySet="Invoice_Company_Product">
+          <ScalarProperty Name="Haba_Count" ColumnName="Haba_Count" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date_Expiration_Hijri" ColumnName="Date_Expiration_Hijri" />
+          <ScalarProperty Name="Date_Expiration" ColumnName="Date_Expiration" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Type" ColumnName="Product_Type" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Invoice_Company_Id" ColumnName="Invoice_Company_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Company_Sadad">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Company_Sadad">
+        <MappingFragment StoreEntitySet="Invoice_Company_Sadad">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Remain" ColumnName="Remain" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Date_Added" ColumnName="Date_Added" />
+          <ScalarProperty Name="Sadad_Type_Id" ColumnName="Sadad_Type_Id" />
+          <ScalarProperty Name="Invoice_Id" ColumnName="Invoice_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Company_Sadad_Rproduct">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Company_Sadad_Rproduct">
+        <MappingFragment StoreEntitySet="Invoice_Company_Sadad_Rproduct">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Return_Invoice_Product_id" ColumnName="Return_Invoice_Product_id" />
+          <ScalarProperty Name="Invoice_Company_Sadad_id" ColumnName="Invoice_Company_Sadad_id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Moshtary">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Moshtary">
+        <MappingFragment StoreEntitySet="Invoice_Moshtary">
+          <ScalarProperty Name="IS_Chekced" ColumnName="IS_Chekced" />
+          <ScalarProperty Name="Is_Deleted" ColumnName="Is_Deleted" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Total_Sadad" ColumnName="Total_Sadad" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date_Invoice_Hijri" ColumnName="Date_Invoice_Hijri" />
+          <ScalarProperty Name="Date_Invoice" ColumnName="Date_Invoice" />
+          <ScalarProperty Name="Moshtary_id" ColumnName="Moshtary_id" />
+          <ScalarProperty Name="Payment_Type" ColumnName="Payment_Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Moshtary_Product">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Moshtary_Product">
+        <MappingFragment StoreEntitySet="Invoice_Moshtary_Product">
+          <ScalarProperty Name="Haba_Count" ColumnName="Haba_Count" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Product_Name" ColumnName="Product_Name" />
+          <ScalarProperty Name="Product_Type" ColumnName="Product_Type" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Invoice_Moshtary_Id" ColumnName="Invoice_Moshtary_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoice_Moshtary_Sadad">
+      <EntityTypeMapping TypeName="DB_cashierModel.Invoice_Moshtary_Sadad">
+        <MappingFragment StoreEntitySet="Invoice_Moshtary_Sadad">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Sadad_Type_Id" ColumnName="Sadad_Type_Id" />
+          <ScalarProperty Name="Money" ColumnName="Money" />
+          <ScalarProperty Name="Date_Added" ColumnName="Date_Added" />
+          <ScalarProperty Name="Invoice_Id" ColumnName="Invoice_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Moshtaries">
+      <EntityTypeMapping TypeName="DB_cashierModel.Moshtary">
+        <MappingFragment StoreEntitySet="Moshtary">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="JawalNO2" ColumnName="JawalNO2" />
+          <ScalarProperty Name="JawalNO" ColumnName="JawalNO" />
+          <ScalarProperty Name="Sejil" ColumnName="Sejil" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="DB_cashierModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="Price_Sndok_Mowrid" ColumnName="Price_Sndok_Mowrid" />
+          <ScalarProperty Name="Price_Carton_Mowrid" ColumnName="Price_Carton_Mowrid" />
+          <ScalarProperty Name="Price_Sndok" ColumnName="Price_Sndok" />
+          <ScalarProperty Name="Sndok_ProCount" ColumnName="Sndok_ProCount" />
+          <ScalarProperty Name="Sndok_Barcode" ColumnName="Sndok_Barcode" />
+          <ScalarProperty Name="Price_Carton" ColumnName="Price_Carton" />
+          <ScalarProperty Name="Price_Mowrid" ColumnName="Price_Mowrid" />
+          <ScalarProperty Name="Date_Expiration_Hijri" ColumnName="Date_Expiration_Hijri" />
+          <ScalarProperty Name="Date_Expiration" ColumnName="Date_Expiration" />
+          <ScalarProperty Name="Carton_ProCount" ColumnName="Carton_ProCount" />
+          <ScalarProperty Name="Carton_Barcode" ColumnName="Carton_Barcode" />
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Jumla_picesCount" ColumnName="Jumla_picesCount" />
+          <ScalarProperty Name="Price_Jumla" ColumnName="Price_Jumla" />
+          <ScalarProperty Name="Price_Unit" ColumnName="Price_Unit" />
+          <ScalarProperty Name="Company_Id" ColumnName="Company_Id" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sadad_Type">
+      <EntityTypeMapping TypeName="DB_cashierModel.Sadad_Type">
+        <MappingFragment StoreEntitySet="Sadad_Type">
+          <ScalarProperty Name="IP" ColumnName="IP" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stores">
+      <EntityTypeMapping TypeName="DB_cashierModel.Store">
+        <MappingFragment StoreEntitySet="Store">
+          <ScalarProperty Name="InDate" ColumnName="InDate" />
+          <ScalarProperty Name="ComputerUser" ColumnName="ComputerUser" />
+          <ScalarProperty Name="ComputerName" ColumnName="ComputerName" />
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DB_cashierModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="PROGRAMUSERID" ColumnName="PROGRAMUSERID" />
+          <ScalarProperty Name="STOPEMP" ColumnName="STOPEMP" />
+          <ScalarProperty Name="INDATE" ColumnName="INDATE" />
+          <ScalarProperty Name="PROGRAMUSER" ColumnName="PROGRAMUSER" />
+          <ScalarProperty Name="COMPUTERUSER" ColumnName="COMPUTERUSER" />
+          <ScalarProperty Name="COMPUTERNAME" ColumnName="COMPUTERNAME" />
+          <ScalarProperty Name="ROLE" ColumnName="ROLE" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="NAME" ColumnName="NAME" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Money">
+      <EntityTypeMapping TypeName="DB_cashierModel.User_Money">
+        <MappingFragment StoreEntitySet="User_Money">
+          <ScalarProperty Name="Save_Date" ColumnName="Save_Date" />
+          <ScalarProperty Name="Money_Remain" ColumnName="Money_Remain" />
+          <ScalarProperty Name="Money_Mada" ColumnName="Money_Mada" />
+          <ScalarProperty Name="Money_Sandok" ColumnName="Money_Sandok" />
+          <ScalarProperty Name="Money_Sarf" ColumnName="Money_Sarf" />
+          <ScalarProperty Name="Money_Invoice_Moshtary" ColumnName="Money_Invoice_Moshtary" />
+          <ScalarProperty Name="User_Id" ColumnName="User_Id" />
+          <ScalarProperty Name="Sadad_Type_ID" ColumnName="Sadad_Type_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserActions">
+      <EntityTypeMapping TypeName="DB_cashierModel.UserAction">
+        <MappingFragment StoreEntitySet="UserAction">
+          <ScalarProperty Name="Operation" ColumnName="Operation" />
+          <ScalarProperty Name="Action" ColumnName="Action" />
+          <ScalarProperty Name="ActionDate" ColumnName="ActionDate" />
+          <ScalarProperty Name="Viewid" ColumnName="Viewid" />
+          <ScalarProperty Name="Userid" ColumnName="Userid" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserViews">
+      <EntityTypeMapping TypeName="DB_cashierModel.UserView">
+        <MappingFragment StoreEntitySet="UserView">
+          <ScalarProperty Name="Role_Delete" ColumnName="Role_Delete" />
+          <ScalarProperty Name="Role_Edit" ColumnName="Role_Edit" />
+          <ScalarProperty Name="Role_Save" ColumnName="Role_Save" />
+          <ScalarProperty Name="Role_Enter" ColumnName="Role_Enter" />
+          <ScalarProperty Name="ViewID" ColumnName="ViewID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Views">
+      <EntityTypeMapping TypeName="DB_cashierModel.View">
+        <MappingFragment StoreEntitySet="View">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ragy3">
+      <EntityTypeMapping TypeName="DB_cashierModel.Ragy3">
+        <MappingFragment StoreEntitySet="Ragy3">
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="Taxes" ColumnName="Taxes" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Date_Expiration_Hijri" ColumnName="Date_Expiration_Hijri" />
+          <ScalarProperty Name="Date_Expiration" ColumnName="Date_Expiration" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Rg3_Type" ColumnName="Rg3_Type" />
+          <ScalarProperty Name="Product_Type" ColumnName="Product_Type" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="Invoice_Company_Id" ColumnName="Invoice_Company_Id" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="aspnet_UsersInRoles" TypeName="DB_cashierModel.aspnet_UsersInRoles" StoreEntitySet="aspnet_UsersInRoles">
+      <EndProperty Name="aspnet_Users">
+        <ScalarProperty Name="UserId" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="aspnet_Roles">
+        <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

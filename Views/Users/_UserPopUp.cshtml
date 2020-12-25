@@ -1,0 +1,10 @@
+﻿@model IEnumerable<Warehouse.Models.Administration.LogInViewModel>
+@foreach (var item in Model)
+{
+    <tr class="odd gradeX" id="@item.UserID" data-value="@item.Name" >
+
+        <td>
+            @item.Name
+        </td>
+    </tr>
+}

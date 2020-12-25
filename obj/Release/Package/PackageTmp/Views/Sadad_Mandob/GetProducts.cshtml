@@ -1,0 +1,81 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-paper-plane font-yellow-casablanca" style="color: #5c9acf !important;"></i>
+                    من فضلك اختار الصنف
+                </div>
+                <div class="actions">
+                    <a class="btn red btn-sm fancymodal-close" id='closebox' ng-click="closeUiProduct()" style="padding-left:15px;" href="#"> إغلاق </a>
+                </div>
+            </div>
+            <div class='portlet-body'>
+
+                <div class='row' style="margin: auto;">
+                    <div class='col-md-6 form-group'>
+                        <label id="lblBarcode">اسم الصنف</label>
+                        <div class='form-group fixeddiv'>
+                            <input id="Search" ng-keyup="keyupevt()" class='form-control' placeholder='البحث باسم الصنف' type='text' autofocus />
+
+                        </div>
+                    </div>
+
+                    <div class='col-md-6 form-group' ng-class="{ 'has-error': FormData.Price_Unit.$invalid }">
+                        <label id="lblBarcode">
+                            رقم باركود
+                            (الصنف / الكرتون / الصندوق)
+                        </label>
+                        <div class='form-group'>
+                            <input id="Src_Barcode" ng-keydown="$event.keyCode === 13 && keyupevt()" type='text' class='form-control' placeholder='البحث برقم الباركود'  />
+                        </div>
+                    </div>
+                </div>
+                <div class='row' style="text-align:center;">
+                    <div class='table-responsive' style="max-height: 300px;margin-top:10px;" id="ViewList">
+                        <table class='table table-striped' style='margin:auto'>
+                            <thead>
+                                <tr>
+                                    <th> اسم الصنف </th>
+                                    <th> الكمية </th>
+                                    <th> سعر الحبة </th>
+                                    <th> كمية الارجاع </th>
+                                    <th> مبلغ الارجاع </th>
+                                    <th> الباقي </th>
+
+                                </tr>
+                            </thead>
+                            <tbody id="GetDealingTypeTable">
+                                <tr ng-repeat="item in ProductList track by $index">
+                                    <td>{{item.Product_Name}}</td>
+                                    <td>{{item.Amount}}</td>
+                                    <td>{{item.Price}}</td>
+                                    <td><input id="Amount" ng-model="item.Amount" class='form-control' placeholder='كمية الارجاع' type='text' /></td>
+                                    <td><input id="Price" ng-model="item.Price" class='form-control' placeholder='كمية الارجاع' type='text' readonly /></td>
+                                    <td><input id="Search" class='form-control' placeholder='كمية الارجاع' type='text' readonly /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+                <div class='row form-actions' style='text-align:center'>
+                    <button type='submit' class='btn green' ng-click="BtnLogin()">حفظ</button>
+                </div>
+            </div>
+        </div>
+        <!-- END Portlet PORTLET-->
+    </div>
+</div>
+
+
+
+
+<style>
+    .modal.in .modal-dialog {
+        height: 150px;
+        width: 1200px;
+    }
+</style>

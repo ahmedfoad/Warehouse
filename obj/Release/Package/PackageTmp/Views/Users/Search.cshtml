@@ -1,0 +1,137 @@
+﻿@{
+    ViewBag.Title = "المستخدمين";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    البحث والإستعلام عن المستخدمين 
+                </a>
+            </li>
+
+        </ul>
+        
+    </div>
+</div>
+<div class="row" ng-controller="UserSearchCtrl">
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    خيارات البحث                  
+                </div>
+                <div class="actions">
+                    <a href="" class="btn btn-default" ng-click="emptyInputs()">
+                        <i class="fa fa-pencil"></i> إخلاء خانات البحث
+                    </a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <form role='form'>
+                    <div class='row form-body'>
+                        <div class='col-md-3 form-group'>
+                            <label> الاسم </label>
+                            <div class='input-icon'>
+                                <i class='fa fa-envelope'></i>
+                                <input type='text' class='form-control' placeholder='الاسم' ng-model='Name'>
+                            </div>
+                        </div>
+                        <div class='col-md-3 form-group'>
+                            <label>اسم المستخدم</label>
+                            <div class='input-icon'>
+                                <i class='fa fa-user'></i>
+                                <input type='text' class='form-control' placeholder='اسم المستخدم' ng-model='UserName'>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-actions" style="text-align:center">
+                        <button type="submit" class="btn green" ng-click="SearchButton()">بحث</button>
+                    </div>
+                </form>
+            </div>
+            <div class="portlet-title">
+                <div class="caption">
+                    نتائج البحث
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;"> الإسم </th>
+                                <th style="width:30%"> اسم المستخدم </th>
+                                <th colspan="2" style="width: 20%; vertical-align: inherit;"> الأداوت </th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in data track by $index">
+                                <td> {{item.NAME}} </td>
+                                <td>{{item.Username}} </td>
+                                <td> <a href="/Users/Operation/{{item.ID}}"><i class="fa fa-pencil"></i> تعديل</a></td>
+                                <td style ="color:red"><a href="/Users/Operation/{{item.ID}}"><i class="fa fa-trash-o" style="color:red"></i> حذف</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="text-align: center;" ng-show="TableLoading">
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                        <img src="~/assets/layouts/img/Preloader_2.gif" />
+                    </div>
+                    <div ng-show="EndSearch" style="text-align: center; color:red;"> عفوا لا توجد بيانات آخري </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Related{
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="page-title">الأدوات</h4>
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption" style="font-size:14px;">
+                        روابط ذات صلة
+                    </div>
+                </div>
+                <div>
+                    <div class="portlet-body">
+                        <a href="/Users/Operation"><i class="fa fa-angle-left"></i>  إضافة مستخدم جديد</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Users/Search"><i class="fa fa-angle-left"></i> الإستعلام عن المستخدمين</a>
+                    </div>
+                    <div id="EditElements">
+                        <div class="portlet-body">
+                            <a href="/Store/Index" id="PrintPayment"><i class="fa fa-angle-left"></i> المخزن</a>
+                        </div>
+                        
+                        <div class="portlet-body">
+                            <a href="/Company/Index" id="Payment"><i class="fa fa-angle-left"></i> اسم الشركة </a>
+                        </div>
+                        <div class="portlet-body">
+                            <a href="/Product/Operation" id="TreamentCopy"><i class="fa fa-angle-left"></i> الصنف</a>
+                        </div>
+                     
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section AngularFiles{   
+<script src="~/App/Users/UsersSearch.js"></script>
+}
+

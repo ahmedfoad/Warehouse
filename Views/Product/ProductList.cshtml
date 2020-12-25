@@ -1,0 +1,164 @@
+﻿@{
+    ViewBag.Title = "اضافة اصناف";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#" id="pageTitle">
+                    اضافة اصناف
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="row" ng-controller="ProductListCtrl" data-ng-init="Intaize_product()">
+    <div class="col-md-12" ng-show="AlertParameter">
+        <div class="m-heading-1 border-green m-bordered">
+            <span style="color:red"> {{ErrorName}} </span>
+            <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="portlet light">
+
+
+
+            <div class="portlet-body">
+                <form role='form' name="FormData">
+                    <div class="table-responsive">
+                        @*<button type='submit' class='btn green' ng-click="AddNewItem()">اضافة صنف جديد</button>*@
+
+                        <a href="javascript:;" class="btn green" ng-click="AddNewItem()">
+                            اضافة صنف جديد
+                        </a>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th title="العدد"> اسم الصنف </th>
+                                    <th title="العدد"> اسم الشركة </th>
+                                    <th width="80px" title="سعر الشراء"> سعر الشراء </th>
+                                    <th width="80px" title="سعر البيع"> سعر البيع </th>
+                                    <th title="باركود الصنف">باركود الصنف</th>
+                                    <th title="ضريبة القيمة المضافة"> ضريبة القيمة المضافة </th>
+                                    <th colspan="2" style="vertical-align: inherit;"> حذف </th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+
+                                <tr ng-repeat="item in  Cls_Product track by $index">
+                                    @*<td class='form-group fixeddiv'>*@
+                                    
+                                    <td>
+                                        <input name="Name[{{$index}}]" ng-model="item.Name" id="Name" type='text' placeholder='اسم الصنف' class='form-control'>
+                                    </td>
+
+                                    <td>
+                                        <input type='hidden' ng-model="item.Company_Id">
+                                        <input type='text' name="Company_Name[{{$index}}]" ng-model="item.Company_Name" ng-click="loadCompanies($index)" placeholder='اسم الشركة' class='form-control' readonly>
+                                    </td>
+
+                                   
+                                    <td>
+                                        <input name="Price_Mowrid[{{$index}}]" ng-model="item.Price_Mowrid" type='text' placeholder='السعر' class='form-control'>
+                                    </td>
+                                    <td>
+                                        <input name="Price_Unit[{{$index}}]" ng-model="item.Price_Unit" type='text' placeholder='السعر' class='form-control'>
+                                    </td>
+                                    
+                                   
+                                    <td>
+                                        <input name="Barcode[{{$index}}]" ng-model="item.Barcode" id="Barcode" type='text' placeholder='رقم الباركود' class='form-control'>
+                                    </td>
+                                    <td>
+                                        <select name="Taxes[{{$index}}]" ng-model="item.Taxes" class="form-control w170">
+                                            <option value=""> اختار القيمة المضافة</option>
+                                            <option value="0">0</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </td>
+                                    <td style="color:red"><a href="javascript:void(0)" ng-click="removeRow($index)"><i class="fa fa-trash-o" style="color:red"></i> حذف</a></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class='row form-actions' style='text-align:center'>
+                <button type='submit' class='btn green' ng-hide="SaveBtn" ng-click="Save()">حفظ</button>
+                <!--  <a href="/Home" type='submit' class='btn purple'>إلغاء</a> -->
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <barcode-scanner separator-char="separatorChar" trigger-char="triggerChar" scan-callback="scanCallback"
+                     trigger-callback="triggerCallback"></barcode-scanner>
+</div>
+
+
+
+@section Related{
+    <div class="row" ng-controller="ProductListCtrl">
+        <div class="col-md-12">
+            <h4 class="page-title">الأدوات</h4>
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption" style="font-size:14px;">
+                        روابط ذات صلة
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <a href="javascipt:void(0)" ng-click="loadCompanies(1)"><i class="fa fa-angle-left"></i>  اضافة قسم جديد</a>
+                </div>
+                <div class="portlet-body">
+                    <a href="javascipt:void(0)" ng-click="loadCompanies(1)"><i class="fa fa-angle-left"></i>  اضافة اسم شركة جديد</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+@section AngularFiles{
+
+    <link href="~/assets/layouts/ZebraDatepicker/style/bootstrap-theme.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/assets/layouts/ZebraDatepicker/style/shCoreDefault.min.css" />
+    <link href="~/assets/layouts/ZebraDatepicker/style/css/default/zebra_datepicker.min.css" rel="stylesheet" />
+    <link href="~/assets/layouts/ZebraDatepicker/examples.css" rel="stylesheet" />
+
+
+    <script src="~/assets/layouts/ZebraDatepicker/style/shCore.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushJScript.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushXml.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/style/shBrushCss.min.js"></script>
+    <script type="text/javascript">
+        SyntaxHighlighter.defaults['toolbar'] = false;
+        SyntaxHighlighter.all();
+    </script>
+
+    <script src="~/assets/layouts/ZebraDatepicker/style/zebra_datepicker.min.js"></script>
+    <script src="~/assets/layouts/ZebraDatepicker/examples.js"></script>
+    <script src="~/App/Tarmeez/ProductListCtrl.js"></script>
+    <script>
+        $(function () {
+            $('input').attr('tabindex', function (index, attr) {
+                return index + 1;
+            });
+        });
+    </script>
+}

@@ -1,0 +1,46 @@
+﻿<div class="row" style="height:100px;">
+    <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet light">
+         
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-paper-plane font-yellow-casablanca" style="color: #5c9acf !important;"></i>
+                    <a href="#" id="pageTitle">
+                       تأكيد صرف عمولة فاتورة مبيعات
+                    </a>
+                </div>
+                <div class="actions">
+                    <a class="btn red btn-sm fancymodal-close" id='closeDealingType' ng-click="closeUiModal()" style="padding-left:15px;" href="#"> إغلاق </a>
+                </div>
+            </div>
+            <div class='portlet-body'  >
+                <div class="col-md-12" ng-show="AlertParameter">
+                    <div class="m-heading-1 border-green m-bordered">
+                        <span style="color:red"> {{ErrorName}} </span>
+                        <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+                    </div>
+                </div>
+                
+                <div style='text-align:center;'>
+                    <div style="color:black;font-size:20px;font-weight:bold;">هل انت متأكد من صرف فاتورة المبيعات ؟</div>
+                </div>
+              
+              <br />
+            </div>
+            <div class='row form-actions' style='text-align:center;border-top: 1px solid #eee;padding-top: 15px;'>
+                <button type='submit' class='btn green' ng-click="BtnSaveOmola()"><i class="fa fa-check" aria-hidden="true"></i>  نعم </button>
+                <button type='submit' class='btn red'  ng-click="BtnCancel()"><i class="fa fa-times" aria-hidden="true"></i>  لا </button>
+            </div>
+        </div>
+        <!-- END Portlet PORTLET-->
+
+        
+    </div>
+
+    
+</div>
+
+
+
+

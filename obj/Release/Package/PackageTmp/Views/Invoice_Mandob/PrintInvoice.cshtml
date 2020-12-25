@@ -1,0 +1,25 @@
+﻿<div class="row" style="height:150px;">
+    <div class="col-md-12">
+        <!-- BEGIN Portlet PORTLET-->
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="icon-paper-plane font-yellow-casablanca" style="color: #5c9acf !important;"></i>
+                   طباعة الفاتورة
+                </div>
+                <div class="actions">
+                    <a class="btn red btn-sm fancymodal-close" id='closebox' ng-click="closeUiModal()" style="padding-left:15px;" href="#"> إغلاق </a>
+                </div>
+            </div>
+            <div class='portlet-body'>
+                
+                <iframe src="@(ViewBag.MyUrl)" style="width:718px; height:700px;" frameborder="0"></iframe>
+            </div>
+        </div>
+        <!-- END Portlet PORTLET @@ViewBag.fileurl-->
+    </div>
+</div>
+
+
+
+

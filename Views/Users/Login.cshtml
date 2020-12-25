@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "الدخول";
+    Layout = "~/Views/Shared/_LayoutAdministration.cshtml";
+}
+<div ng-controller="UserLoginCtrl">
+    <div class="logo">
+        <a href="/Home">
+            <img src="/assets/layouts/img/logo-light.png" alt="أسواق جزيرة الشفاء" />
+        </a>
+    </div>
+    <form class="login-form" method="post">
+        <h5 class="form-title font-green">تسجيل الدخول</h5>
+        <div class="alert alert-danger" style="text-align:center;" ng-show="AlertDiv">
+            <span>{{AlertSMS}}</span>
+        </div>
+        <div class="form-group">
+            <div class="input-icon">
+                <i class="fa fa-user"></i>
+                <input  autocomplete="off" id="Username" ng-model="User.Username" type="text" class="form-control" placeholder="اسم المستخدم " autofocus select-on-click>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-icon">
+                <i class="fa fa-lock"></i>
+                <input  autocomplete="off" id="Password" ng-model="User.Password" type="password" class="form-control" placeholder="كلمة المرور" select-on-click>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn green uppercase pull-right" ng-click="login(User)">الدخول</button>
+        </div>
+    </form>
+</div>
+@section AngularFiles{
+<script src="~/App/Users/UsersLogin.js"></script>
+  <script>
+      $("#Password").val("");
+      setTimeout(function () { $("#Password").val(""); }, 1000);
+    </script>  
+}
+ 

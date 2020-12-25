@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2f1e670738134dc89391445cab8d1f6b" Name="Diagram1" ZoomLevel="10">
+        <EntityTypeShape EntityType="DB_StoreModel.Company" Width="1.5" PointX="2.75" PointY="42.5" />
+        <EntityTypeShape EntityType="DB_StoreModel.Employee" Width="1.5" PointX="8.75" PointY="10.625" />
+        <EntityTypeShape EntityType="DB_StoreModel.Employee_Salary" Width="1.5" PointX="11" PointY="25.125" />
+        <EntityTypeShape EntityType="DB_StoreModel.Eradat" Width="1.5" PointX="5.75" PointY="10.125" />
+        <EntityTypeShape EntityType="DB_StoreModel.Eradat_Type" Width="1.5" PointX="3.5" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_StoreModel.Invoice_Company" Width="1.5" PointX="5" PointY="27" />
+        <EntityTypeShape EntityType="DB_StoreModel.Invoice_Company_Product" Width="1.5" PointX="10.25" PointY="28.625" />
+        <EntityTypeShape EntityType="DB_StoreModel.Invoice_Company_Sadad" Width="1.5" PointX="7.25" PointY="31.625" />
+        <EntityTypeShape EntityType="DB_StoreModel.Invoice_Company_Sadad_Rproduct" Width="1.5" PointX="12.5" PointY="34.625" />
+        <EntityTypeShape EntityType="DB_StoreModel.Invoice_Mandob" Width="1.5" PointX="5" PointY="20.375" />
+        <EntityTypeShape EntityType="DB_StoreModel.Invoice_Mandob_Product" Width="1.5" PointX="13.25" PointY="23.375" />
+        <EntityTypeShape EntityType="DB_StoreModel.Invoice_Mandob_Sadad" Width="1.5" PointX="7.25" PointY="15.875" />
+        <EntityTypeShape EntityType="DB_StoreModel.Invoice_Mandob_Sadad_Rproduct" Width="1.5" PointX="10.25" PointY="21.75" />
+        <EntityTypeShape EntityType="DB_StoreModel.Job" Width="1.5" PointX="6.5" PointY="7.75" />
+        <EntityTypeShape EntityType="DB_StoreModel.Mandob" Width="1.5" PointX="2.75" PointY="33.375" />
+        <EntityTypeShape EntityType="DB_StoreModel.Masrofat" Width="1.5" PointX="13.5" PointY="27.875" />
+        <EntityTypeShape EntityType="DB_StoreModel.Masrofat_Type" Width="1.5" PointX="11.25" PointY="37.875" />
+        <EntityTypeShape EntityType="DB_StoreModel.Omola" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="DB_StoreModel.Product" Width="1.5" PointX="8" PointY="24.75" />
+        <EntityTypeShape EntityType="DB_StoreModel.Salary" Width="1.5" PointX="2.75" PointY="37.625" />
+        <EntityTypeShape EntityType="DB_StoreModel.Store" Width="1.5" PointX="2.75" PointY="3.375" />
+        <EntityTypeShape EntityType="DB_StoreModel.User" Width="1.5" PointX="0.5" PointY="9.5" />
+        <EntityTypeShape EntityType="DB_StoreModel.User_Money" Width="1.5" PointX="2.75" PointY="12" />
+        <EntityTypeShape EntityType="DB_StoreModel.UserAction" Width="1.5" PointX="2.75" PointY="8.25" />
+        <EntityTypeShape EntityType="DB_StoreModel.UserView" Width="1.5" PointX="2.75" PointY="16.25" />
+        <EntityTypeShape EntityType="DB_StoreModel.View" Width="1.5" PointX="0.5" PointY="6.625" />
+        <AssociationConnector Association="DB_StoreModel.FK_Company_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Company_Company" />
+        <AssociationConnector Association="DB_StoreModel.FK_Product_Company" />
+        <AssociationConnector Association="DB_StoreModel.FK_Employee_Job" />
+        <AssociationConnector Association="DB_StoreModel.FK_Employee_Salary_Employee" />
+        <AssociationConnector Association="DB_StoreModel.FK_Employee_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Employee_User1" />
+        <AssociationConnector Association="DB_StoreModel.FK_Employee_Salary_Salary" />
+        <AssociationConnector Association="DB_StoreModel.FK_Erad_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Erad_User1" />
+        <AssociationConnector Association="DB_StoreModel.FK_Eradat_Eradat_Type" />
+        <AssociationConnector Association="DB_StoreModel.FK_Eradat_Invoice_Mandob_Sadad" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Company_Product_Invoice_Company" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Company_Sadad_Invoice_Company" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Company_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Company_Product_Product" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad" />
+        <AssociationConnector Association="DB_StoreModel.FK_Masrofat_Invoice_Company_Sadad" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Moshtary_Moshtary" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Moshtary_Product_Invoice_Moshtary" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Invoice_Moshtary" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Moshtary_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Masrofat_Invoice_Mandob" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Moshtary_Product_Product" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Moshtary_Sadad_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Rproduct_Product" />
+        <AssociationConnector Association="DB_StoreModel.FK_Moshtary_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Masrofat_Masrofat_Type" />
+        <AssociationConnector Association="DB_StoreModel.FK_Masrofat_Salary" />
+        <AssociationConnector Association="DB_StoreModel.FK_Masrofat_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Masrofat_User1" />
+        <AssociationConnector Association="DB_StoreModel.FK_Product_Product" />
+        <AssociationConnector Association="DB_StoreModel.FK_Product_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Salary_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_Salary_User1" />
+        <AssociationConnector Association="DB_StoreModel.FK_Store_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_User_Money_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_UserAction_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_UserView_User" />
+        <AssociationConnector Association="DB_StoreModel.FK_UserAction_View" />
+        <AssociationConnector Association="DB_StoreModel.FK_UserView_View" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

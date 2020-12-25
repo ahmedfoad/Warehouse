@@ -1,0 +1,241 @@
+﻿@{
+    ViewBag.Title = "المستخدمين";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row">
+    <div class="col-md-12">
+        
+        <ul class="page-breadcrumb breadcrumb">
+            <li>
+                <i class="icon-settings"></i>
+                <a href="#">
+                    الاعدادات
+                </a>
+                <i class="fa fa-angle-left"></i>
+            </li>
+            <li>
+                <a href="#">
+                    إضافة مستخدم جديد
+                </a>
+            </li>
+
+        </ul>
+        
+    </div>
+</div>
+<div class="row" ng-controller="UserOperationCtrl">
+    <div class="col-md-12" ng-show="AlertParameter">
+        <div class="m-heading-1 border-green m-bordered">
+            <span style="color:red"> {{ErrorName}} </span>
+            <button type="button" style="margin-top: 6px;" class="close" ng-click="ReomveAlert()"></button>
+        </div>
+    </div>
+    <div class="col-md-12" ng-show="DeleteAuthenticationDiv">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="portlet light">
+                    <div class='portlet-title'>
+                        <div class='caption font-red-sunglo'> <i class='fa fa-link font-red-sunglo'></i> <span class='caption-subject bold'> هل متأكد من حذف الصلاحية التالية</span> </div>
+                    </div>
+                    <div class='portlet-body'>
+                        <div class='row'>
+                            <div class='table-responsive'>
+                                <table class='table table-striped' style='width:95%;margin:auto'>
+                                    <thead>
+                                        <tr>
+                                            <th> اسم النافذة </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id="{{WindowsID}}">
+                                            <th> {{WindowName}}</th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row" style="text-align:center;margin-top:5px;">
+                            <div class='form-actions'>
+                                <button type='submit' class='btn red' ng-click="DeleteAuthenticationConfirm()">حذف</button>
+                                <button type='button' class='btn default' ng-click="RemoveAuthenticationDiv()">إلغاء</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+
+    </div>
+    <div class="col-md-12">
+        <div class="portlet light">
+            <div class="portlet-title">
+                <div class="caption">
+                    البيانات الأساسية
+                </div>
+            </div>
+            <div class="portlet-body">
+                <form autocomplete='off' role='form'>
+                    <div class='row form-body'>
+                        <div class="col-md-12">
+                            <div class='col-md-3 form-group'>
+                                <label>اسم الموظف </label>
+                                <div class='input-icon'>
+                                    <i class='fa fa-font'></i>
+                                    <input id="NAME" type='text' class='form-control' placeholder='اسم الموظف ' ng-model='Cls_User.User.NAME'>
+                                </div>
+                            </div>
+                            <div class='col-md-3 form-group'>
+                                <label>اسم المستخدم</label>
+                                <div class='input-icon'>
+                                    <i class='fa fa-user'></i>
+                                    <input type='text' id="Username" class='form-control' placeholder='اسم المستخدم' ng-model='Cls_User.User.Username'>
+                                </div>
+                            </div>
+                            <div class='col-md-3 form-group'>
+                                <div class="row">
+                                    <div class="col-md-6"> <label class="control-label">كلمة المرور</label></div>
+                                    <div class="col-md-6" style="text-align: left; margin-top: 5px; font-size:10px;"> <a href="javascript:;" ng-click="ShowHidePass()" id="ShowPass">إظهار كلمة المرور</a> </div>
+                                </div>
+                                <div class='input-icon'>
+                                    <i class='fa fa-lock'></i>
+                                    <input type='password' id="Password" class='form-control' placeholder='كلمة المرور' ng-model='Cls_User.User.Password'>
+                                </div>
+                            </div>
+                            <div class='col-md-3 form-group'>
+                                <label id="lblBarcode">نوع المستخدم</label>
+                                <div class='form-group fixeddiv'>
+                                    <select name="Account_Type" id="Account_Type" class="form-control">
+                                        <option value="0" ng-selected="Cls_User.User.Account_Type == 0">محاسب</option>
+                                        <option value="1" ng-selected="Cls_User.User.Account_Type == 1">مدير النظام</option>
+                                       
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
+                </form>
+            </div>
+            <div class="portlet-title">
+                <div class="caption">
+                    صلاحيات المستخدم
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="row">
+                    <div class="col-md-3" style="border-left: 2px solid #eee; padding-left: 20px; padding-right: 20px;">
+                        <div class='portlet-title'>
+                            <div class='caption' style="text-align:center;"> من فضلك اختار النافذة </div>
+                            <div class='tools'>
+                                <a href='' class='fancymodal-close remove' data-original-title='' title=''> </a>
+                            </div>
+                        </div>
+                        <div class='portlet-body'>
+                            <div class='row'>
+                                <input ng-model="Search" ng-keyup="keyupevt()" class='form-control' placeholder='بحث بالنافذة' type='text' />
+                            </div>
+                            <div class='row'>
+                                <div class='table-responsive' style="max-height: 400px;margin-top:10px;" id="ViewList">
+                                    <table class='table table-striped' style='width:95%;margin:auto'>
+                                        <thead>
+                                            <tr>
+                                                <th> اسم النافذة </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr ng-repeat="item in data track by $index" id="{{item._View.ID}}" data-value="{{item._View.Name}}">
+                                                <th ng-click="AddAuthentication(item,$index)">{{item._View.Name}}</th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2" style="width: 30%; vertical-align: inherit;"> اسم الشاشة </th>
+                                        <th style="width:15%"> الدخول </th>
+                                        <th style="width:15%"> الحفظ </th>
+                                        <th style="width:15%"> التعديل </th>
+                                        <th style="width:15%"> الحذف </th>
+                                        <th rowspan="2" style="width: 10%; vertical-align: inherit;"> الأداوت </th>
+                                    </tr>
+                                    <tr>
+                                        <th style="width:15%"><input type="checkbox" class="form-check-input"  id="EnterMarkAll" ng-click="EnterMarkAll()"> تحديد الكل</th>
+                                        <th style="width:15%"><input type="checkbox" class="form-check-input"  id="SaveMarkAll" ng-click="SaveMarkAll()"> تحديد الكل</th>
+                                        <th style="width:15%"><input type="checkbox" class="form-check-input"  id="EditMarkAll" ng-click="EditMarkAll()"> تحديد الكل</th>
+                                        <th style="width:15%"><input type="checkbox" class="form-check-input"  id="DeleteMarkAll" ng-click="DeleteMarkAll()"> تحديد الكل</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ng-repeat="x in dataAuthentication track by $index" id="{{x._View.ID}}">
+                                        <th>{{x._View.Name}} </th>
+                                        <th><input type="checkbox" name="Role_Enter" ng-model="x.Role_Enter" ng-click="EnterChecked(x)"></th>
+                                        <th><input type="checkbox" name="Role_Save" ng-model="x.Role_Save" ng-click="SaveChecked(x)"></th>
+                                        <th><input type="checkbox" name="Role_Edit" ng-model="x.Role_Edit" ng-click="EditChecked(x)"></th>
+                                        <th><input type="checkbox" name="Role_Delete" ng-model="x.Role_Delete" ng-click="RemoveChecked(x)"></th>
+                                        <th style="color:red" ng-click="DeleteAuthentication(x)"><i class="fa fa-trash-o"></i> حذف</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class='row form-actions' style='text-align:center'>
+                            <button type='submit' class='btn green' ng-show='SaveBtn' ng-click="SaveUser()">حفظ</button>
+                            <button type='submit' class='btn purple' ng-show='EditBtn' ng-click="SaveUser()">تعديل</button>
+                            <button type='submit' class='btn red' ng-show='DeleteBtn' ng-click="DeleteUser()">حذف</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Related{
+    <div class="row">
+        <div class="col-md-12">
+            <h4 class="page-title">الأدوات</h4>
+            <div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption" style="font-size:14px;">
+                        روابط ذات صلة
+                    </div>
+                </div>
+                <div>
+                    <div class="portlet-body">
+                        <a href="/Users/Operation"><i class="fa fa-angle-left"></i>  إضافة مستخدم جديد</a>
+                    </div>
+                    <div class="portlet-body">
+                        <a href="/Users/Search"><i class="fa fa-angle-left"></i> الإستعلام عن المستخدمين</a>
+                    </div>
+                    <div id="EditElements">
+                        <div class="portlet-body">
+                            <a href="/Store/Index" id="PrintPayment"><i class="fa fa-angle-left"></i> المخزن</a>
+                        </div>
+                        
+                        <div class="portlet-body">
+                            <a href="/Company/Index" id="Payment"><i class="fa fa-angle-left"></i> اسم الشركة </a>
+                        </div>
+                        <div class="portlet-body">
+                            <a href="/Product/Operation" id="TreamentCopy"><i class="fa fa-angle-left"></i> الصنف</a>
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+@section AngularFiles{
+    <script src="~/App/Users/UsersOperation.js"></script>
+    
+}

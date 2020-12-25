@@ -1,0 +1,1157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_StoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DB_StoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companies" EntityType="DB_StoreModel.Company" />
+    <EntitySet Name="Employees" EntityType="DB_StoreModel.Employee" />
+    <EntitySet Name="Employee_Salary" EntityType="DB_StoreModel.Employee_Salary" />
+    <EntitySet Name="Eradats" EntityType="DB_StoreModel.Eradat" />
+    <EntitySet Name="Eradat_Type" EntityType="DB_StoreModel.Eradat_Type" />
+    <EntitySet Name="Invoice_Company" EntityType="DB_StoreModel.Invoice_Company" />
+    <EntitySet Name="Invoice_Company_Product" EntityType="DB_StoreModel.Invoice_Company_Product" />
+    <EntitySet Name="Invoice_Company_Sadad" EntityType="DB_StoreModel.Invoice_Company_Sadad" />
+    <EntitySet Name="Invoice_Company_Sadad_Rproduct" EntityType="DB_StoreModel.Invoice_Company_Sadad_Rproduct" />
+    <EntitySet Name="Invoice_Mandob" EntityType="DB_StoreModel.Invoice_Mandob" />
+    <EntitySet Name="Invoice_Mandob_Product" EntityType="DB_StoreModel.Invoice_Mandob_Product" />
+    <EntitySet Name="Invoice_Mandob_Sadad" EntityType="DB_StoreModel.Invoice_Mandob_Sadad" />
+    <EntitySet Name="Invoice_Mandob_Sadad_Rproduct" EntityType="DB_StoreModel.Invoice_Mandob_Sadad_Rproduct" />
+    <EntitySet Name="Jobs" EntityType="DB_StoreModel.Job" />
+    <EntitySet Name="Mandobs" EntityType="DB_StoreModel.Mandob" />
+    <EntitySet Name="Masrofats" EntityType="DB_StoreModel.Masrofat" />
+    <EntitySet Name="Masrofat_Type" EntityType="DB_StoreModel.Masrofat_Type" />
+    <EntitySet Name="Omolas" EntityType="DB_StoreModel.Omola" />
+    <EntitySet Name="Products" EntityType="DB_StoreModel.Product" />
+    <EntitySet Name="Salaries" EntityType="DB_StoreModel.Salary" />
+    <EntitySet Name="Stores" EntityType="DB_StoreModel.Store" />
+    <EntitySet Name="Users" EntityType="DB_StoreModel.User" />
+    <EntitySet Name="User_Money" EntityType="DB_StoreModel.User_Money" />
+    <EntitySet Name="UserActions" EntityType="DB_StoreModel.UserAction" />
+    <EntitySet Name="UserViews" EntityType="DB_StoreModel.UserView" />
+    <EntitySet Name="Views" EntityType="DB_StoreModel.View" />
+    <AssociationSet Name="FK_Company_User" Association="DB_StoreModel.FK_Company_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Company" EntitySet="Companies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Company" Association="DB_StoreModel.FK_Invoice_Company_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Invoice_Company" EntitySet="Invoice_Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Company" Association="DB_StoreModel.FK_Product_Company">
+      <End Role="Company" EntitySet="Companies" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Job" Association="DB_StoreModel.FK_Employee_Job">
+      <End Role="Job" EntitySet="Jobs" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Salary_Employee" Association="DB_StoreModel.FK_Employee_Salary_Employee">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="Employee_Salary" EntitySet="Employee_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_User" Association="DB_StoreModel.FK_Employee_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_User1" Association="DB_StoreModel.FK_Employee_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Employee_Salary_Salary" Association="DB_StoreModel.FK_Employee_Salary_Salary">
+      <End Role="Salary" EntitySet="Salaries" />
+      <End Role="Employee_Salary" EntitySet="Employee_Salary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Erad_User" Association="DB_StoreModel.FK_Erad_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Eradat" EntitySet="Eradats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Erad_User1" Association="DB_StoreModel.FK_Erad_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Eradat" EntitySet="Eradats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eradat_Eradat_Type" Association="DB_StoreModel.FK_Eradat_Eradat_Type">
+      <End Role="Eradat_Type" EntitySet="Eradat_Type" />
+      <End Role="Eradat" EntitySet="Eradats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Eradat_Invoice_Mandob_Sadad" Association="DB_StoreModel.FK_Eradat_Invoice_Mandob_Sadad">
+      <End Role="Invoice_Mandob_Sadad" EntitySet="Invoice_Mandob_Sadad" />
+      <End Role="Eradat" EntitySet="Eradats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Product_Invoice_Company" Association="DB_StoreModel.FK_Invoice_Company_Product_Invoice_Company">
+      <End Role="Invoice_Company" EntitySet="Invoice_Company" />
+      <End Role="Invoice_Company_Product" EntitySet="Invoice_Company_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Sadad_Invoice_Company" Association="DB_StoreModel.FK_Invoice_Company_Sadad_Invoice_Company">
+      <End Role="Invoice_Company" EntitySet="Invoice_Company" />
+      <End Role="Invoice_Company_Sadad" EntitySet="Invoice_Company_Sadad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_User" Association="DB_StoreModel.FK_Invoice_Company_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Invoice_Company" EntitySet="Invoice_Company" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Product_Product" Association="DB_StoreModel.FK_Invoice_Company_Product_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Invoice_Company_Product" EntitySet="Invoice_Company_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product" Association="DB_StoreModel.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product">
+      <End Role="Invoice_Company_Product" EntitySet="Invoice_Company_Product" />
+      <End Role="Invoice_Company_Sadad_Rproduct" EntitySet="Invoice_Company_Sadad_Rproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad" Association="DB_StoreModel.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad">
+      <End Role="Invoice_Company_Sadad" EntitySet="Invoice_Company_Sadad" />
+      <End Role="Invoice_Company_Sadad_Rproduct" EntitySet="Invoice_Company_Sadad_Rproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_Invoice_Company_Sadad" Association="DB_StoreModel.FK_Masrofat_Invoice_Company_Sadad">
+      <End Role="Invoice_Company_Sadad" EntitySet="Invoice_Company_Sadad" />
+      <End Role="Masrofat" EntitySet="Masrofats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Moshtary" Association="DB_StoreModel.FK_Invoice_Moshtary_Moshtary">
+      <End Role="Mandob" EntitySet="Mandobs" />
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Product_Invoice_Moshtary" Association="DB_StoreModel.FK_Invoice_Moshtary_Product_Invoice_Moshtary">
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+      <End Role="Invoice_Mandob_Product" EntitySet="Invoice_Mandob_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Sadad_Invoice_Moshtary" Association="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Invoice_Moshtary">
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+      <End Role="Invoice_Mandob_Sadad" EntitySet="Invoice_Mandob_Sadad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_User" Association="DB_StoreModel.FK_Invoice_Moshtary_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_Invoice_Mandob" Association="DB_StoreModel.FK_Masrofat_Invoice_Mandob">
+      <End Role="Invoice_Mandob" EntitySet="Invoice_Mandob" />
+      <End Role="Masrofat" EntitySet="Masrofats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Product_Product" Association="DB_StoreModel.FK_Invoice_Moshtary_Product_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Invoice_Mandob_Product" EntitySet="Invoice_Mandob_Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad" Association="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad">
+      <End Role="Invoice_Mandob_Sadad" EntitySet="Invoice_Mandob_Sadad" />
+      <End Role="Invoice_Mandob_Sadad_Rproduct" EntitySet="Invoice_Mandob_Sadad_Rproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Sadad_User" Association="DB_StoreModel.FK_Invoice_Moshtary_Sadad_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Invoice_Mandob_Sadad" EntitySet="Invoice_Mandob_Sadad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Invoice_Moshtary_Sadad_Rproduct_Product" Association="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Rproduct_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Invoice_Mandob_Sadad_Rproduct" EntitySet="Invoice_Mandob_Sadad_Rproduct" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Moshtary_User" Association="DB_StoreModel.FK_Moshtary_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Mandob" EntitySet="Mandobs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_Masrofat_Type" Association="DB_StoreModel.FK_Masrofat_Masrofat_Type">
+      <End Role="Masrofat_Type" EntitySet="Masrofat_Type" />
+      <End Role="Masrofat" EntitySet="Masrofats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_Salary" Association="DB_StoreModel.FK_Masrofat_Salary">
+      <End Role="Salary" EntitySet="Salaries" />
+      <End Role="Masrofat" EntitySet="Masrofats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_User" Association="DB_StoreModel.FK_Masrofat_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Masrofat" EntitySet="Masrofats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Masrofat_User1" Association="DB_StoreModel.FK_Masrofat_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Masrofat" EntitySet="Masrofats" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Product" Association="DB_StoreModel.FK_Product_Product">
+      <End Role="Product" EntitySet="Products" />
+      <End Role="Product1" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_User" Association="DB_StoreModel.FK_Product_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Product" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Salary_User" Association="DB_StoreModel.FK_Salary_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Salary" EntitySet="Salaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Salary_User1" Association="DB_StoreModel.FK_Salary_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Salary" EntitySet="Salaries" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Store_User" Association="DB_StoreModel.FK_Store_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Store" EntitySet="Stores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Money_User" Association="DB_StoreModel.FK_User_Money_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="User_Money" EntitySet="User_Money" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAction_User" Association="DB_StoreModel.FK_UserAction_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserAction" EntitySet="UserActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserView_User" Association="DB_StoreModel.FK_UserView_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserView" EntitySet="UserViews" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserAction_View" Association="DB_StoreModel.FK_UserAction_View">
+      <End Role="View" EntitySet="Views" />
+      <End Role="UserAction" EntitySet="UserActions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserView_View" Association="DB_StoreModel.FK_UserView_View">
+      <End Role="View" EntitySet="Views" />
+      <End Role="UserView" EntitySet="UserViews" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="User_ID" Type="Int32" />
+    <Property Name="ComputerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Company_User" FromRole="Company" ToRole="User" />
+    <NavigationProperty Name="Invoice_Company" Relationship="DB_StoreModel.FK_Invoice_Company_Company" FromRole="Company" ToRole="Invoice_Company" />
+    <NavigationProperty Name="Products" Relationship="DB_StoreModel.FK_Product_Company" FromRole="Company" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Job_Id" Type="Int32" Nullable="false" />
+    <Property Name="Salary" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EditDate" Type="DateTime" Precision="3" />
+    <Property Name="Userid_In" Type="Int32" Nullable="false" />
+    <Property Name="userid_Edit" Type="Int32" />
+    <NavigationProperty Name="Job" Relationship="DB_StoreModel.FK_Employee_Job" FromRole="Employee" ToRole="Job" />
+    <NavigationProperty Name="Employee_Salary" Relationship="DB_StoreModel.FK_Employee_Salary_Employee" FromRole="Employee" ToRole="Employee_Salary" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Employee_User" FromRole="Employee" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="DB_StoreModel.FK_Employee_User1" FromRole="Employee" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Employee_Salary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Salary_Id" Type="Int32" Nullable="false" />
+    <Property Name="Employee_Id" Type="Int32" Nullable="false" />
+    <Property Name="Salary" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Employee" Relationship="DB_StoreModel.FK_Employee_Salary_Employee" FromRole="Employee_Salary" ToRole="Employee" />
+    <NavigationProperty Name="Salary1" Relationship="DB_StoreModel.FK_Employee_Salary_Salary" FromRole="Employee_Salary" ToRole="Salary" />
+  </EntityType>
+  <EntityType Name="Eradat">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Number" Type="Int32" Nullable="false" />
+    <Property Name="Date_Invoice" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Eradat_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="Money" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Bian" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EditDate" Type="DateTime" Precision="3" />
+    <Property Name="Userid_In" Type="Int32" Nullable="false" />
+    <Property Name="userid_Edit" Type="Int32" />
+    <Property Name="Invoice_Mandob_Sadad_ID" Type="Int32" />
+    <Property Name="IS_Chekced" Type="Boolean" Nullable="false" />
+    <Property Name="Is_Deleted" Type="Boolean" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Erad_User" FromRole="Eradat" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="DB_StoreModel.FK_Erad_User1" FromRole="Eradat" ToRole="User" />
+    <NavigationProperty Name="Eradat_Type" Relationship="DB_StoreModel.FK_Eradat_Eradat_Type" FromRole="Eradat" ToRole="Eradat_Type" />
+    <NavigationProperty Name="Invoice_Mandob_Sadad" Relationship="DB_StoreModel.FK_Eradat_Invoice_Mandob_Sadad" FromRole="Eradat" ToRole="Invoice_Mandob_Sadad" />
+  </EntityType>
+  <EntityType Name="Eradat_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Eradats" Relationship="DB_StoreModel.FK_Eradat_Eradat_Type" FromRole="Eradat_Type" ToRole="Eradat" />
+  </EntityType>
+  <EntityType Name="Invoice_Company">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Number" Type="Int32" Nullable="false" />
+    <Property Name="Company_id" Type="Int32" Nullable="false" />
+    <Property Name="Date_Invoice" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Date_Invoice_Hijri" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Nakl_Cost" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Taxes" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Total_Sadad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="ComputerName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="IS_Chekced" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Company" Relationship="DB_StoreModel.FK_Invoice_Company_Company" FromRole="Invoice_Company" ToRole="Company" />
+    <NavigationProperty Name="Invoice_Company_Product" Relationship="DB_StoreModel.FK_Invoice_Company_Product_Invoice_Company" FromRole="Invoice_Company" ToRole="Invoice_Company_Product" />
+    <NavigationProperty Name="Invoice_Company_Sadad" Relationship="DB_StoreModel.FK_Invoice_Company_Sadad_Invoice_Company" FromRole="Invoice_Company" ToRole="Invoice_Company_Sadad" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Invoice_Company_User" FromRole="Invoice_Company" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Invoice_Company_Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Company_Id" Type="Int32" Nullable="false" />
+    <Property Name="Product_Id" Type="Int32" Nullable="false" />
+    <Property Name="Product_Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Taxes" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Invoice_Company" Relationship="DB_StoreModel.FK_Invoice_Company_Product_Invoice_Company" FromRole="Invoice_Company_Product" ToRole="Invoice_Company" />
+    <NavigationProperty Name="Product" Relationship="DB_StoreModel.FK_Invoice_Company_Product_Product" FromRole="Invoice_Company_Product" ToRole="Product" />
+    <NavigationProperty Name="Invoice_Company_Sadad_Rproduct" Relationship="DB_StoreModel.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product" FromRole="Invoice_Company_Product" ToRole="Invoice_Company_Sadad_Rproduct" />
+  </EntityType>
+  <EntityType Name="Invoice_Company_Sadad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Invoice_Id" Type="Int32" Nullable="false" />
+    <Property Name="Sadad_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="Date_Added" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Money" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="ComputerName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Invoice_Company" Relationship="DB_StoreModel.FK_Invoice_Company_Sadad_Invoice_Company" FromRole="Invoice_Company_Sadad" ToRole="Invoice_Company" />
+    <NavigationProperty Name="Invoice_Company_Sadad_Rproduct" Relationship="DB_StoreModel.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad" FromRole="Invoice_Company_Sadad" ToRole="Invoice_Company_Sadad_Rproduct" />
+    <NavigationProperty Name="Masrofats" Relationship="DB_StoreModel.FK_Masrofat_Invoice_Company_Sadad" FromRole="Invoice_Company_Sadad" ToRole="Masrofat" />
+  </EntityType>
+  <EntityType Name="Invoice_Company_Sadad_Rproduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Company_Sadad_id" Type="Int32" Nullable="false" />
+    <Property Name="Return_Invoice_Product_id" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Invoice_Company_Product" Relationship="DB_StoreModel.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product" FromRole="Invoice_Company_Sadad_Rproduct" ToRole="Invoice_Company_Product" />
+    <NavigationProperty Name="Invoice_Company_Sadad" Relationship="DB_StoreModel.FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad" FromRole="Invoice_Company_Sadad_Rproduct" ToRole="Invoice_Company_Sadad" />
+  </EntityType>
+  <EntityType Name="Invoice_Mandob">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Number" Type="Int32" Nullable="false" />
+    <Property Name="Payment_Type" Type="Int32" Nullable="false" />
+    <Property Name="Mandob_id" Type="Int32" />
+    <Property Name="Date_Invoice" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Date_Invoice_Hijri" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Price_Mowrid" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Taxes" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Total_Sadad" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="ComputerName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Is_Deleted" Type="Boolean" Nullable="false" />
+    <Property Name="IS_Payed_Omola" Type="Boolean" Nullable="false" />
+    <Property Name="Omola_Type" Type="Boolean" />
+    <Property Name="Omola_quota" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Omola_Money" Type="Decimal" Precision="18" Scale="2" />
+    <NavigationProperty Name="Mandob" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Moshtary" FromRole="Invoice_Mandob" ToRole="Mandob" />
+    <NavigationProperty Name="Invoice_Mandob_Product" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Product_Invoice_Moshtary" FromRole="Invoice_Mandob" ToRole="Invoice_Mandob_Product" />
+    <NavigationProperty Name="Invoice_Mandob_Sadad" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Invoice_Moshtary" FromRole="Invoice_Mandob" ToRole="Invoice_Mandob_Sadad" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Invoice_Moshtary_User" FromRole="Invoice_Mandob" ToRole="User" />
+    <NavigationProperty Name="Masrofats" Relationship="DB_StoreModel.FK_Masrofat_Invoice_Mandob" FromRole="Invoice_Mandob" ToRole="Masrofat" />
+  </EntityType>
+  <EntityType Name="Invoice_Mandob_Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Mandob_Id" Type="Int32" Nullable="false" />
+    <Property Name="Product_Id" Type="Int32" Nullable="false" />
+    <Property Name="Product_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Price_Mowrid" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Taxes" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Offer_Product_id" Type="Int32" />
+    <Property Name="Offer_BonusAmount" Type="Int32" />
+    <Property Name="TotalPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Invoice_Mandob" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Product_Invoice_Moshtary" FromRole="Invoice_Mandob_Product" ToRole="Invoice_Mandob" />
+    <NavigationProperty Name="Product" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Product_Product" FromRole="Invoice_Mandob_Product" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Invoice_Mandob_Sadad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Invoice_Id" Type="Int32" Nullable="false" />
+    <Property Name="Sadad_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="Date_Added" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Money" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="ComputerName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IS_Chekced" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Eradats" Relationship="DB_StoreModel.FK_Eradat_Invoice_Mandob_Sadad" FromRole="Invoice_Mandob_Sadad" ToRole="Eradat" />
+    <NavigationProperty Name="Invoice_Mandob" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Invoice_Moshtary" FromRole="Invoice_Mandob_Sadad" ToRole="Invoice_Mandob" />
+    <NavigationProperty Name="Invoice_Mandob_Sadad_Rproduct" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad" FromRole="Invoice_Mandob_Sadad" ToRole="Invoice_Mandob_Sadad_Rproduct" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Sadad_User" FromRole="Invoice_Mandob_Sadad" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Invoice_Mandob_Sadad_Rproduct">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Mandob_Sadad_id" Type="Int32" Nullable="false" />
+    <Property Name="Return_Invoice_Product_id" Type="Int32" Nullable="false" />
+    <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="Invoice_Mandob_Sadad" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad" FromRole="Invoice_Mandob_Sadad_Rproduct" ToRole="Invoice_Mandob_Sadad" />
+    <NavigationProperty Name="Product" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Rproduct_Product" FromRole="Invoice_Mandob_Sadad_Rproduct" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Employees" Relationship="DB_StoreModel.FK_Employee_Job" FromRole="Job" ToRole="Employee" />
+  </EntityType>
+  <EntityType Name="Mandob">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Sejil" Type="Int32" />
+    <Property Name="JawalNO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="JawalNO2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Barcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="User_ID" Type="Int32" Nullable="false" />
+    <Property Name="ComputerName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Invoice_Mandob" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Moshtary" FromRole="Mandob" ToRole="Invoice_Mandob" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Moshtary_User" FromRole="Mandob" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Masrofat">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Number" Type="Int32" Nullable="false" />
+    <Property Name="Date_Invoice" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Masrofat_Type_Id" Type="Int32" Nullable="false" />
+    <Property Name="Money" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Bian" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EditDate" Type="DateTime" Precision="3" />
+    <Property Name="Userid_In" Type="Int32" Nullable="false" />
+    <Property Name="userid_Edit" Type="Int32" />
+    <Property Name="Invoice_Company_Sadad_ID" Type="Int32" />
+    <Property Name="Invoice_Mandob_ID" Type="Int32" />
+    <Property Name="Salary_ID" Type="Int32" />
+    <Property Name="Is_Deleted" Type="Boolean" />
+    <NavigationProperty Name="Invoice_Company_Sadad" Relationship="DB_StoreModel.FK_Masrofat_Invoice_Company_Sadad" FromRole="Masrofat" ToRole="Invoice_Company_Sadad" />
+    <NavigationProperty Name="Invoice_Mandob" Relationship="DB_StoreModel.FK_Masrofat_Invoice_Mandob" FromRole="Masrofat" ToRole="Invoice_Mandob" />
+    <NavigationProperty Name="Masrofat_Type" Relationship="DB_StoreModel.FK_Masrofat_Masrofat_Type" FromRole="Masrofat" ToRole="Masrofat_Type" />
+    <NavigationProperty Name="Salary" Relationship="DB_StoreModel.FK_Masrofat_Salary" FromRole="Masrofat" ToRole="Salary" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Masrofat_User" FromRole="Masrofat" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="DB_StoreModel.FK_Masrofat_User1" FromRole="Masrofat" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Masrofat_Type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Masrofats" Relationship="DB_StoreModel.FK_Masrofat_Masrofat_Type" FromRole="Masrofat_Type" ToRole="Masrofat" />
+  </EntityType>
+  <EntityType Name="Omola">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Omola_Type" Type="Boolean" Nullable="false" />
+    <Property Name="Omola_quota" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Barcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Company_Id" Type="Int32" Nullable="false" />
+    <Property Name="Price_Mowrid" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Price_Unit" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Taxes" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="OldAmount" Type="Int32" Nullable="false" />
+    <Property Name="Offer_TargetAmount" Type="Int32" />
+    <Property Name="Offer_BonusAmount" Type="Int32" />
+    <Property Name="Offer_Product_id" Type="Int32" />
+    <Property Name="User_ID" Type="Int32" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ComputerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Company" Relationship="DB_StoreModel.FK_Product_Company" FromRole="Product" ToRole="Company" />
+    <NavigationProperty Name="Invoice_Company_Product" Relationship="DB_StoreModel.FK_Invoice_Company_Product_Product" FromRole="Product" ToRole="Invoice_Company_Product" />
+    <NavigationProperty Name="Invoice_Mandob_Product" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Product_Product" FromRole="Product" ToRole="Invoice_Mandob_Product" />
+    <NavigationProperty Name="Invoice_Mandob_Sadad_Rproduct" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Sadad_Rproduct_Product" FromRole="Product" ToRole="Invoice_Mandob_Sadad_Rproduct" />
+    <NavigationProperty Name="Product1" Relationship="DB_StoreModel.FK_Product_Product" FromRole="Product" ToRole="Product1" />
+    <NavigationProperty Name="Product2" Relationship="DB_StoreModel.FK_Product_Product" FromRole="Product1" ToRole="Product" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Product_User" FromRole="Product" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Salary">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Invoice_Number" Type="Int32" Nullable="false" />
+    <Property Name="DateFrom" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateTO" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Notes" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TotalSalaries" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="ComputerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EditDate" Type="DateTime" Precision="3" />
+    <Property Name="Userid_In" Type="Int32" Nullable="false" />
+    <Property Name="userid_Edit" Type="Int32" />
+    <NavigationProperty Name="Employee_Salary" Relationship="DB_StoreModel.FK_Employee_Salary_Salary" FromRole="Salary" ToRole="Employee_Salary" />
+    <NavigationProperty Name="Masrofats" Relationship="DB_StoreModel.FK_Masrofat_Salary" FromRole="Salary" ToRole="Masrofat" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Salary_User" FromRole="Salary" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="DB_StoreModel.FK_Salary_User1" FromRole="Salary" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Store">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="User_ID" Type="Int32" />
+    <Property Name="ComputerName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ComputerUser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="InDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_Store_User" FromRole="Store" ToRole="User" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Username" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ROLE" Type="Int32" Nullable="false" />
+    <Property Name="INDATE" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="STOPEMP" Type="Boolean" Nullable="false" />
+    <Property Name="Account_Type" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Companies" Relationship="DB_StoreModel.FK_Company_User" FromRole="User" ToRole="Company" />
+    <NavigationProperty Name="Employees" Relationship="DB_StoreModel.FK_Employee_User" FromRole="User" ToRole="Employee" />
+    <NavigationProperty Name="Employees1" Relationship="DB_StoreModel.FK_Employee_User1" FromRole="User" ToRole="Employee" />
+    <NavigationProperty Name="Eradats" Relationship="DB_StoreModel.FK_Erad_User" FromRole="User" ToRole="Eradat" />
+    <NavigationProperty Name="Eradats1" Relationship="DB_StoreModel.FK_Erad_User1" FromRole="User" ToRole="Eradat" />
+    <NavigationProperty Name="Invoice_Company" Relationship="DB_StoreModel.FK_Invoice_Company_User" FromRole="User" ToRole="Invoice_Company" />
+    <NavigationProperty Name="Invoice_Mandob" Relationship="DB_StoreModel.FK_Invoice_Moshtary_User" FromRole="User" ToRole="Invoice_Mandob" />
+    <NavigationProperty Name="Invoice_Mandob_Sadad" Relationship="DB_StoreModel.FK_Invoice_Moshtary_Sadad_User" FromRole="User" ToRole="Invoice_Mandob_Sadad" />
+    <NavigationProperty Name="Mandobs" Relationship="DB_StoreModel.FK_Moshtary_User" FromRole="User" ToRole="Mandob" />
+    <NavigationProperty Name="Masrofats" Relationship="DB_StoreModel.FK_Masrofat_User" FromRole="User" ToRole="Masrofat" />
+    <NavigationProperty Name="Masrofats1" Relationship="DB_StoreModel.FK_Masrofat_User1" FromRole="User" ToRole="Masrofat" />
+    <NavigationProperty Name="Products" Relationship="DB_StoreModel.FK_Product_User" FromRole="User" ToRole="Product" />
+    <NavigationProperty Name="Salaries" Relationship="DB_StoreModel.FK_Salary_User" FromRole="User" ToRole="Salary" />
+    <NavigationProperty Name="Salaries1" Relationship="DB_StoreModel.FK_Salary_User1" FromRole="User" ToRole="Salary" />
+    <NavigationProperty Name="Stores" Relationship="DB_StoreModel.FK_Store_User" FromRole="User" ToRole="Store" />
+    <NavigationProperty Name="User_Money" Relationship="DB_StoreModel.FK_User_Money_User" FromRole="User" ToRole="User_Money" />
+    <NavigationProperty Name="UserActions" Relationship="DB_StoreModel.FK_UserAction_User" FromRole="User" ToRole="UserAction" />
+    <NavigationProperty Name="UserViews" Relationship="DB_StoreModel.FK_UserView_User" FromRole="User" ToRole="UserView" />
+  </EntityType>
+  <EntityType Name="User_Money">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Id" Type="Int32" Nullable="false" />
+    <Property Name="Money_Invoice_Mandob" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Money_Sarf" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Money_Sandok" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Money_Mada" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Money_Remain" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Save_Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_User_Money_User" FromRole="User_Money" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Userid" Type="Int32" Nullable="false" />
+    <Property Name="Viewid" Type="Int32" Nullable="false" />
+    <Property Name="ActionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Action" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Operation" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_UserAction_User" FromRole="UserAction" ToRole="User" />
+    <NavigationProperty Name="View" Relationship="DB_StoreModel.FK_UserAction_View" FromRole="UserAction" ToRole="View" />
+  </EntityType>
+  <EntityType Name="UserView">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="Int32" Nullable="false" />
+    <Property Name="ViewID" Type="Int32" Nullable="false" />
+    <Property Name="Role_Enter" Type="Boolean" Nullable="false" />
+    <Property Name="Role_Save" Type="Boolean" Nullable="false" />
+    <Property Name="Role_Edit" Type="Boolean" Nullable="false" />
+    <Property Name="Role_Delete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="DB_StoreModel.FK_UserView_User" FromRole="UserView" ToRole="User" />
+    <NavigationProperty Name="View" Relationship="DB_StoreModel.FK_UserView_View" FromRole="UserView" ToRole="View" />
+  </EntityType>
+  <EntityType Name="View">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ViewIndex" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="UserActions" Relationship="DB_StoreModel.FK_UserAction_View" FromRole="View" ToRole="UserAction" />
+    <NavigationProperty Name="UserViews" Relationship="DB_StoreModel.FK_UserView_View" FromRole="View" ToRole="UserView" />
+  </EntityType>
+  <Association Name="FK_Company_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Company" Role="Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Company">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Company">
+    <End Type="DB_StoreModel.Company" Role="Company" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Company" Role="Invoice_Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company">
+        <PropertyRef Name="Company_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Company">
+    <End Type="DB_StoreModel.Company" Role="Company" Multiplicity="1" />
+    <End Type="DB_StoreModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Job">
+    <End Type="DB_StoreModel.Job" Role="Job" Multiplicity="1" />
+    <End Type="DB_StoreModel.Employee" Role="Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Job_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Salary_Employee">
+    <End Type="DB_StoreModel.Employee" Role="Employee" Multiplicity="1" />
+    <End Type="DB_StoreModel.Employee_Salary" Role="Employee_Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee_Salary">
+        <PropertyRef Name="Employee_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.Employee" Role="Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Userid_In" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_User1">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Employee" Role="Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="userid_Edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Employee_Salary_Salary">
+    <End Type="DB_StoreModel.Salary" Role="Salary" Multiplicity="1" />
+    <End Type="DB_StoreModel.Employee_Salary" Role="Employee_Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Employee_Salary">
+        <PropertyRef Name="Salary_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Erad_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Eradat" Role="Eradat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Eradat">
+        <PropertyRef Name="userid_Edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Erad_User1">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.Eradat" Role="Eradat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Eradat">
+        <PropertyRef Name="Userid_In" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eradat_Eradat_Type">
+    <End Type="DB_StoreModel.Eradat_Type" Role="Eradat_Type" Multiplicity="1" />
+    <End Type="DB_StoreModel.Eradat" Role="Eradat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Eradat_Type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Eradat">
+        <PropertyRef Name="Eradat_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Eradat_Invoice_Mandob_Sadad">
+    <End Type="DB_StoreModel.Invoice_Mandob_Sadad" Role="Invoice_Mandob_Sadad" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Eradat" Role="Eradat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob_Sadad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Eradat">
+        <PropertyRef Name="Invoice_Mandob_Sadad_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Product_Invoice_Company">
+    <End Type="DB_StoreModel.Invoice_Company" Role="Invoice_Company" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Company_Product" Role="Invoice_Company_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Product">
+        <PropertyRef Name="Invoice_Company_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Sadad_Invoice_Company">
+    <End Type="DB_StoreModel.Invoice_Company" Role="Invoice_Company" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Company_Sadad" Role="Invoice_Company_Sadad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Sadad">
+        <PropertyRef Name="Invoice_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Company" Role="Invoice_Company" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Product_Product">
+    <End Type="DB_StoreModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Company_Product" Role="Invoice_Company_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Product">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Product">
+    <End Type="DB_StoreModel.Invoice_Company_Product" Role="Invoice_Company_Product" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Company_Sadad_Rproduct" Role="Invoice_Company_Sadad_Rproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company_Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Sadad_Rproduct">
+        <PropertyRef Name="Return_Invoice_Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Company_Sadad_Rproduct_Invoice_Company_Sadad">
+    <End Type="DB_StoreModel.Invoice_Company_Sadad" Role="Invoice_Company_Sadad" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Company_Sadad_Rproduct" Role="Invoice_Company_Sadad_Rproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company_Sadad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Company_Sadad_Rproduct">
+        <PropertyRef Name="Invoice_Company_Sadad_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_Invoice_Company_Sadad">
+    <End Type="DB_StoreModel.Invoice_Company_Sadad" Role="Invoice_Company_Sadad" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Masrofat" Role="Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Company_Sadad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Invoice_Company_Sadad_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Moshtary">
+    <End Type="DB_StoreModel.Mandob" Role="Mandob" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Invoice_Mandob" Role="Invoice_Mandob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mandob">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob">
+        <PropertyRef Name="Mandob_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Product_Invoice_Moshtary">
+    <End Type="DB_StoreModel.Invoice_Mandob" Role="Invoice_Mandob" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Mandob_Product" Role="Invoice_Mandob_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Product">
+        <PropertyRef Name="Invoice_Mandob_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Sadad_Invoice_Moshtary">
+    <End Type="DB_StoreModel.Invoice_Mandob" Role="Invoice_Mandob" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Mandob_Sadad" Role="Invoice_Mandob_Sadad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Sadad">
+        <PropertyRef Name="Invoice_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Mandob" Role="Invoice_Mandob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_Invoice_Mandob">
+    <End Type="DB_StoreModel.Invoice_Mandob" Role="Invoice_Mandob" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Masrofat" Role="Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Invoice_Mandob_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Product_Product">
+    <End Type="DB_StoreModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Mandob_Product" Role="Invoice_Mandob_Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Product">
+        <PropertyRef Name="Product_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Sadad_Rproduct_Invoice_Moshtary_Sadad">
+    <End Type="DB_StoreModel.Invoice_Mandob_Sadad" Role="Invoice_Mandob_Sadad" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Mandob_Sadad_Rproduct" Role="Invoice_Mandob_Sadad_Rproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Invoice_Mandob_Sadad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Sadad_Rproduct">
+        <PropertyRef Name="Invoice_Mandob_Sadad_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Sadad_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Mandob_Sadad" Role="Invoice_Mandob_Sadad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Sadad">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Invoice_Moshtary_Sadad_Rproduct_Product">
+    <End Type="DB_StoreModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="DB_StoreModel.Invoice_Mandob_Sadad_Rproduct" Role="Invoice_Mandob_Sadad_Rproduct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Invoice_Mandob_Sadad_Rproduct">
+        <PropertyRef Name="Return_Invoice_Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Moshtary_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.Mandob" Role="Mandob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Mandob">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_Masrofat_Type">
+    <End Type="DB_StoreModel.Masrofat_Type" Role="Masrofat_Type" Multiplicity="1" />
+    <End Type="DB_StoreModel.Masrofat" Role="Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Masrofat_Type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Masrofat_Type_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_Salary">
+    <End Type="DB_StoreModel.Salary" Role="Salary" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Masrofat" Role="Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Salary">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Salary_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.Masrofat" Role="Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="Userid_In" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Masrofat_User1">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Masrofat" Role="Masrofat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Masrofat">
+        <PropertyRef Name="userid_Edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Product">
+    <End Type="DB_StoreModel.Product" Role="Product" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Product" Role="Product1" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product1">
+        <PropertyRef Name="Offer_Product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Salary_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.Salary" Role="Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="Userid_In" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Salary_User1">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Salary" Role="Salary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Salary">
+        <PropertyRef Name="userid_Edit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Store_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="DB_StoreModel.Store" Role="Store" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Store">
+        <PropertyRef Name="User_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Money_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.User_Money" Role="User_Money" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User_Money">
+        <PropertyRef Name="User_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAction_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.UserAction" Role="UserAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserAction">
+        <PropertyRef Name="Userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserView_User">
+    <End Type="DB_StoreModel.User" Role="User" Multiplicity="1" />
+    <End Type="DB_StoreModel.UserView" Role="UserView" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserView">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserAction_View">
+    <End Type="DB_StoreModel.View" Role="View" Multiplicity="1" />
+    <End Type="DB_StoreModel.UserAction" Role="UserAction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="View">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserAction">
+        <PropertyRef Name="Viewid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserView_View">
+    <End Type="DB_StoreModel.View" Role="View" Multiplicity="1" />
+    <End Type="DB_StoreModel.UserView" Role="UserView" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="View">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="UserView">
+        <PropertyRef Name="ViewID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
